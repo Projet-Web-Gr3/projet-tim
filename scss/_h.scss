@@ -1,5 +1,10 @@
+@font-face {
+    font-family: "pixellari";
+    src: url("../fonts/Pixellari.ttf");
+}
+
 h1 {
-    font-family: "VT323", monospace; // Test
+    font-family: 'pixellari';
     font-size: 10vw;
     color:white;
     filter: url(#crispify);

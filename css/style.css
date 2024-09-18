@@ -327,6 +327,10 @@ body {
   overflow-x: hidden;
 }
 
+p {
+  font-family: "Titillium Web", sans-serif;
+}
+
 /* HEADER */
 header {
   width: 100%;
@@ -369,8 +373,12 @@ section {
   color: white;
 }
 
+@font-face {
+  font-family: "pixellari";
+  src: url("../fonts/Pixellari.ttf");
+}
 h1 {
-  font-family: "VT323", monospace;
+  font-family: "pixellari";
   font-size: 10vw;
   color: white;
   filter: url(#crispify);
