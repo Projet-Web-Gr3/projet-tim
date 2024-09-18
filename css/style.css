@@ -307,8 +307,28 @@ template {
   display: none;
 }
 
+:root {
+  /* Couleurs */
+  --couleur-background: hsl(0.66, 0.67, 0.15);
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
+  background-color: var(--couleur-background);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  font-family: pixellari;
+  font-size: 10vw;
+  color: white;
+  filter: url(#crispify);
+  text-shadow: 0.3vw 0.3vw 0px rgb(255, 151, 194), 0.6vw 0.6vw 0px rgba(167, 10, 75, 0.662745098), -0.3vw -0.3vw 0px rgba(0, 188, 135, 0.6980392157), -10px 15px 15px rgba(8, 9, 42, 0.8470588235);
 }
