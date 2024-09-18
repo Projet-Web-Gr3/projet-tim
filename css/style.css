@@ -310,9 +310,15 @@ template {
 
 :root {
   /* Couleurs */
-  --couleur-background: hsl(237.7,67.1%,15.5%);
+  --couleur-primaire: hsl(237.7,67.1%,15.5%);
+  --couleur-secondaire: hsl(159.6,100%,29.6%);
+  /* Tailles d'écrans */
+  --Fullscreen: 1920px;
+  --Medium: 700px;
+  --Small: 400px;
 }
 
+/* MIXIN */
 /* BODY/ REMISE À 0 */
 * {
   margin: 0;
@@ -323,64 +329,78 @@ template {
 body {
   width: 100vw;
   height: 100vh;
-  background-color: var(--couleur-background);
+  background: linear-gradient(180deg, var(--couleur-primaire) 0%, var(--couleur-secondaire) 100%);
   overflow-x: hidden;
+  /* HEADER */
+  /* CANVAS */
+  /* MAIN */
+  /* FOOTER */
 }
-
-p {
-  font-family: "Titillium Web", sans-serif;
-}
-
-/* HEADER */
-header {
+body header {
   width: 100%;
   height: 15vh;
   background-color: transparent;
   display: flex;
   flex-direction: row;
+  flex: 1 1 auto;
+  align-items: center;
 }
-
-img {
-  width: 15rem;
+body header h1 {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .logo {
+  width: 20rem;
   height: 10rem;
 }
-
-/* CANVAS */
-canvas {
+@media screen and (min-width: var(--Medium)) {
+  body .logo {
+    width: 30rem;
+    height: 20rem;
+  }
+}
+body canvas {
   width: 100%;
   height: 100%;
   position: absolute;
   z-index: -1;
 }
-
-/* MAIN */
-main {
+body main {
   width: 100%;
-  height: 100%;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
   margin-top: 2rem;
-  background-color: hsla(1, 0%, 5%, 0.5);
+  /* SECTION(S) */
 }
-main p {
-  color: white;
-  padding-bottom: 2rem;
-}
-
-/* SECTION(S) */
-section {
+body main section {
   width: 100%;
   height: 30%;
   background-color: hsl(1, 2%, 5%);
   color: white;
 }
+body footer {
+  width: 100%;
+  height: 10vh;
+  background-color: blue;
+}
 
+p {
+  color: white;
+  padding-bottom: 2rem;
+  font-family: "Titillium Web", sans-serif;
+}
+
+/* POLICES */
 @font-face {
   font-family: "pixellari";
   src: url("../fonts/Pixellari.ttf");
 }
 h1 {
   font-family: "pixellari";
-  font-size: 10vw;
-  color: white;
+  font-size: clamp(2rem, 0.235rem + 4.412vw, 5rem);
   filter: url(#crispify);
   text-shadow: 0.3vw 0.3vw 0px rgb(255, 151, 194), 0.6vw 0.6vw 0px rgba(167, 10, 75, 0.662745098), -0.3vw -0.3vw 0px rgba(0, 188, 135, 0.6980392157), -10px 15px 15px rgba(8, 9, 42, 0.8470588235);
 }

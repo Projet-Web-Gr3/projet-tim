@@ -1,3 +1,4 @@
+/* POLICES */
 @font-face {
     font-family: "pixellari";
     src: url("../fonts/Pixellari.ttf");
@@ -5,8 +6,7 @@
 
 h1 {
     font-family: 'pixellari';
-    font-size: 10vw;
-    color:white;
+    font-size: clamp(2rem, 0.235rem + 4.412vw, 5rem); // À TRAVAILLER
     filter: url(#crispify);
     text-shadow: 0.3vw 0.3vw 0px rgb(255, 151, 194),0.6vw 0.6vw 0px #a70a4ba9, 
     -0.3vw -0.3vw 0px #00bc87b2, -10px 15px 15px #08092ad8;

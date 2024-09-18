@@ -8,58 +8,78 @@
 body {
     width: 100vw;
     height: 100vh;
-    background-color: var(--couleur-background);
+    @include gradient(var(--couleur-primaire), var(--couleur-secondaire));
 
     overflow-x: hidden;
-}
 
-p {
-    font-family: "Titillium Web", sans-serif;
-}
+    /* HEADER */
+    header {
+        width: 100%;
+        height: 15vh;
+        background-color: transparent;
+        display: flex;
+        flex-direction: row;
+        flex: 1 1 auto;
+        align-items: center;
 
-/* HEADER */
-header {
-    width: 100%;
-    height: 15vh;
-    background-color: transparent;
-    display: flex;
-    flex-direction: row;
-}
+        h1 {
+            color:white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
 
-img {
-    width: 15rem;
-    height: 10rem;
-}
+    .logo {
+        width: 20rem;
+        height: 10rem;
 
-/* CANVAS */
-canvas {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    z-index: -1;
-}
+        @media screen and (min-width: var(--Medium)) {
+            width: 30rem;
+            height: 20rem;
+            
+        }
+    }
+    
+    /* CANVAS */
+    canvas {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: -1;
+    }
 
-/* MAIN */
-main {
-    width: 100%;
-    height: 100%;
+    /* MAIN */
+    main {
+        width: 100%;
+        height: 80vh;
+        display: flex;
+        flex-direction: column;
 
-    // TEMPORAIRE
-    margin-top: 2rem;
-    background-color: hsla(1%, 0%, 5%, 0.5);
+        // TEMPORAIRE
+        margin-top: 2rem;
 
-    p {
-        color: white;
-        padding-bottom: 2rem;
+            /* SECTION(S) */
+            section {
+                width: 100%;
+                height: 30%;
+
+                // TEMPORAIRE
+                background-color: hsla(1%, 2%, 5%, 1);
+                color: white;
+            }
+    }
+
+    /* FOOTER */
+    footer {
+        width: 100%;
+        height: 10vh;
+        background-color: blue;
     }
 }
 
-/* SECTION(S) */
-section {
-    width: 100%;
-    height: 30%;
-
-    // TEMPORAIRE
-    background-color: hsla(1%, 2%, 5%, 1);
+p {
     color: white;
+    padding-bottom: 2rem;
+    font-family: "Titillium Web", sans-serif;
 }

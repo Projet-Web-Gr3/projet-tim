@@ -1,5 +1,16 @@
 :root {
     /* Couleurs */
-    --couleur-background: hsl(237.7,67.1%,15.5%);
-    
+    --couleur-primaire: hsl(237.7,67.1%,15.5%);
+    --couleur-secondaire: hsl(159.6,100%,29.6%);
+
+    /* Tailles d'écrans */
+    --Fullscreen: 1920px;
+    --Medium: 700px;
+    --Small: 400px;
+}
+
+/* MIXIN */
+// Dégradé du background (body)
+@mixin gradient($couleur1, $couleur2) {
+    background: linear-gradient(180deg, $couleur1 0%, $couleur2 100%);
 }
