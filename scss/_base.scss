@@ -1,3 +1,4 @@
+/* BODY/ REMISE À 0 */
  * {
     margin: 0;
     padding: 0;
@@ -5,8 +6,56 @@
 }
 
 body {
+    width: 100vw;
+    height: 100vh;
     background-color: var(--couleur-background);
+
+    overflow-x: hidden;
+}
+
+/* HEADER */
+header {
+    width: 100%;
+    height: 15vh;
+    background-color: transparent;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: row;
+}
+
+img {
+    width: 15rem;
+    height: 10rem;
+}
+
+/* CANVAS */
+canvas {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+}
+
+/* MAIN */
+main {
+    width: 100%;
+    height: 100%;
+
+    // TEMPORAIRE
+    margin-top: 2rem;
+    background-color: hsla(1%, 0%, 5%, 0.5);
+
+    p {
+        color: white;
+        padding-bottom: 2rem;
+    }
+}
+
+/* SECTION(S) */
+section {
+    width: 100%;
+    height: 30%;
+
+    // TEMPORAIRE
+    background-color: hsla(1%, 2%, 5%, 1);
+    color: white;
 }
