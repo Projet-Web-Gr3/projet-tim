@@ -14,7 +14,7 @@ body {
     &:before {
         content: "";
         position: absolute;
-        top: -7rem;
+        top: -6.5rem;
         left: 0;
         width: 100%;
         height: 100%;
@@ -85,12 +85,14 @@ body {
         height: 80vh;
         display: flex;
         flex-direction: column;
-        margin-top: 25rem;  // TEMPORAIRE
+        margin-top: 15rem;  // TEMPORAIRE
 
             /* SECTION(S) */
             section {
                 width: 100%;
-                height: 30%;
+                height: 50vh;
+                margin-bottom: 10rem;
+                transition: opacity 0.5s ease-in-out;
 
                 // background-color: grey;
                 color: white;
@@ -101,6 +103,7 @@ body {
     footer {
         width: 100%;
         height: 20vh;
+        margin-top: 10rem;
 
         background-color: black;
     }

@@ -1,5 +1,7 @@
-console.log('Hello World');
-
+/* 
+    Fonction pour envoyer le logo en haut à droite et faire
+    apparaître le contenu du header.
+*/
 let aJoue = false;
 
 // Fonction pour changer la position du logo
@@ -23,4 +25,27 @@ window.addEventListener('scroll', function() {
         nav.style.opacity = '1';
         aJoue = true;
     } 
+});
+
+
+/*
+    Fonction pour faire disparaître le texte des sections
+    quand le header arrive à la hauteur du texte.
+*/
+window.addEventListener('scroll', function() {
+
+    const sections = document.querySelectorAll('section');
+    const header = document.querySelector('header');
+    const distanceFromTop = window.scrollY;
+
+    sections.forEach(section => {
+        const distanceFromTopSection = section.offsetTop;
+        const distanceFromTopHeader = header.offsetTop;
+
+        if (distanceFromTop >= distanceFromTopSection - 100) {
+            section.style.opacity = '0';
+        } else {
+            section.style.opacity = '1';
+        }
+    });
 });

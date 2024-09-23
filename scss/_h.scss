@@ -4,10 +4,21 @@
     src: url("../fonts/Pixellari.ttf");
 }
 
+@font-face {
+    font-family: "Titillium Web";
+    src: url("../fonts/TitilliumWeb-Regular.ttf");
+}
+
+/* TITRES */
 h1 {
     font-family: 'pixellari';
     font-size: clamp(2rem, 0.235rem + 4.412vw, 5rem); // À TRAVAILLER
     filter: url(#crispify);
     text-shadow: 0.3vw 0.3vw 0px rgb(255, 151, 194),0.6vw 0.6vw 0px #a70a4ba9, 
     -0.3vw -0.3vw 0px #00bc87b2, -10px 15px 15px #08092ad8;
+}
+
+h2 {
+    font-family: 'Titillium Web';
+    font-size: clamp(1.5rem, 0.235rem + 4.412vw, 3rem); // À TRAVAILLER
 }
