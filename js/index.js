@@ -9,28 +9,18 @@ window.addEventListener('scroll', function() {
     const distanceFromTop = window.scrollY;
     const hPlaceholder = document.querySelector('#header-placeholder');
     const header = document.querySelector('header');
+    const nav = document.querySelector('nav');
 
-    if (distanceFromTop >= 100 && !aJoue) 
+    if (distanceFromTop >= 50 && !aJoue) 
     {
-        logo.style.width = '50%';
-        logo.style.height = '15rem';
+        logo.style.width = '40%';
+        logo.style.height = '10rem';
         logo.style.position = 'static';
         logo.style.transform = 'translate(0%, 0%)';
         title.style.opacity = '1';
         logo.style.top = '1rem';
         logo.style.left = '1rem';
+        nav.style.opacity = '1';
         aJoue = true;
     } 
-
-    else if (distanceFromTop < 100 && !aJoue)
-    {
-        logo.style.width = '50%';
-        logo.style.height = '15rem';
-        logo.style.position = 'absolute';
-        logo.style.top = '50%';
-        logo.style.left = '0%';
-        logo.style.transform = 'translate(0%, -50%)';
-        title.style.opacity = '0';
-        header.style.height = '50vh';
-    }
 });
