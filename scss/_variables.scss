@@ -2,12 +2,12 @@
     /* Couleurs */
     --couleur-primaire: hsl(237.7,67.1%,15.5%);
     --couleur-secondaire: hsl(159.6,100%,29.6%);
-
-    /* Tailles d'écrans */
-    --Fullscreen: 1920px;
-    --Medium: 700px;
-    --Small: 400px;
 }
+
+/* Tailles d'écrans en variables Sass */
+$Fullscreen: 1080px;
+$Medium: 700px;
+$Small: 400px;
 
 /* MIXIN */
 // Dégradé du background (body)

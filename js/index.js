@@ -9,21 +9,45 @@ window.addEventListener('scroll', function() {
     const logo = document.querySelector('.logo');
     const title = document.querySelector('h1');
     const distanceFromTop = window.scrollY;
-    const hPlaceholder = document.querySelector('#header-placeholder');
-    const header = document.querySelector('header');
     const nav = document.querySelector('nav');
+
+    // Detection de la taille de l'écran
+    const mediaQuery = window.matchMedia('(min-width: 1080px)');
 
     if (distanceFromTop >= 50 && !aJoue) 
     {
-        logo.style.width = '40%';
-        logo.style.height = '10rem';
-        logo.style.position = 'static';
-        logo.style.transform = 'translate(0%, 0%)';
-        title.style.opacity = '1';
-        logo.style.top = '1rem';
-        logo.style.left = '1rem';
-        nav.style.opacity = '1';
-        aJoue = true;
+        if (mediaQuery.matches) {
+            // Le logo
+            logo.style.position = 'static';
+            logo.style.transform = 'translate(-10%, 10%)';
+            logo.style.top = '0rem';
+            logo.style.left = '1rem';
+
+            // Le titre
+            title.style.opacity = '1';
+            title.style.transform = 'translate(-20%, 50%)';
+            
+            // La navigation
+            nav.style.display = 'flex';
+            nav.style.justifyContent = 'center';
+            nav.style.opacity = '1';
+
+            aJoue = true;
+
+        } else {
+            // Le logo
+            logo.style.position = 'static';
+            logo.style.transform = 'translate(0%, 0%)';
+            logo.style.top = '1rem';
+            logo.style.left = '1rem';
+
+            // Le titre
+            title.style.opacity = '1';
+
+            // La navigation
+            nav.style.opacity = '1';
+            aJoue = true;
+        }
     } 
 });
 
@@ -49,3 +73,19 @@ window.addEventListener('scroll', function() {
         }
     });
 });
+
+/* 
+    Évènements pour le menu burger (ouvert/ fermé) 
+*/
+const burgerMenu = document.querySelector('.burger-menu');
+const nav = document.querySelector('nav');
+const navLiens = document.querySelectorAll('nav a');
+
+// Add an event listener to the burger menu button
+burgerMenu.addEventListener('click', function() {
+    // Toggle the visibility of the navigation
+    nav.classList.toggle('nav-onscreen');
+    // On active la classe qui change l'icone du bouton burger
+    burgerMenu.classList.toggle('active');
+    });
+

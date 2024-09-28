@@ -7,10 +7,14 @@
 
 body {
     width: 100vw;
+    height: 100vh;
+
+    // couleur du background selon la règle @Mixin du fichier _variables.scss
     @include gradient(var(--couleur-primaire), var(--couleur-secondaire));
 
     overflow-x: hidden;
 
+    // La grille dans le background
     &:before {
         content: "";
         position: absolute;
@@ -24,11 +28,21 @@ body {
         background-position: center;
         background-repeat: no-repeat;
         overflow-x: hidden;
+
+        @media screen and (min-width: $Fullscreen) {
+            width: 200%;
+            height: 100%;
+            top: 0;
+            left: -50%;
+            
+        }
     }
 
     /* HEADER */
     header {
-        width: 100vw;
+        width: 95vw; // Pas sûr!
+        top: 0;
+        left: 0;
         position: fixed;
         display: flex;
         flex-direction: column;
@@ -39,6 +53,10 @@ body {
         background-color: transparent;
 
         transition: all 0.5s ease-in-out;
+
+        @media screen and (min-width: $Fullscreen) {
+            top: -10rem;
+        }
 
         .logo-titre {
             display: flex;
@@ -57,18 +75,18 @@ body {
             }
     
              .logo {
-                width: 40%;
+                width: 50%;
                 height: 10rem;
                 transform: translate(50%, 20%);
     
                  transition: all 0.5s ease-in-out;
+
+                 @media screen and (min-width: $Fullscreen) {
+                    width: 40%;
+                    height: 20%;
+                }
              }
         }
-    }
-
-    #header-placeholder {
-        width: 100%;
-        height: 10vh;
     }
     
     /* CANVAS */
@@ -93,6 +111,7 @@ body {
                 height: 50vh;
                 margin-bottom: 10rem;
                 transition: opacity 0.5s ease-in-out;
+                z-index: -1;
 
                 // background-color: grey;
                 color: white;
@@ -113,6 +132,7 @@ body {
     }
 }
 
+// Le texte
 p {
     color: white;
     padding-bottom: 2rem;
