@@ -1,16 +1,46 @@
+/*==================
+ ** VARIABLES CSS **
+ ==================*/
 :root {
-    /* Couleurs */
-    --couleur-primaire: hsl(237.7,67.1%,15.5%);
-    --couleur-secondaire: hsl(159.6,100%,29.6%);
+    /* Calcul teintes
+    ---------------------------------------------*/
+    --u1: 238;
+    // Variations:
+    --u2: calc(var(--u1) - 78); // 160
+    --u3: calc(var(--u1) + 90); // 328
+    --u4: calc(var(--u1) - 216); // 22
+    --u5: calc(var(--u1) - 201); // 37
+    --u6: calc(var(--u1) - 186); // 52
+
+    /* Couleurs de base pour l'arriere plan
+    ---------------------------------------------*/
+    --couleur-primaire: hsl(var(--u1),67.1%,15.5%);
+    --couleur-secondaire: hsl(var(--u2),100%,29.6%);
+    
+    --couleur1-LightMode: hsl(var(--u3), 100%, 33%);
+    --couleur2-LightMode: hsl(var(--u4), 63%, 45%);
+    --couleur3-LightMode: hsl(var(--u5), 76%, 43%);
+    --couleur4-LightMode: hsl(var(--u6), 98%, 41%);
 }
 
-/* Tailles d'écrans en variables Sass */
+/* MIXIN 
+---------------------------------------------------*/
+// Dégradé du background (body)
+@mixin gradient2($couleur1, $couleur2) {
+    background: linear-gradient(180deg, $couleur1 0%, $couleur2 100%);
+}
+
+@mixin gradient4($couleur1, $couleur2, $couleur3, $couleur4) {
+    background: linear-gradient(140deg, $couleur1 0%, $couleur2 25%, $couleur3 50%, $couleur4 75%);
+}
+
+
+/*===================
+ ** Variables Sass **
+====================*/
+/* Tailles d'écrans en variables Sass 
+-----------------------------------------------------*/
 $Fullscreen: 1080px;
 $Medium: 700px;
 $Small: 400px;
 
-/* MIXIN */
-// Dégradé du background (body)
-@mixin gradient($couleur1, $couleur2) {
-    background: linear-gradient(180deg, $couleur1 0%, $couleur2 100%);
-}

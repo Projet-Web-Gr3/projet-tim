@@ -308,14 +308,35 @@ template {
   display: none;
 }
 
+/*==================
+ ** VARIABLES CSS **
+ ==================*/
 :root {
-  /* Couleurs */
-  --couleur-primaire: hsl(237.7,67.1%,15.5%);
-  --couleur-secondaire: hsl(159.6,100%,29.6%);
+  /* Calcul teintes
+  ---------------------------------------------*/
+  --u1: 238;
+  --u2: calc(var(--u1) - 78);
+  --u3: calc(var(--u1) + 90);
+  --u4: calc(var(--u1) - 216);
+  --u5: calc(var(--u1) - 201);
+  --u6: calc(var(--u1) - 186);
+  /* Couleurs de base pour l'arriere plan
+  ---------------------------------------------*/
+  --couleur-primaire: hsl(var(--u1),67.1%,15.5%);
+  --couleur-secondaire: hsl(var(--u2),100%,29.6%);
+  --couleur1-LightMode: hsl(var(--u3), 100%, 33%);
+  --couleur2-LightMode: hsl(var(--u4), 63%, 45%);
+  --couleur3-LightMode: hsl(var(--u5), 76%, 43%);
+  --couleur4-LightMode: hsl(var(--u6), 98%, 41%);
 }
 
-/* Tailles d'écrans en variables Sass */
-/* MIXIN */
+/* MIXIN 
+---------------------------------------------------*/
+/*===================
+ ** Variables Sass **
+====================*/
+/* Tailles d'écrans en variables Sass 
+-----------------------------------------------------*/
 /* BODY/ REMISE À 0 */
 * {
   margin: 0 auto;
@@ -332,6 +353,9 @@ body {
   /* CANVAS */
   /* MAIN */
   /* FOOTER */
+}
+body.lightMd {
+  background: linear-gradient(140deg, var(--couleur1-LightMode) 0%, var(--couleur2-LightMode) 25%, var(--couleur3-LightMode) 50%, var(--couleur4-LightMode) 75%);
 }
 body:before {
   content: "";
@@ -399,6 +423,24 @@ body header .logo-titre .logo {
     width: 40%;
     height: 20%;
   }
+}
+body header .DL_Md {
+  width: 4.5rem;
+  height: 2rem;
+  border: 5px solid gainsboro;
+  border-radius: 50px;
+  background-color: grey;
+  position: absolute;
+  top: 1rem;
+  cursor: pointer;
+}
+body header .DL_Md .dot {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50px;
+  background-color: black;
+  transform: translate(-20px, -1px);
+  transition: transform 0.2s ease-in-out;
 }
 body canvas {
   width: 100%;

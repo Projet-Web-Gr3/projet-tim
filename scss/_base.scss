@@ -10,9 +10,13 @@ body {
     height: 100vh;
 
     // couleur du background selon la règle @Mixin du fichier _variables.scss
-    @include gradient(var(--couleur-primaire), var(--couleur-secondaire));
+    @include gradient2(var(--couleur-primaire), var(--couleur-secondaire));
 
     overflow-x: hidden;
+
+    &.lightMd {
+        @include gradient4(var(--couleur1-LightMode), var(--couleur2-LightMode), var(--couleur3-LightMode), var(--couleur4-LightMode));
+    }
 
     // La grille dans le background
     &:before {
@@ -86,6 +90,28 @@ body {
                     height: 20%;
                 }
              }
+        }
+
+        // Le bouton du light/ darkmode
+        .DL_Md {
+            width: 4.5rem;
+            height: 2rem;
+            border: 5px solid gainsboro;
+            border-radius: 50px;
+            background-color: grey;
+            position: absolute;
+            top: 1rem;
+            cursor: pointer;
+            
+            // Le point dans le bouton
+            .dot {
+                width: 1.5rem;
+                height: 1.5rem;
+                border-radius: 50px;
+                background-color: black;
+                transform: translate(-20px, -1px);
+                transition: transform 0.2s ease-in-out;
+            }
         }
     }
     
