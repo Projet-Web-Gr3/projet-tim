@@ -7,7 +7,7 @@
 
 body {
     width: 100vw;
-    height: 100vh;
+    height: 132.5vh;
 
     // couleur du background selon la règle @Mixin du fichier _variables.scss
     @include gradient2(var(--couleur-primaire), var(--couleur-secondaire));
@@ -59,7 +59,7 @@ body {
         transition: all 0.5s ease-in-out;
 
         @media screen and (min-width: $Fullscreen) {
-            top: -10rem;
+            top: -40rem;
         }
 
         .logo-titre {
@@ -100,7 +100,7 @@ body {
             border-radius: 50px;
             background-color: grey;
             position: absolute;
-            top: 1rem;
+            top: 0.4rem;
             cursor: pointer;
             
             // Le point dans le bouton
@@ -139,7 +139,7 @@ body {
             section {
                 width: 100%;
                 height: 50vh;
-                margin-bottom: 10rem;            
+                margin-bottom: 5rem;            
                 transition: opacity 0.5s ease-in-out;
                 z-index: -1;
 
@@ -155,10 +155,85 @@ body {
     /* FOOTER */
     footer {
         width: 100%;
-        height: 20vh;
+        height: 35vh;
         margin-top: 10rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+        position: relative;
 
-        background-color: black;
+        /* Bck transparent */
+        background: rgba(0, 0, 0, 0.19);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border: 1px solid rgba(0, 0, 0, 0.01);
+
+        .conteneur-map {
+            order: -1;
+            margin: 0;
+            margin-top: 0.5rem;
+            margin-left: 1rem;
+
+            h3 {
+                color: white;
+                order: -2;
+                margin: 0;
+                margin-bottom: 1rem;
+                padding: 0;
+            }
+
+            .map {
+                width: 130px;
+                height: 130px;
+            }
+        }
+
+        .conteneur-texte {
+            width: 10rem;
+            font-size: 0.7rem;
+            margin: 0;
+            margin-top: 4rem;
+            margin-left: 0.5rem;
+
+            p {
+                margin: 0;
+                padding: 0;
+            }
+        }
+        
+        .liens {
+            width: 15rem;
+            font-size: 0.7rem;
+            margin-top: 4rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: flex-end;
+            position: absolute;
+            left: 10rem;
+
+            a {
+                color: white;
+                text-decoration: none;
+                margin: 0;
+                margin-bottom: 1rem;
+            }
+        }
+
+        .logo {
+            height: 1rem;
+            margin: 0;
+            display: flex;
+            flex-direction: row;
+
+            img {
+                width: 3rem;
+                height: 3rem;
+                padding-left: 0.5rem;
+            }
+        }
     }
 }
 

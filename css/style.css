@@ -346,7 +346,7 @@ template {
 
 body {
   width: 100vw;
-  height: 100vh;
+  height: 132.5vh;
   background: linear-gradient(180deg, var(--couleur-primaire) 0%, var(--couleur-secondaire) 100%);
   overflow-x: hidden;
   /* HEADER */
@@ -395,7 +395,7 @@ body header {
 }
 @media screen and (min-width: 1080px) {
   body header {
-    top: -10rem;
+    top: -40rem;
   }
 }
 body header .logo-titre {
@@ -431,7 +431,7 @@ body header .DL_Md {
   border-radius: 50px;
   background-color: grey;
   position: absolute;
-  top: 1rem;
+  top: 0.4rem;
   cursor: pointer;
 }
 body header .DL_Md .dot {
@@ -462,7 +462,7 @@ body main h2 {
 body main section {
   width: 100%;
   height: 50vh;
-  margin-bottom: 10rem;
+  margin-bottom: 5rem;
   transition: opacity 0.5s ease-in-out;
   z-index: -1;
   color: white;
@@ -472,9 +472,75 @@ body main .hidden {
 }
 body footer {
   width: 100%;
-  height: 20vh;
+  height: 35vh;
   margin-top: 10rem;
-  background-color: black;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  position: relative;
+  /* Bck transparent */
+  background: rgba(0, 0, 0, 0.19);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(0, 0, 0, 0.01);
+}
+body footer .conteneur-map {
+  order: -1;
+  margin: 0;
+  margin-top: 0.5rem;
+  margin-left: 1rem;
+}
+body footer .conteneur-map h3 {
+  color: white;
+  order: -2;
+  margin: 0;
+  margin-bottom: 1rem;
+  padding: 0;
+}
+body footer .conteneur-map .map {
+  width: 130px;
+  height: 130px;
+}
+body footer .conteneur-texte {
+  width: 10rem;
+  font-size: 0.7rem;
+  margin: 0;
+  margin-top: 4rem;
+  margin-left: 0.5rem;
+}
+body footer .conteneur-texte p {
+  margin: 0;
+  padding: 0;
+}
+body footer .liens {
+  width: 15rem;
+  font-size: 0.7rem;
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  position: absolute;
+  left: 10rem;
+}
+body footer .liens a {
+  color: white;
+  text-decoration: none;
+  margin: 0;
+  margin-bottom: 1rem;
+}
+body footer .logo {
+  height: 1rem;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+}
+body footer .logo img {
+  width: 3rem;
+  height: 3rem;
+  padding-left: 0.5rem;
 }
 
 p {
@@ -505,6 +571,10 @@ h1 {
 h2 {
   font-family: "Titillium Web";
   font-size: clamp(1.5rem, 0.235rem + 4.412vw, 3rem);
+}
+
+h3 {
+  font-family: "Titillium Web";
 }
 
 nav {
