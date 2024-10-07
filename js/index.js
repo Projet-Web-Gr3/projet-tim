@@ -10,11 +10,14 @@ window.addEventListener('scroll', function() {
     const title = document.querySelector('h1');
     const distanceFromTop = window.scrollY;
     const nav = document.querySelector('nav');
+    const main = document.querySelector('main');
+    const footer = document.querySelector('footer');
+    const conteneurHeader = document.querySelector('.logo-titre');
 
     // Detection de la taille de l'écran
     const mediaQuery = window.matchMedia('(min-width: 1080px)');
 
-    if (distanceFromTop >= 50 && !aJoue) 
+    if (distanceFromTop >= 60 && !aJoue) 
     {
         if (mediaQuery.matches) 
         {
@@ -39,21 +42,23 @@ window.addEventListener('scroll', function() {
         {
             // Le logo
             logo.style.position = 'static';
-            logo.style.transform = 'translate(0%, 0%)';
+            logo.style.transform = 'translate(-30%, -20%) scale(0.8)';
             logo.style.top = '1rem';
             logo.style.left = '1rem';
+            conteneurHeader.style.top = '0rem';
 
             // Le titre
-            title.style.opacity = '1';
+            title.style.opacity = '0';
 
             // La navigation
             nav.style.opacity = '1';
+
+            main.style.opacity = '1';
+            footer.style.opacity = '1';
             aJoue = true;
         }
     } 
 });
-
-
 /*============================================================
     Fonction pour faire disparaître le texte des sections
     quand le header arrive à la hauteur du texte.
@@ -61,12 +66,10 @@ window.addEventListener('scroll', function() {
 window.addEventListener('scroll', function() {
 
     const sections = document.querySelectorAll('section');
-    const header = document.querySelector('header');
     const distanceFromTop = window.scrollY;
 
     sections.forEach(section => {
         const distanceFromTopSection = section.offsetTop;
-        const distanceFromTopHeader = header.offsetTop;
 
         if (distanceFromTop >= distanceFromTopSection - 100) 
         {

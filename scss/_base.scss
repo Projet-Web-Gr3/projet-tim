@@ -7,7 +7,7 @@
 
 body {
     width: 100vw;
-    height: 132.5vh;
+    height: 146vh;
 
     // couleur du background selon la règle @Mixin du fichier _variables.scss
     @include gradient2(var(--couleur-primaire), var(--couleur-secondaire));
@@ -22,13 +22,13 @@ body {
     &:before {
         content: "";
         position: absolute;
-        top: -6.5rem;
+        top: 0rem;
         left: 0;
         width: 100%;
         height: 100%;
         opacity: 50%;
         background-image: url("../images/GrilleTopology.png");
-        background-size: cover;
+        background-size: 80rem 80rem;
         background-position: center;
         background-repeat: no-repeat;
         overflow-x: hidden;
@@ -44,7 +44,8 @@ body {
 
     /* HEADER */
     header {
-        width: 95vw; // Pas sûr!
+        width: 100%;
+        height: 30vh;
         top: 0;
         left: 0;
         position: fixed;
@@ -55,6 +56,7 @@ body {
         align-items: stretch;
         justify-content: center;
         background-color: transparent;
+        z-index: 2;
 
         transition: all 0.5s ease-in-out;
 
@@ -64,24 +66,30 @@ body {
 
         .logo-titre {
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
+            position: relative;
+            top: 19rem;
+
+            transition: top 0.5s ease-in-out;
 
             h1 {
-                width: 50%;
+                width: 100%;
                 color:white;
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                opacity: 0;
+                opacity: 1;
+                margin: 0 auto;
     
                 transition: opacity 0.5s ease-in-out;
             }
     
              .logo {
-                width: 50%;
-                height: 10rem;
-                transform: translate(50%, 20%);
+                width: 100vw;
+                height: 100%;
+                transform: scale(2);
     
                  transition: all 0.5s ease-in-out;
 
@@ -118,18 +126,20 @@ body {
     /* CANVAS */
     canvas {
         width: 100%;
-        height: 100%;
+        height: 100vh;
         position: absolute;
         z-index: -1;
     }
 
     /* MAIN */
     main {
-        width: 100%;
-        height: 80vh;
+        height: 120vh;
         display: flex;
         flex-direction: column;
-        margin-top: 15rem;  // TEMPORAIRE
+        margin-top: 20rem;  // TEMPORAIRE
+        opacity: 0;
+        overflow-x: hidden;
+
 
         h2 {
             margin-bottom: 1rem;
@@ -138,10 +148,12 @@ body {
             /* SECTION(S) */
             section {
                 width: 100%;
-                height: 50vh;
-                margin-bottom: 5rem;            
+                height: 50vh;                       
                 transition: opacity 0.5s ease-in-out;
                 z-index: -1;
+                padding-left: 2rem;
+                padding-right: 2rem;
+                margin-bottom: 5rem;
 
                 // background-color: grey;
                 color: white;
@@ -155,13 +167,14 @@ body {
     /* FOOTER */
     footer {
         width: 100%;
-        height: 35vh;
-        margin-top: 10rem;
+        height: 28.5vh;
         display: flex;
         flex-direction: row;
         justify-content: flex-start;
         align-items: flex-start;
         position: relative;
+        opacity: 0;
+        z-index: 1;
 
         /* Bck transparent */
         background: rgba(0, 0, 0, 0.19);
