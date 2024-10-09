@@ -14,27 +14,34 @@ window.addEventListener('scroll', function() {
     const footer = document.querySelector('footer');
     const conteneurHeader = document.querySelector('.logo-titre');
 
+    //let Scroll = window.scrollY;
+    //console.log(Scroll);
+
     // Detection de la taille de l'écran
     const mediaQuery = window.matchMedia('(min-width: 1080px)');
 
-    if (distanceFromTop >= 60 && !aJoue) 
+    if (distanceFromTop >= 100 && !aJoue) 
     {
         if (mediaQuery.matches) 
         {
             // Le logo
             logo.style.position = 'static';
-            logo.style.transform = 'translate(-10%, 10%)';
+            logo.style.transform = 'translate(-380%, 180%)';
             logo.style.top = '0rem';
             logo.style.left = '1rem';
+            conteneurHeader.style.top = '-20rem';
 
             // Le titre
-            title.style.opacity = '1';
-            title.style.transform = 'translate(-20%, 50%)';
+            title.style.opacity = '0';
             
             // La navigation
             nav.style.display = 'flex';
             nav.style.justifyContent = 'center';
             nav.style.opacity = '1';
+
+            // Le contenu du footer et main
+            main.style.opacity = '1';
+            footer.style.opacity = '1';
 
             aJoue = true;
         } 
@@ -42,10 +49,10 @@ window.addEventListener('scroll', function() {
         {
             // Le logo
             logo.style.position = 'static';
-            logo.style.transform = 'translate(-30%, -20%) scale(0.8)';
+            logo.style.transform = 'translate(-30%, 120%) scale(0.8)';
             logo.style.top = '1rem';
             logo.style.left = '1rem';
-            conteneurHeader.style.top = '0rem';
+            conteneurHeader.style.top = '-20rem';
 
             // Le titre
             title.style.opacity = '0';
@@ -53,25 +60,36 @@ window.addEventListener('scroll', function() {
             // La navigation
             nav.style.opacity = '1';
 
+            // Le contenu du footer et main
             main.style.opacity = '1';
             footer.style.opacity = '1';
             aJoue = true;
         }
     } 
 });
+
 /*============================================================
     Fonction pour faire disparaître le texte des sections
     quand le header arrive à la hauteur du texte.
 ==============================================================*/
 window.addEventListener('scroll', function() {
 
-    const sections = document.querySelectorAll('section');
-    const distanceFromTop = window.scrollY;
+    const logo = document.querySelector('.logo');
+    const sections = document.querySelectorAll('.effacer');
+    const carousel = document.querySelector('section.carousel');
+
+    const logoRect = logo.getBoundingClientRect(); // Position du logo
 
     sections.forEach(section => {
-        const distanceFromTopSection = section.offsetTop;
+        const sectionRect = section.getBoundingClientRect(); // Position de la section
 
-        if (distanceFromTop >= distanceFromTopSection - 100) 
+        // Pour les sections, on vérifie si le logo est en collision avec la section
+        const overlap = !(logoRect.right < sectionRect.left || 
+            logoRect.left > sectionRect.right || 
+            logoRect.bottom < sectionRect.top + 100 || 
+            logoRect.top > sectionRect.bottom);
+
+        if (overlap) 
         {
             section.style.opacity = '0';
         } 
@@ -80,6 +98,21 @@ window.addEventListener('scroll', function() {
             section.style.opacity = '1';
         }
     });
+
+    const carouselRect = carousel.getBoundingClientRect(); // Position du carousel
+
+    // Pour le carousel, on vérifie si le logo est en collision avec le carousel
+    const overlap = !(logoRect.right < carouselRect.left || 
+        logoRect.left > carouselRect.right || 
+        logoRect.bottom < carouselRect.top + 400 || 
+        logoRect.top > carouselRect.bottom);
+
+    if (overlap) {
+        carousel.style.opacity = '0';
+    }
+    else {
+        carousel.style.opacity = '1';
+    }
 });
 
 /* ==================================================
@@ -119,6 +152,3 @@ btn_Bck.addEventListener('click', function() {
         point.style.transform = 'translate(20px, 0)';
     }
 });
-
-
-

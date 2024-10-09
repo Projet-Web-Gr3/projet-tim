@@ -346,40 +346,16 @@ template {
 
 body {
   width: 100vw;
-  height: 146vh;
+  height: 100%;
   background: linear-gradient(180deg, var(--couleur-primaire) 0%, var(--couleur-secondaire) 100%);
   overflow-x: hidden;
-  /* HEADER */
-  /* CANVAS */
-  /* MAIN */
-  /* FOOTER */
 }
 body.lightMd {
   background: linear-gradient(140deg, var(--couleur1-LightMode) 0%, var(--couleur2-LightMode) 25%, var(--couleur3-LightMode) 50%, var(--couleur4-LightMode) 75%);
 }
-body:before {
-  content: "";
-  position: absolute;
-  top: 0rem;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 50%;
-  background-image: url("../images/GrilleTopology.png");
-  background-size: 80rem 80rem;
-  background-position: center;
-  background-repeat: no-repeat;
-  overflow-x: hidden;
-}
-@media screen and (min-width: 1080px) {
-  body:before {
-    width: 200%;
-    height: 100%;
-    top: 0;
-    left: -50%;
-  }
-}
-body header {
+
+/* HEADER */
+header {
   width: 100%;
   height: 30vh;
   top: 0;
@@ -396,11 +372,11 @@ body header {
   transition: all 0.5s ease-in-out;
 }
 @media screen and (min-width: 1080px) {
-  body header {
-    top: -40rem;
+  header {
+    top: 0rem;
   }
 }
-body header .logo-titre {
+header .logo-titre {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -409,7 +385,12 @@ body header .logo-titre {
   top: 19rem;
   transition: top 0.5s ease-in-out;
 }
-body header .logo-titre h1 {
+@media screen and (min-width: 1080px) {
+  header .logo-titre {
+    top: 30rem;
+  }
+}
+header .logo-titre h1 {
   width: 100%;
   color: white;
   display: flex;
@@ -419,19 +400,19 @@ body header .logo-titre h1 {
   margin: 0 auto;
   transition: opacity 0.5s ease-in-out;
 }
-body header .logo-titre .logo {
+header .logo-titre .logo {
   width: 100vw;
   height: 100%;
   transform: scale(2);
   transition: all 0.5s ease-in-out;
 }
 @media screen and (min-width: 1080px) {
-  body header .logo-titre .logo {
+  header .logo-titre .logo {
     width: 40%;
-    height: 20%;
+    height: 30%;
   }
 }
-body header .DL_Md {
+header .DL_Md {
   width: 4.5rem;
   height: 2rem;
   border: 5px solid gainsboro;
@@ -441,7 +422,7 @@ body header .DL_Md {
   top: 0.4rem;
   cursor: pointer;
 }
-body header .DL_Md .dot {
+header .DL_Md .dot {
   width: 1.5rem;
   height: 1.5rem;
   border-radius: 50px;
@@ -449,27 +430,36 @@ body header .DL_Md .dot {
   transform: translate(-20px, -1px);
   transition: transform 0.2s ease-in-out;
 }
-body canvas {
+@media screen and (min-width: 1080px) {
+  header .DL_Md {
+    top: 1rem;
+    left: 1rem;
+  }
+}
+
+/* CANVAS */
+canvas {
   width: 100%;
   height: 100vh;
   position: absolute;
   z-index: -1;
 }
-body main {
-  height: 120vh;
+
+/* MAIN */
+main {
   display: flex;
   flex-direction: column;
-  margin-top: 20rem;
+  padding-top: 50rem;
   opacity: 0;
   overflow-x: hidden;
   /* SECTION(S) */
 }
-body main h2 {
+main h2 {
   margin-bottom: 1rem;
 }
-body main section {
-  width: 100%;
-  height: 50vh;
+main section {
+  width: 100vw;
+  height: 100vh;
   transition: opacity 0.5s ease-in-out;
   z-index: -1;
   padding-left: 2rem;
@@ -477,10 +467,20 @@ body main section {
   margin-bottom: 5rem;
   color: white;
 }
-body main .hidden {
+main section p {
+  color: white;
+  padding-bottom: 2rem;
+  font-family: "Titillium Web", sans-serif;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  font-size: clamp(1rem, -1.5rem + 8vw, 3rem);
+}
+main .hidden {
   opacity: 0;
 }
-body footer {
+
+/* FOOTER */
+footer {
   width: 100%;
   height: 28.5vh;
   display: flex;
@@ -497,35 +497,60 @@ body footer {
   -webkit-backdrop-filter: blur(10px);
   border: 1px solid rgba(0, 0, 0, 0.01);
 }
-body footer .conteneur-map {
+@media screen and (min-width: 1080px) {
+  footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+  }
+}
+footer .conteneur-map {
   order: -1;
   margin: 0;
   margin-top: 0.5rem;
   margin-left: 1rem;
 }
-body footer .conteneur-map h3 {
+footer .conteneur-map h3 {
   color: white;
   order: -2;
   margin: 0;
   margin-bottom: 1rem;
   padding: 0;
 }
-body footer .conteneur-map .map {
+footer .conteneur-map .map {
   width: 130px;
   height: 130px;
 }
-body footer .conteneur-texte {
+@media screen and (min-width: 1080px) {
+  footer .conteneur-map .map {
+    width: 500px;
+    height: 250px;
+  }
+}
+footer .conteneur-texte {
   width: 10rem;
   font-size: 0.7rem;
   margin: 0;
   margin-top: 4rem;
   margin-left: 0.5rem;
 }
-body footer .conteneur-texte p {
+@media screen and (min-width: 1080px) {
+  footer .conteneur-texte {
+    flex-grow: 1;
+  }
+}
+footer .conteneur-texte p {
   margin: 0;
   padding: 0;
+  color: white;
 }
-body footer .liens {
+@media screen and (min-width: 1080px) {
+  footer .conteneur-texte p {
+    font-size: 1rem;
+  }
+}
+footer .liens {
   width: 15rem;
   font-size: 0.7rem;
   margin-top: 4rem;
@@ -536,30 +561,37 @@ body footer .liens {
   position: absolute;
   left: 10rem;
 }
-body footer .liens a {
+@media screen and (min-width: 1080px) {
+  footer .liens {
+    flex-grow: 1;
+    position: relative;
+    left: -2rem;
+    top: -7rem;
+    font-size: 1rem;
+  }
+}
+footer .liens a {
   color: white;
   text-decoration: none;
   margin: 0;
   margin-bottom: 1rem;
 }
-body footer .logo {
+footer .logo {
   height: 1rem;
   margin: 0;
   display: flex;
   flex-direction: row;
 }
-body footer .logo img {
+footer .logo img {
   width: 3rem;
   height: 3rem;
   padding-left: 0.5rem;
 }
-
-p {
-  color: white;
-  padding-bottom: 2rem;
-  font-family: "Titillium Web", sans-serif;
-  margin-left: 2rem;
-  margin-right: 2rem;
+@media screen and (min-width: 1080px) {
+  footer .logo img {
+    width: 5rem;
+    height: 5rem;
+  }
 }
 
 /* POLICES */
@@ -656,7 +688,8 @@ li a {
   .burger-menu {
     width: 4rem;
     height: 4rem;
-    top: 11rem;
+    top: 1rem;
+    right: 1rem;
   }
 }
 .burger-menu .ligne {
@@ -704,14 +737,14 @@ li a {
 /* Le Carousel */
 .carousel {
   width: 100%;
-  height: 100%;
+  height: 100vh;
   perspective: 1000px;
   transform-origin: 50% 50%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin-bottom: 2rem;
+  padding-bottom: 7rem;
   z-index: 1;
 }
 .carousel h2 {
@@ -730,6 +763,11 @@ li a {
   justify-content: center;
   align-items: center;
   transform-style: preserve-3d;
+}
+@media screen and (min-width: 1080px) {
+  #spinner {
+    transform: scale(1.5);
+  }
 }
 
 /* Conteneur des boutons */
@@ -760,6 +798,18 @@ li a {
   perspective: 1000px;
   transform: rotateY(45deg);
   transition: transform 1s;
+}
+.flip-card h1 {
+  font-size: 30px;
+  text-shadow: 0.3vw 0.3vw 0px rgb(255, 151, 194), 0.6vw 0.6vw 0px rgba(167, 10, 75, 0.662745098), -0.3vw -0.3vw 0px rgba(0, 188, 135, 0.6980392157), -20px 15px 15px rgba(8, 9, 42, 0.8470588235);
+}
+@media screen and (min-width: 1080px) {
+  .flip-card h1 {
+    text-shadow: 0.1vw 0vw 0px rgb(255, 151, 194), 0.1vw 0.1vw 0px rgba(167, 10, 75, 0.662745098), -0.05vw -0.1vw 0px rgba(0, 188, 135, 0.6980392157), -5px 15px 15px rgba(8, 9, 42, 0.8470588235);
+  }
+}
+.flip-card p {
+  font-size: 12px;
 }
 
 /* Positionnement de l'avant et arrière des cartes */

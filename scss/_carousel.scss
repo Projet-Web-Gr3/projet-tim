@@ -1,14 +1,14 @@
 /* Le Carousel */
 .carousel {
     width: 100%;
-    height: 100%;
+    height: 100vh;
     perspective: 1000px;
     transform-origin: 50% 50%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin-bottom: 2rem;
+    padding-bottom: 7rem;
     z-index: 1;
 
     h2 {
@@ -29,6 +29,10 @@
     justify-content: center;
     align-items: center;
     transform-style: preserve-3d;
+
+    @media screen and (min-width: $Fullscreen) {
+        transform: scale(1.5);  
+    }
 }
 
 /* Conteneur des boutons */
@@ -62,6 +66,21 @@
 
     transform: rotateY(45deg);
     transition: transform 1s;
+
+    h1 {
+        font-size: 30px;
+        text-shadow: 0.3vw 0.3vw 0px rgb(255, 151, 194),0.6vw 0.6vw 0px #a70a4ba9, 
+        -0.3vw -0.3vw 0px #00bc87b2, -20px 15px 15px #08092ad8;
+
+        @media screen and (min-width: $Fullscreen) {
+            text-shadow: 0.1vw 0vw 0px rgb(255, 151, 194), 0.1vw 0.1vw 0px rgba(167, 10, 75, 0.662745098), 
+            -0.05vw -0.1vw 0px rgba(0, 188, 135, 0.6980392157), -5px 15px 15px rgba(8, 9, 42, 0.8470588235);
+        }
+    }
+
+    p {
+        font-size: 12px;
+    }
 }
 
 /* Positionnement de l'avant et arrière des cartes */
