@@ -2,8 +2,8 @@
         .burger-menu { 
             width: 3rem;
             height: 3rem;
-            top: 0.5rem;
-            right: 0rem;
+            top: 1.5rem;
+            right: 0.7rem;
             position: absolute;
             background-color: hsla(0, 0%, 100%, 0.45); // À voir
             border-radius: 20px;
@@ -24,6 +24,7 @@
                 height: 4rem;
                 top: 1rem;
                 right: 1rem;
+                display: none;
             }
 
             // Les lignes de l'icône du menu burger

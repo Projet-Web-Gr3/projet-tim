@@ -89,7 +89,7 @@ body {
             border-radius: 50px;
             background-color: grey;
             position: absolute;
-            top: 0.4rem;
+            top: 2rem;
             cursor: pointer;
             
             // Le point dans le bouton
@@ -174,7 +174,7 @@ body {
         background: rgba(0, 0, 0, 0.19);
         box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
         backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: brightness(0.5);
         border: 1px solid rgba(0, 0, 0, 0.01);
 
         @media screen and (min-width: $Fullscreen) {

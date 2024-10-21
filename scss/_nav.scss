@@ -15,7 +15,14 @@ nav {
     transition: opacity 0.5s ease-in-out, left 0.3s ease;
 
     @media screen and (min-width: $Fullscreen) {
-        width: 15%;
+        width: 100%;
+        height: 30%;
+        left: 0;
+        top: 0;
+        margin-top: 1rem;
+        background: transparent;
+        box-shadow: none;
+        backdrop-filter: none;
     }
 
     ul {
@@ -25,15 +32,59 @@ nav {
         justify-content: flex-start;
         align-items: flex-start;
         gap: 50px; 
+
+        @media screen and (min-width: $Fullscreen) {
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+        }
     }
 }
 
 li {
     list-style-type: none;
     margin: 0 1rem;
+    position: relative;
+
+
+    @media screen and (min-width: $Fullscreen) {
+        ::before, ::after {
+            content: "¬";
+            font-size: 70px;
+            position: absolute;
+            width: 2px;
+            height: 50%;
+            transition: all 0.3s ease;
+        }  
+
+        ::before {
+            transform: rotate(180deg);
+            top: 65px;
+            left: 10px;
+        }
+    
+        ::after {
+            top: -40px;
+            right: 10px;
+        }
+    
+        &:hover {
+            ::before {
+                left: 0px; 
+            }
+    
+            ::after {
+                right: 0px; 
+            }
+        }        
+    }
 
     &:nth-child(1) {
         margin-top: 4rem;
+
+        @media screen and (min-width: $Fullscreen) {
+            margin-top: 0;
+        }
     }
 
     a {

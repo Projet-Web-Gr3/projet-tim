@@ -12,47 +12,50 @@ window.addEventListener('scroll', function() {
     const nav = document.querySelector('nav');
     const main = document.querySelector('main');
     const footer = document.querySelector('footer');
+    const brgrBoutton = document.querySelector('.burger-menu');
     const conteneurHeader = document.querySelector('.logo-titre');
 
-    //let Scroll = window.scrollY;
-    //console.log(Scroll);
 
     // Detection de la taille de l'écran
     const mediaQuery = window.matchMedia('(min-width: 1080px)');
 
     if (distanceFromTop >= 100 && !aJoue) 
     {
+        // Fullscreen
         if (mediaQuery.matches) 
         {
             // Le logo
             logo.style.position = 'static';
-            logo.style.transform = 'translate(-380%, 180%)';
-            logo.style.top = '0rem';
+            logo.style.transform = 'translate(-380%, 0%)';
+            logo.style.top = '1rem';
             logo.style.left = '1rem';
-            conteneurHeader.style.top = '-20rem';
 
             // Le titre
             title.style.opacity = '0';
             
             // La navigation
-            nav.style.display = 'flex';
-            nav.style.justifyContent = 'center';
+            nav.style.display = 'block';
             nav.style.opacity = '1';
 
             // Le contenu du footer et main
             main.style.opacity = '1';
             footer.style.opacity = '1';
 
+            // Le bouton burger
+            brgrBoutton.style.display = 'none';
+
+            conteneurHeader.style.top = '0';
+
             aJoue = true;
         } 
+        // Mobile
         else 
         {
             // Le logo
             logo.style.position = 'static';
-            logo.style.transform = 'translate(-30%, 120%) scale(0.8)';
+            logo.style.transform = 'translate(-30%, -130%) scale(0.8)';
             logo.style.top = '1rem';
             logo.style.left = '1rem';
-            conteneurHeader.style.top = '-20rem';
 
             // Le titre
             title.style.opacity = '0';
@@ -64,7 +67,11 @@ window.addEventListener('scroll', function() {
             main.style.opacity = '1';
             footer.style.opacity = '1';
             aJoue = true;
+
+            // Le bouton burger
+            brgrBoutton.style.display = 'flex';
         }
+        
     } 
 });
 
