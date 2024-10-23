@@ -90,8 +90,8 @@ card.addEventListener('mousemove', (e) => {
     let diffY = mouseY - cardY;
 
     // On calcule l'angle de rotation de la carte
-    let angleX = diffY / 5;
-    let angleY = diffX / 5;
+    let angleX = diffY / 10;
+    let angleY = diffX / 10;
 
     // On applique la rotation à la carte
     card.style.transform = `rotateX(${-angleX}deg) rotateY(${angleY}deg) scale(1.2)`;
@@ -99,7 +99,7 @@ card.addEventListener('mousemove', (e) => {
 
 // On remet la carte à sa position initiale quand la souris quitte la carte
 card.addEventListener('mouseleave', () => {
-    card.style.transform = 'rotateX(0deg) rotateY(0deg) scale(1.2)';
+    card.style.transform = 'rotateX(0deg) rotateY(0deg) translateZ(253px) scale(1.2)';
 });
 
 

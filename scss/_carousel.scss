@@ -9,7 +9,7 @@
     align-items: center;
     flex-direction: column;
     padding-bottom: 7rem;
-    z-index: 1;
+    z-index: 1000; //Temporaire
 
     h2 {
         margin: 0 0 0 0;
@@ -41,7 +41,7 @@
     top: 67%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 5;
+    z-index: 1000;
 
     .prev {
         position: relative;
@@ -63,6 +63,9 @@
     height: 120px;
     transform-style: preserve-3d;
     perspective: 1000px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     transform: rotateY(45deg);
     transition: transform 1s;
@@ -79,7 +82,9 @@
     }
 
     p {
+        width: 100%;
         font-size: 12px;
+        margin: 0;
     }
 }
 

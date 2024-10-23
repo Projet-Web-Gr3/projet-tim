@@ -791,7 +791,7 @@ li a {
   align-items: center;
   flex-direction: column;
   padding-bottom: 7rem;
-  z-index: 1;
+  z-index: 1000;
 }
 .carousel h2 {
   margin: 0 0 0 0;
@@ -822,7 +822,7 @@ li a {
   top: 67%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 5;
+  z-index: 1000;
 }
 #boutons .prev {
   position: relative;
@@ -842,6 +842,9 @@ li a {
   height: 120px;
   transform-style: preserve-3d;
   perspective: 1000px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   transform: rotateY(45deg);
   transition: transform 1s;
 }
@@ -855,7 +858,9 @@ li a {
   }
 }
 .flip-card p {
+  width: 100%;
   font-size: 12px;
+  margin: 0;
 }
 
 /* Positionnement de l'avant et arrière des cartes */
