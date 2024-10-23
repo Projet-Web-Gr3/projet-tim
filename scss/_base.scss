@@ -8,6 +8,8 @@
 body {
     width: 100vw;
     height: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
 
     // couleur du background selon la règle @Mixin du fichier _variables.scss
     @include gradient2(var(--couleur-primaire), var(--couleur-secondaire));
@@ -109,13 +111,7 @@ body {
         }
     }
     
-    /* CANVAS */
-    canvas {
-        width: 100%;
-        height: 100vh;
-        position: absolute;
-        z-index: -1;
-    }
+   
 
     /* MAIN */
     main {
@@ -128,6 +124,16 @@ body {
         h2 {
             margin-bottom: 1rem;
         }
+        // Le container 3D pour le background
+        #container3D canvas {
+            width: 100vw !important;
+            height: 100vh !important;
+            position: absolute;
+            top: 0;
+            left: 25%;
+            z-index: -2;
+            position: fixed;
+          }
 
             /* SECTION(S) */
             section {
