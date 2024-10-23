@@ -353,7 +353,15 @@ body {
 body.lightMd {
   background: linear-gradient(140deg, var(--couleur1-LightMode) 0%, var(--couleur2-LightMode) 25%, var(--couleur3-LightMode) 50%, var(--couleur4-LightMode) 75%);
 }
-
+#container3D canvas {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 25%;
+  z-index: -4; /* Assurez-vous que le conteneur est derrière le header */
+  overflow: hidden; /* Empêche le débordement du contenu */
+}
 /* HEADER */
 header {
   width: 100%;
@@ -437,19 +445,13 @@ header .DL_Md .dot {
   }
 }
 
-/* CANVAS */
-canvas {
-  width: 100%;
-  height: 100vh;
-  position: absolute;
-  z-index: -1;
-}
+
 
 /* MAIN */
 main {
   display: flex;
   flex-direction: column;
-  padding-top: 50rem;
+  padding-top: 30rem;
   opacity: 0;
   overflow-x: hidden;
   /* SECTION(S) */
@@ -491,11 +493,11 @@ footer {
   opacity: 0;
   z-index: 1;
   /* Bck transparent */
-  background: rgba(0, 0, 0, 0.19);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(10px);
-  backdrop-filter: brightness(0.5);
-  border: 1px solid rgba(0, 0, 0, 0.01);
+  background: rgba(0, 0, 0, 0.489);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(6.7px);
+        -webkit-backdrop-filter: blur(6.7px);
+        border: 1px solid rgba(0, 0, 0, 0.01);
 }
 @media screen and (min-width: 1080px) {
   footer {

@@ -1,7 +1,3 @@
-/**
- * Importation de Three.js pour le model 3D
- */
-
 // Import the THREE.js library
 import * as THREE from "https://cdn.skypack.dev/three@0.129.0/build/three.module.js";
 // To allow for importing the .gltf file
@@ -21,12 +17,14 @@ let objToRender = 'Model';
 // Instantiate a loader for the .gltf file
 const loader = new GLTFLoader();
 
+// Load the file
 loader.load(
   `models/${objToRender}/scene.gltf`,
   function (gltf) {
-
+    // If the file is loaded, add it to the scene
     object = gltf.scene;
 
+    // Inverser le modèle en appliquant une mise à l'échelle négative
     object.scale.x *= -1;
     object.scale.y *= -1;
     object.scale.z *= -1;
@@ -34,22 +32,27 @@ loader.load(
     scene.add(object);
   },
   function (xhr) {
+    // While it is loading, log the progress
     console.log((xhr.loaded / xhr.total * 100) + '% loaded');
   },
-  function (error) {  
+  function (error) {
+    // If there is an error, log it
     console.error(error);
   }
 );
 
+// Instantiate a new renderer and set its size
 const renderer = new THREE.WebGLRenderer({ alpha: true });
 renderer.setSize(window.innerWidth, window.innerHeight);
 
-
+// Add the renderer to the DOM
 document.getElementById("container3D").appendChild(renderer.domElement);
 
+// Set initial camera position (further away)
+camera.position.z = 10; // Plus éloigné
 
-camera.position.z = 10; 
-const redLight = new THREE.DirectionalLight(0xAA1B52, 4.5);
+// Add lights to the scene
+const redLight = new THREE.DirectionalLight(0xAA1B52, 2.9);
 scene.add(redLight);
 
 const topLight = new THREE.DirectionalLight(0xffffff, 2);
@@ -57,9 +60,10 @@ topLight.position.set(500, 0, 500);
 topLight.castShadow = true;
 scene.add(topLight);
 
-const ambientLight = new THREE.AmbientLight(0x333333, 6);
+const ambientLight = new THREE.AmbientLight(0x333333, 3);
 scene.add(ambientLight);
 
+// Variable to keep track of rotation speed
 let scrollY = 0;
 let mouseX = 0;
 let smoothScrollY = 0;
@@ -80,19 +84,20 @@ function lerp(start, end, t) {
 function animate() {
     requestAnimationFrame(animate);
 
-    // smooth scrolling
+    // Interpolate the values for smooth scrolling
     smoothScrollY = lerp(smoothScrollY, scrollY, 0.05);
     smoothMouseX = lerp(smoothMouseX, mouseX, 0.05);
 
     if (object) {
-        // rotation
-        object.rotation.y = smoothScrollY * 0.0008; // Rotation
-        object.position.x = smoothMouseX * 0.5; // Position
+        // Apply rotation at the beginning
+        object.rotation.y = smoothScrollY * 0.0008; // Rotation based on scroll
+        object.position.x = smoothMouseX * 0.5; // Position based on mouse movement
     }
 
-    //scroll
-    camera.position.z = Math.max(5, 7 - smoothScrollY * 0.001); 
+    // Adjust the zoom based on scroll (slower zoom)
+    camera.position.z = Math.max(5, 7 - smoothScrollY * 0.001); // S'arrêter à 5 pour ne pas zoomer trop près
 
+    // Render the scene after all transformations
     renderer.render(scene, camera);
 }
 
