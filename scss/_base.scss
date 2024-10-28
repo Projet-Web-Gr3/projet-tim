@@ -21,53 +21,64 @@ body {
         }
     }
 
-    /* HEADER */
-    header {
-        width: 100%;
-        height: 30vh;
-        top: 0;
-        left: 0;
-        position: fixed;
+   /* Conteneur pour le modèle 3D */
+#container3D canvas {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 25%;
+    z-index: -4; /* Assurez-vous que le conteneur est derrière le header */
+    overflow: hidden; /* Empêche le débordement du contenu */
+}
+
+/* HEADER */
+header {
+    width: 100%;
+    height: 30vh;
+    top: 0;
+    left: 0;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: center;
+    background-color: transparent;
+    z-index: 2; /* Assurez-vous que le header est au-dessus du conteneur 3D */
+
+    transition: all 0.5s ease-in-out;
+
+    @media screen and (min-width: $Fullscreen) {
+        top: 0rem;
+    }
+
+    .logo-titre {
         display: flex;
         flex-direction: column;
-        flex: 1 1 auto;
-        flex-wrap: wrap;
-        align-items: stretch;
         justify-content: center;
-        background-color: transparent;
-        z-index: 2;
+        align-items: center;
+        position: relative;
+        top: 19rem;
 
-        transition: all 0.5s ease-in-out;
+        transition: top 0.5s ease-in-out;
 
         @media screen and (min-width: $Fullscreen) {
-            top: 0rem;
+            top: 30rem;
         }
 
-        .logo-titre {
+        h1 {
+            width: 100%;
+            color: white;
             display: flex;
-            flex-direction: column;
             justify-content: center;
             align-items: center;
-            position: relative;
-            top: 19rem;
+            opacity: 1;
+            margin: 0 auto;
+        }
 
-            transition: top 0.5s ease-in-out;
 
-            @media screen and (min-width: $Fullscreen) {
-                top: 30rem;
-            }
-
-            h1 {
-                width: 100%;
-                color:white;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                opacity: 1;
-                margin: 0 auto;
-    
-                transition: opacity 0.5s ease-in-out;
-            }
     
              .logo {
                 width: 100vw;
@@ -112,12 +123,11 @@ body {
     }
     
    
-
     /* MAIN */
     main {
         display: flex;
         flex-direction: column;
-        padding-top: 50rem;  // TEMPORAIRE
+        padding-top: 30rem;  // TEMPORAIRE
         opacity: 0;
         min-height: 100vh;
         overflow-x: hidden;
@@ -126,15 +136,7 @@ body {
             margin-bottom: 1rem;
         }
         // Le container 3D pour le background
-        #container3D canvas {
-            width: 100vw !important;
-            height: 100vh !important;
-            position: absolute;
-            top: 0;
-            left: 25%;
-            z-index: -2;
-            position: fixed;
-          }
+        
 
             /* SECTION(S) */
             section {
@@ -178,10 +180,10 @@ body {
         z-index: 1;
 
         /* Bck transparent */
-        background: rgba(0, 0, 0, 0.19);
+        background: rgba(0, 0, 0, 0.463);
         box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-        backdrop-filter: blur(10px);
-        backdrop-filter: brightness(0.5);
+        backdrop-filter: blur(6.7px);
+        -webkit-backdrop-filter: blur(6.7px);
         border: 1px solid rgba(0, 0, 0, 0.01);
 
         @media screen and (min-width: $Fullscreen) {
