@@ -16,12 +16,19 @@ https://gftnth00.mywhc.ca/tim17/
 [https://cmaisonneuveqcca-my.sharepoint.com/:x:/r/personal/e2035933_cmaisonneuve_qc_ca/_layouts/15/Doc.aspx?sourcedoc=%7B4F80ACEF-4CD1-47BF-8122-9D1EFDF32153%7D&file=Produit%20Backlog.xlsx&action=default&mobileredirect=true]
 
 
-## Objetive pour le sprint 2:
+## Objetive pour le sprint 3:
 1. Intégrer notre thème sur Wordpress et le serveur distant WHC.
-2. Créer les plugins pour le carrousel.
-3. Génerer un base de données avec les cours (Déja donner par les profs).
-4. Implémenter le modèle 3D dans le site
-
+2. Faire les autres pages du sites
+3. Finir le design général du site
+4. Faire les plugins de triages
+5. Faire le systeme de recherches
+6. TOUS les liens doivent fonctionner
+7. Faire les categories des profs en creatif et logique
+8. Faire la version mobile et tablette
+9. Implémenter les images et les projets
+10. Triages des projets
+11. Faire les pixel Art des profs
+    
 
 
 
