@@ -1,5 +1,287 @@
+/* BODY/ REMISE À 0 */
  * {
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
     box-sizing: border-box;
 }
+
+body {
+    width: 100vw;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+
+    // couleur du background selon la règle @Mixin du fichier _variables.scss
+    @include gradient2(var(--couleur-primaire), var(--couleur-secondaire));
+
+    overflow-x: hidden;
+
+        &.lightMd {
+            @include gradient4(var(--couleur1-LightMode), var(--couleur2-LightMode), var(--couleur3-LightMode), var(--couleur4-LightMode));
+        }
+    }
+
+   /* Conteneur pour le modèle 3D */
+#container3D canvas {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 25%;
+    z-index: -4; /* Assurez-vous que le conteneur est derrière le header */
+    overflow: hidden; /* Empêche le débordement du contenu */
+}
+
+/* HEADER */
+header {
+    width: 100%;
+    height: 30vh;
+    top: 0;
+    left: 0;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: center;
+    background-color: transparent;
+    z-index: 2; /* Assurez-vous que le header est au-dessus du conteneur 3D */
+
+    transition: all 0.5s ease-in-out;
+
+    @media screen and (min-width: $Fullscreen) {
+        top: 0rem;
+    }
+
+    .logo-titre {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        top: 19rem;
+
+        transition: top 0.5s ease-in-out;
+
+        @media screen and (min-width: $Fullscreen) {
+            top: 30rem;
+        }
+
+        h1 {
+            width: 100%;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 1;
+            margin: 0 auto;
+        }
+
+
+    
+             .logo {
+                width: 100vw;
+                height: 100%;
+                transform: scale(2);
+    
+                 transition: all 0.5s ease-in-out;
+
+                 @media screen and (min-width: $Fullscreen) {
+                    width: 40%;
+                    height: 30%;
+                }
+             }
+        }
+
+        // Le bouton du light/ darkmode
+        .DL_Md {
+            width: 4.5rem;
+            height: 2rem;
+            border: 5px solid gainsboro;
+            border-radius: 50px;
+            background-color: grey;
+            position: absolute;
+            top: 2rem;
+            cursor: pointer;
+            
+            // Le point dans le bouton
+            .dot {
+                width: 1.5rem;
+                height: 1.5rem;
+                border-radius: 50px;
+                background-color: black;
+                transform: translate(-20px, -1px);
+                transition: transform 0.2s ease-in-out;
+            }
+
+            @media screen and (min-width: $Fullscreen) {
+                top: 1rem;
+                left: 1rem;
+            }
+        }
+    }
+    
+   
+    /* MAIN */
+    main {
+        display: flex;
+        flex-direction: column;
+        padding-top: 30rem;  // TEMPORAIRE
+        opacity: 0;
+        min-height: 100vh;
+        overflow-x: hidden;
+
+        h2 {
+            margin-bottom: 1rem;
+        }
+        // Le container 3D pour le background
+        
+
+            /* SECTION(S) */
+            section {
+                width: 100vw;
+                height: 100vh;                       
+                transition: opacity 0.5s ease-in-out;
+                z-index: -1;
+                padding-left: 2rem;
+                padding-right: 2rem;
+                margin-bottom: 5rem;
+
+                // background-color: grey;
+                color: white;
+
+                // Le texte
+                p {
+                    color: white;
+                    padding-bottom: 2rem;
+                    font-family: "Titillium Web", sans-serif;
+                    margin-left: 2rem;
+                    margin-right: 2rem;
+                    font-size: clamp(1rem, -1.5rem + 8vw, 3rem);
+                }
+            }
+
+            .hidden {
+                opacity: 0;
+            }
+    }
+
+    /* FOOTER */
+    footer {
+        width: 100%;
+        height: 28.5vh;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+        position: relative;
+        opacity: 0;
+        z-index: 1;
+
+        /* Bck transparent */
+        background: rgba(0, 0, 0, 0.463);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(6.7px);
+        -webkit-backdrop-filter: blur(6.7px);
+        border: 1px solid rgba(0, 0, 0, 0.01);
+
+        @media screen and (min-width: $Fullscreen) {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: stretch;
+        }
+
+        .conteneur-map {
+            order: -1;
+            margin: 0;
+            margin-top: 0.5rem;
+            margin-left: 1rem;
+
+            h3 {
+                color: white;
+                order: -2;
+                margin: 0;
+                margin-bottom: 1rem;
+                padding: 0;
+            }
+
+            .map {
+                width: 130px;
+                height: 130px;
+
+                @media screen and (min-width: $Fullscreen) {
+                    width: 500px;
+                    height: 250px;
+                }
+            }
+        }
+
+        .conteneur-texte {
+            width: 10rem;
+            font-size: 0.7rem;
+            margin: 0;
+            margin-top: 4rem;
+            margin-left: 0.5rem;
+            
+            @media screen and (min-width: $Fullscreen) {
+                flex-grow: 1;
+            }
+
+            p {
+                margin: 0;
+                padding: 0;
+                color: white;
+
+                @media screen and (min-width: $Fullscreen) {
+                    font-size: 1rem;
+                }
+            }
+        }
+        
+        .liens {
+            width: 15rem;
+            font-size: 0.7rem;
+            margin-top: 4rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: flex-end;
+            position: absolute;
+            left: 10rem;
+
+            @media screen and (min-width: $Fullscreen) {
+                flex-grow: 1;
+                position: relative;
+                left: -2rem;
+                top: -7rem;
+                font-size: 1rem;
+            }
+
+            a {
+                color: white;
+                text-decoration: none;
+                margin: 0;
+                margin-bottom: 1rem;
+            }
+        }
+
+        .logo {
+            height: 1rem;
+            margin: 0;
+            display: flex;
+            flex-direction: row;
+
+            img {
+                width: 3rem;
+                height: 3rem;
+                padding-left: 0.5rem;
+
+                @media screen and (min-width: $Fullscreen) {
+                    width: 5rem;
+                    height: 5rem;
+                }
+            }
+        }
+    }

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -307,8 +308,651 @@ template {
   display: none;
 }
 
+/*==================
+ ** VARIABLES CSS **
+ ==================*/
+:root {
+  /* Calcul teintes
+  ---------------------------------------------*/
+  --u1: 238;
+  --u2: calc(var(--u1) - 78);
+  --u3: calc(var(--u1) + 90);
+  --u4: calc(var(--u1) - 216);
+  --u5: calc(var(--u1) - 201);
+  --u6: calc(var(--u1) - 186);
+  /* Couleurs de base pour l'arriere plan
+  ---------------------------------------------*/
+  --couleur-primaire: hsl(var(--u1),67.1%,15.5%);
+  --couleur-secondaire: hsl(var(--u2),100%,29.6%);
+  --couleur1-LightMode: hsl(var(--u3), 100%, 33%);
+  --couleur2-LightMode: hsl(var(--u4), 63%, 45%);
+  --couleur3-LightMode: hsl(var(--u5), 76%, 43%);
+  --couleur4-LightMode: hsl(var(--u6), 98%, 41%);
+}
+
+/* MIXIN 
+---------------------------------------------------*/
+/*===================
+ ** Variables Sass **
+====================*/
+/* Tailles d'écrans en variables Sass 
+-----------------------------------------------------*/
+/* BODY/ REMISE À 0 */
 * {
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100%;
+  background: linear-gradient(180deg, var(--couleur-primaire) 0%, var(--couleur-secondaire) 100%);
+  overflow-x: hidden;
+}
+body.lightMd {
+  background: linear-gradient(140deg, var(--couleur1-LightMode) 0%, var(--couleur2-LightMode) 25%, var(--couleur3-LightMode) 50%, var(--couleur4-LightMode) 75%);
+}
+#container3D canvas {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 25%;
+  z-index: -4; /* Assurez-vous que le conteneur est derrière le header */
+  overflow: hidden; /* Empêche le débordement du contenu */
+}
+/* HEADER */
+header {
+  width: 100%;
+  height: 30vh;
+  top: 0;
+  left: 0;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: center;
+  background-color: transparent;
+  z-index: 2;
+  transition: all 0.5s ease-in-out;
+}
+@media screen and (min-width: 1080px) {
+  header {
+    top: 0rem;
+  }
+}
+header .logo-titre {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 19rem;
+  transition: top 0.5s ease-in-out;
+}
+@media screen and (min-width: 1080px) {
+  header .logo-titre {
+    top: 30rem;
+  }
+}
+header .logo-titre h1 {
+  width: 100%;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  margin: 0 auto;
+  transition: opacity 0.5s ease-in-out;
+}
+header .logo-titre .logo {
+  width: 100vw;
+  height: 100%;
+  transform: scale(2);
+  transition: all 0.5s ease-in-out;
+}
+@media screen and (min-width: 1080px) {
+  header .logo-titre .logo {
+    width: 40%;
+    height: 30%;
+  }
+}
+header .DL_Md {
+  width: 4.5rem;
+  height: 2rem;
+  border: 5px solid gainsboro;
+  border-radius: 50px;
+  background-color: grey;
+  position: absolute;
+  top: 2rem;
+  cursor: pointer;
+}
+header .DL_Md .dot {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50px;
+  background-color: black;
+  transform: translate(-20px, -1px);
+  transition: transform 0.2s ease-in-out;
+}
+@media screen and (min-width: 1080px) {
+  header .DL_Md {
+    top: 1rem;
+    left: 1rem;
+  }
+}
+
+
+
+/* MAIN */
+main {
+  display: flex;
+  flex-direction: column;
+  padding-top: 30rem;
+  opacity: 0;
+  overflow-x: hidden;
+  /* SECTION(S) */
+}
+main h2 {
+  margin-bottom: 1rem;
+}
+main section {
+  width: 100vw;
+  height: 100vh;
+  transition: opacity 0.5s ease-in-out;
+  z-index: -1;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  margin-bottom: 5rem;
+  color: white;
+}
+main section p {
+  color: white;
+  padding-bottom: 2rem;
+  font-family: "Titillium Web", sans-serif;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  font-size: clamp(1rem, -1.5rem + 8vw, 3rem);
+}
+main .hidden {
+  opacity: 0;
+}
+
+/* FOOTER */
+footer {
+  width: 100%;
+  height: 28.5vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  position: relative;
+  opacity: 0;
+  z-index: 1;
+  /* Bck transparent */
+  background: rgba(0, 0, 0, 0.489);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(6.7px);
+        -webkit-backdrop-filter: blur(6.7px);
+        border: 1px solid rgba(0, 0, 0, 0.01);
+}
+@media screen and (min-width: 1080px) {
+  footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+  }
+}
+footer .conteneur-map {
+  order: -1;
+  margin: 0;
+  margin-top: 0.5rem;
+  margin-left: 1rem;
+}
+footer .conteneur-map h3 {
+  color: white;
+  order: -2;
+  margin: 0;
+  margin-bottom: 1rem;
+  padding: 0;
+}
+footer .conteneur-map .map {
+  width: 130px;
+  height: 130px;
+}
+@media screen and (min-width: 1080px) {
+  footer .conteneur-map .map {
+    width: 500px;
+    height: 250px;
+  }
+}
+footer .conteneur-texte {
+  width: 10rem;
+  font-size: 0.7rem;
+  margin: 0;
+  margin-top: 4rem;
+  margin-left: 0.5rem;
+}
+@media screen and (min-width: 1080px) {
+  footer .conteneur-texte {
+    flex-grow: 1;
+  }
+}
+footer .conteneur-texte p {
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+@media screen and (min-width: 1080px) {
+  footer .conteneur-texte p {
+    font-size: 1rem;
+  }
+}
+footer .liens {
+  width: 15rem;
+  font-size: 0.7rem;
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  position: absolute;
+  left: 10rem;
+}
+@media screen and (min-width: 1080px) {
+  footer .liens {
+    flex-grow: 1;
+    position: relative;
+    left: -2rem;
+    top: -7rem;
+    font-size: 1rem;
+  }
+}
+footer .liens a {
+  color: white;
+  text-decoration: none;
+  margin: 0;
+  margin-bottom: 1rem;
+}
+footer .logo {
+  height: 1rem;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+}
+footer .logo img {
+  width: 3rem;
+  height: 3rem;
+  padding-left: 0.5rem;
+}
+@media screen and (min-width: 1080px) {
+  footer .logo img {
+    width: 5rem;
+    height: 5rem;
+  }
+}
+
+/* POLICES */
+@font-face {
+  font-family: "pixellari";
+  src: url("../fonts/Pixellari.ttf");
+}
+@font-face {
+  font-family: "Titillium Web";
+  src: url("../fonts/TitilliumWeb-Regular.ttf");
+}
+/* TITRES */
+h1 {
+  font-family: "pixellari";
+  font-size: clamp(2rem, 0.235rem + 4.412vw, 5rem);
+  filter: url(#crispify);
+  text-shadow: 0.3vw 0.3vw 0px rgb(255, 151, 194), 0.6vw 0.6vw 0px rgba(167, 10, 75, 0.662745098), -0.3vw -0.3vw 0px rgba(0, 188, 135, 0.6980392157), -10px 15px 15px rgba(8, 9, 42, 0.8470588235);
+}
+
+h2 {
+  font-family: "Titillium Web";
+  font-size: clamp(1.5rem, 0.235rem + 4.412vw, 3rem);
+}
+
+h3 {
+  font-family: "Titillium Web";
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.19);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(0, 0, 0, 0.01);
+  color: #fff;
+  z-index: 1000;
+  transition: opacity 0.5s ease-in-out, left 0.3s ease;
+}
+@media screen and (min-width: 1080px) {
+  nav {
+    width: 100%;
+    height: 30%;
+    left: 0;
+    top: 0;
+    margin-top: 1rem;
+    background: transparent;
+    box-shadow: none;
+    backdrop-filter: none;
+  }
+}
+nav ul {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 50px;
+}
+@media screen and (min-width: 1080px) {
+  nav ul {
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+}
+
+li {
+  list-style-type: none;
+  margin: 0 1rem;
+  position: relative;
+}
+@media screen and (min-width: 1080px) {
+  li ::before, li ::after {
+    content: "¬";
+    font-size: 70px;
+    position: absolute;
+    width: 2px;
+    height: 50%;
+    transition: all 0.3s ease;
+  }
+  li ::before {
+    transform: rotate(180deg);
+    top: 65px;
+    left: 10px;
+  }
+  li ::after {
+    top: -40px;
+    right: 10px;
+  }
+  li:hover ::before {
+    left: 0px;
+  }
+  li:hover ::after {
+    right: 0px;
+  }
+}
+li:nth-child(1) {
+  margin-top: 4rem;
+}
+@media screen and (min-width: 1080px) {
+  li:nth-child(1) {
+    margin-top: 0;
+  }
+}
+li a {
+  color: white;
+  text-decoration: none;
+  font-size: 2rem;
+}
+
+.nav-onscreen {
+  left: 0;
+}
+
+.burger-menu {
+  width: 3rem;
+  height: 3rem;
+  top: 1.5rem;
+  right: 0.7rem;
+  position: absolute;
+  background-color: hsla(0, 0%, 100%, 0.45);
+  border-radius: 20px;
+  justify-self: flex-end;
+  align-self: flex-end;
+  z-index: 1000;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: translate 0.5s ease-in-out;
+}
+@media screen and (min-width: 1080px) {
+  .burger-menu {
+    width: 4rem;
+    height: 4rem;
+    top: 1rem;
+    right: 1rem;
+    display: none;
+  }
+}
+.burger-menu .ligne {
+  width: 50%;
+  height: 0.3rem;
+  background: #000;
+  border-radius: 50px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  transform-origin: center;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+.burger-menu .ligne:nth-child(1) {
+  transform: translate(-50%, -1rem);
+}
+.burger-menu .ligne:nth-child(3) {
+  transform: translate(-50%, -0.25rem);
+}
+.burger-menu div:nth-child(2) {
+  margin: 0.5rem 0;
+}
+.burger-menu.active .ligne:nth-child(1) {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.burger-menu.active .ligne:nth-child(2) {
+  opacity: 0;
+}
+.burger-menu.active .ligne:nth-child(3) {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+@media screen and (min-width: 400px) {
+  .burger-menu.active .ligne:nth-child(1) {
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+  .burger-menu.active .ligne:nth-child(2) {
+    opacity: 0;
+  }
+  .burger-menu.active .ligne:nth-child(3) {
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+}
+
+/* Le Carousel */
+.carousel {
+  width: 100%;
+  height: 100vh;
+  perspective: 1000px;
+  transform-origin: 50% 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 7rem;
+  z-index: 1000;
+}
+.carousel h2 {
+  margin: 0 0 0 0;
+  align-self: flex-start;
+}
+.carousel p {
+  padding-bottom: 0;
+}
+
+/* Conteneur des cartes */
+#spinner {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform-style: preserve-3d;
+}
+@media screen and (min-width: 1080px) {
+  #spinner {
+    transform: scale(1.5);
+  }
+}
+
+/* Conteneur des boutons */
+#boutons {
+  position: absolute;
+  top: 67%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+}
+#boutons .prev {
+  position: relative;
+  left: -220%;
+  z-index: 5;
+}
+#boutons .next {
+  position: relative;
+  left: 220%;
+  z-index: 5;
+}
+
+/* Les cartes */
+.flip-card {
+  position: absolute;
+  width: 190px;
+  height: 120px;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: rotateY(45deg);
+  transition: transform 1s;
+}
+.flip-card h1 {
+  font-size: 30px;
+  text-shadow: 0.3vw 0.3vw 0px rgb(255, 151, 194), 0.6vw 0.6vw 0px rgba(167, 10, 75, 0.662745098), -0.3vw -0.3vw 0px rgba(0, 188, 135, 0.6980392157), -20px 15px 15px rgba(8, 9, 42, 0.8470588235);
+}
+@media screen and (min-width: 1080px) {
+  .flip-card h1 {
+    text-shadow: 0.1vw 0vw 0px rgb(255, 151, 194), 0.1vw 0.1vw 0px rgba(167, 10, 75, 0.662745098), -0.05vw -0.1vw 0px rgba(0, 188, 135, 0.6980392157), -5px 15px 15px rgba(8, 9, 42, 0.8470588235);
+  }
+}
+.flip-card p {
+  width: 100%;
+  font-size: 12px;
+  margin: 0;
+}
+
+/* Positionnement de l'avant et arrière des cartes */
+.inner-flip {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+
+/* Hover sur la carte */
+.flip-card:hover .inner-flip {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+/* Le devant et l'arrière des cartes */
+.front-flip, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  font-size: 12px;
+  transition: transform 1s;
+}
+
+/* Le dos de la carte */
+.flip-card-back {
+  width: 150px;
+  height: 150px;
+  background-color: skyblue;
+  transform: rotateY(180deg) translateX(-20px);
+}
+
+/* Le devant est visible dans l'état normal */
+.front-flip {
+  backface-visibility: visible;
+}
+
+/* L'arrière est invisible dans l'état normal (caché derrière le devant) */
+.flip-card-back {
+  backface-visibility: hidden;
+}
+
+/* Pour debugger (voir une des images tourner pour s'assurer que la rotation soit bonne) */
+.carousel .no1 .image:nth-child(1) {
+  border: 3px solid blue;
+}
+
+/* 
+    Calcul pour obtenir la moitié du rectangle en face de l'usager, le milieu est l'endroit où l'image s'arrête après un click :
+
+    1- rotation Y = 360deg / 8 images --> [45deg] (angle d'un triangle de l'octogone) 
+    2- translate Z = 45deg / 2 (séparation d'un triangle en 2 pour obtenir l'angle des 2 triangles rectangles obtenus)--> [22.5deg]
+    3- width = 210px (largeur d'un panneau de l'octogone) / 2 --> [105px] 
+    4- tan(22.5deg) = 105px/ r ("rayon" qui part du centre de l'octogone et se rend au panneau faisant face à l'utilisateur) -->
+       r = 105px/22.5tan = 253px
+
+    Références: https://www.sitepoint.com/building-3d-rotating-carousel-css-javascript/ 
+                https://3dtransforms.desandro.com/carousel
+*/
+.flip-card.no1 {
+  transform: rotateY(0deg) translateZ(253px);
+}
+
+.flip-card.no2 {
+  transform: rotateY(45deg) translateZ(253px);
+}
+
+.flip-card.no3 {
+  transform: rotateY(90deg) translateZ(253px);
+}
+
+.flip-card.no4 {
+  transform: rotateY(135deg) translateZ(253px);
+}
+
+.flip-card.no5 {
+  transform: rotateY(180deg) translateZ(253px);
+}
+
+.flip-card.no6 {
+  transform: rotateY(225deg) translateZ(253px);
+}
+
+.flip-card.no7 {
+  transform: rotateY(270deg) translateZ(253px);
+}
+
+.flip-card.no8 {
+  transform: rotateY(315deg) translateZ(253px);
 }

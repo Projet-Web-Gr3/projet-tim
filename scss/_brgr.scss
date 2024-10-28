@@ -1,0 +1,89 @@
+        // Menu Burger
+        .burger-menu { 
+            width: 3rem;
+            height: 3rem;
+            top: 1.5rem;
+            right: 0.7rem;
+            position: absolute;
+            background-color: hsla(0, 0%, 100%, 0.45); // À voir
+            border-radius: 20px;
+            justify-self: flex-end;
+            align-self: flex-end;
+            z-index: 1000;
+            cursor: pointer;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            transition: translate 0.5s ease-in-out;
+
+            @media screen and (min-width: $Fullscreen) {
+                width: 4rem;
+                height: 4rem;
+                top: 1rem;
+                right: 1rem;
+                display: none;
+            }
+
+            // Les lignes de l'icône du menu burger
+            .ligne {
+                width: 50%;
+                height: 0.3rem;
+                background: #000;
+                border-radius: 50px;
+
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translateX(-50%);
+                transform-origin: center;
+                transition: transform 0.3s ease, opacity 0.3s ease;
+
+                &:nth-child(1) {
+                    transform: translate(-50%, -1rem);
+                }
+            
+                &:nth-child(3) {
+                    transform: translate(-50%, -0.25rem);
+                }
+            }
+
+            // Espacement au milieu des lignes
+            div {
+                &:nth-child(2) {
+                    margin: 0.5rem 0;
+                }
+            }
+
+            // État actif de l'icône du menu burger
+            &.active {
+                .ligne:nth-child(1) {
+                    transform: translate(-50%, -50%) rotate(45deg);
+                }
+            
+                .ligne:nth-child(2) {
+                    opacity: 0;
+                }
+            
+                .ligne:nth-child(3) {
+                    transform: translate(-50%, -50%) rotate(-45deg);
+                }
+            
+                @media screen and (min-width: $Small) {
+                    .ligne:nth-child(1) {
+                        transform: translate(-50%, -50%) rotate(45deg);
+                    }
+            
+                    .ligne:nth-child(2) {
+                        opacity: 0;
+                    }
+            
+                    .ligne:nth-child(3) {
+                        transform: translate(-50%, -50%) rotate(-45deg);
+                    }
+                }
+            }
+        }
+
