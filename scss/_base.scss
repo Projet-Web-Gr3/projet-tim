@@ -75,7 +75,7 @@ header {
             justify-content: center;
             align-items: center;
             opacity: 1;
-            margin: 0 auto;
+            margin: 0;
         }
 
 
@@ -128,7 +128,7 @@ header {
         display: flex;
         flex-direction: column;
         padding-top: 30rem;  // TEMPORAIRE
-        opacity: 0;
+        opacity: 1;
         min-height: 100vh;
         overflow-x: hidden;
 
@@ -163,7 +163,7 @@ header {
             }
 
             .hidden {
-                opacity: 0;
+                opacity: 1;
             }
     }
 
@@ -176,7 +176,7 @@ header {
         justify-content: flex-start;
         align-items: flex-start;
         position: relative;
-        opacity: 0;
+        opacity: 1;
         z-index: 1;
 
         /* Bck transparent */

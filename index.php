@@ -1,7 +1,13 @@
 <?php get_header() ?>
-        <!-- Contenu du site -->
-        <main>
-
+<div id="main-content">
+        <div id="container3D"></div>
+    <!-- Contenu du site -->
+        <main>   
+            <section class="accueil_effacer">
+                <h1>BIENVENUE AU</h1>
+                <img src="/4w4_joules/wp-content/themes/projet-tim/images/LogoTIMHiRes.png" alt="">
+                <h1>TECNIQUE D'INTÉGRATION MULTIMÉDIA</h1>
+            </section>
             <!-- Texte d'intro TIM -->
             <section class="intro effacer">
                 <h2>TIM... C'est quoi?</h2>

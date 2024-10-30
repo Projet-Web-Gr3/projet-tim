@@ -30,11 +30,12 @@
             </div>
         </footer>
     </div>
+    <!-- JS -->
+    <script src="/4w4_joules/wp-content/themes/projet-tim/js/carousel.js"></script>
+    <script src="/4w4_joules/wp-content/themes/projet-tim/js/index.js"></script>
+    <script type="module" src="/4w4_joules/wp-content/themes/projet-tim/js/model3d.js"></script>
+
 </body>
 
-<!-- JS -->
-<script type="module" src="js/index.js"></script>
-<script type="module" src="js/carousel.js"></script>
-<script type="module" src="js/model3d.js"></script>
 
 </html>
