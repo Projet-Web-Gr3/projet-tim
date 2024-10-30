@@ -99,7 +99,7 @@ card.addEventListener('mousemove', (e) => {
 
 // On remet la carte à sa position initiale quand la souris quitte la carte
 card.addEventListener('mouseleave', () => {
-    card.style.transform = 'rotateX(0deg) rotateY(0deg) translateZ(253px) scale(1.2)';
+    card.style.transform = 'rotateX(0deg) rotateY(0deg) translateZ(253px) scale(1)';
 });
 
 

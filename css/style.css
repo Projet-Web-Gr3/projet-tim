@@ -353,7 +353,7 @@ body {
   overflow-x: hidden;
 }
 body.lightMd {
-  background: linear-gradient(140deg, var(--couleur1-LightMode) 0%, var(--couleur2-LightMode) 25%, var(--couleur3-LightMode) 50%, var(--couleur4-LightMode) 75%);
+  background: linear-gradient(180deg, var(--couleur1-LightMode) 0%, var(--couleur4-LightMode) 100%);
 }
 
 /* Conteneur pour le modèle 3D */
@@ -408,6 +408,7 @@ header .logo-titre .logo {
   height: 60vw;
   margin-bottom: 3rem;
   transition: style 5s ease-in-out;
+  filter: drop-shadow(0.5vw 0.5vw 2vw rgba(8, 9, 42, 0.4901960784));
 }
 @media screen and (min-width: 1080px) {
   header .logo-titre .logo {
@@ -418,19 +419,23 @@ header .logo-titre .logo {
 header .DL_Md {
   width: 4.5rem;
   height: 2rem;
-  border: 5px solid gainsboro;
   border-radius: 50px;
-  background-color: grey;
+  background-color: rgba(0, 0, 0, 0.5);
+  filter: drop-shadow(0 0 0.5rem white);
+  backdrop-filter: blur(50px);
   position: absolute;
   top: 2rem;
   cursor: pointer;
+  z-index: 1001;
+  display: flex;
+  align-items: center;
 }
 header .DL_Md .dot {
   width: 1.5rem;
   height: 1.5rem;
   border-radius: 50px;
-  background-color: black;
-  transform: translate(-20px, -1px);
+  background-color: rgb(255, 255, 255);
+  transform: translate(0.25rem, 0);
   transition: transform 0.2s ease-in-out;
 }
 @media screen and (min-width: 1080px) {
@@ -487,11 +492,11 @@ footer {
   opacity: 0;
   z-index: 1;
   /* Bck transparent */
-  background: rgba(0, 0, 0, 0.463);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(6.7px);
-  -webkit-backdrop-filter: blur(6.7px);
-  border: 1px solid rgba(0, 0, 0, 0.01);
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(50px);
+  filter: drop-shadow(0 0 1rem rgba(255, 255, 255, 0.7));
+  -webkit-backdrop-filter: blur(50px);
+  padding: 2rem;
 }
 @media screen and (min-width: 1080px) {
   footer {
@@ -617,6 +622,14 @@ h3 {
   font-family: "Titillium Web";
 }
 
+a {
+  font-family: "Titillium Web";
+}
+
+p {
+  font-family: "Titillium Web";
+}
+
 nav {
   position: fixed;
   top: 0;
@@ -625,7 +638,7 @@ nav {
   height: 100%;
   background: rgba(0, 0, 0, 0.19);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(30px);
   -webkit-backdrop-filter: blur(10px);
   border: 1px solid rgba(0, 0, 0, 0.01);
   color: #fff;
@@ -788,7 +801,7 @@ li a {
   align-items: center;
   flex-direction: column;
   padding-bottom: 7rem;
-  z-index: 1000;
+  z-index: 1;
 }
 .carousel h2 {
   margin: 0 0 0 0;

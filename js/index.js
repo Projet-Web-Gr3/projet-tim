@@ -25,7 +25,7 @@ window.addEventListener('scroll', function() {
         if (mediaQuery.matches) 
         {
             // Le logo
-            logo.style.transform = 'translate(-50vh, 0)';
+            logo.style.transform = 'translate(-100vh, 0)';
 
 
             // Le titre
@@ -50,7 +50,7 @@ window.addEventListener('scroll', function() {
         else 
         {
             // Le logo
-            logo.style.transform = 'translate(-50vh, 0)';
+            logo.style.transform = 'translate(-100vh, 0)';
 
 
             // Le titre
@@ -148,11 +148,11 @@ btn_Bck.addEventListener('click', function() {
     if (bod.classList.contains('lightMd'))
     {
         bod.classList.remove('lightMd');
-        point.style.transform = 'translate(-20px, 0)';
+        point.style.transform = 'translate(0.25rem, 0)';
     }
     else
     {
         bod.classList.add('lightMd');
-        point.style.transform = 'translate(20px, 0)';
+        point.style.transform = 'translate(2.7rem, 0)';
     }
 });
