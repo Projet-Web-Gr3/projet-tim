@@ -25,10 +25,8 @@ window.addEventListener('scroll', function() {
         if (mediaQuery.matches) 
         {
             // Le logo
-            logo.style.position = 'static';
-            logo.style.transform = 'translate(-380%, 0%)';
-            logo.style.top = '1rem';
-            logo.style.left = '1rem';
+            logo.style.transform = 'translate(-50vh, 0)';
+
 
             // Le titre
             title.style.opacity = '0';
@@ -52,13 +50,12 @@ window.addEventListener('scroll', function() {
         else 
         {
             // Le logo
-            logo.style.position = 'static';
-            logo.style.transform = 'translate(-30%, -130%) scale(0.8)';
-            logo.style.top = '1rem';
-            logo.style.left = '1rem';
+            logo.style.transform = 'translate(-50vh, 0)';
+
 
             // Le titre
             title.style.opacity = '0';
+
 
             // La navigation
             nav.style.opacity = '1';

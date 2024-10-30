@@ -33,7 +33,7 @@ main {
  */
 h1 {
   font-size: 2em;
-  margin: 0.67em 0;
+  margin: 0;
 }
 
 /* Grouping content
@@ -339,7 +339,7 @@ template {
 -----------------------------------------------------*/
 /* BODY/ REMISE À 0 */
 * {
-  margin: 0 auto;
+  margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
@@ -362,7 +362,7 @@ body.lightMd {
   height: 100vh;
   position: fixed;
   top: 0;
-  left: 25%;
+  left: 30%;
   z-index: -4; /* Assurez-vous que le conteneur est derrière le header */
   overflow: hidden; /* Empêche le débordement du contenu */
 }
@@ -370,7 +370,6 @@ body.lightMd {
 /* HEADER */
 header {
   width: 100%;
-  height: 30vh;
   top: 0;
   left: 0;
   position: fixed;
@@ -392,36 +391,28 @@ header {
 header .logo-titre {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-between;
   position: relative;
-  top: 19rem;
-  transition: top 0.5s ease-in-out;
-}
-@media screen and (min-width: 1080px) {
-  header .logo-titre {
-    top: 30rem;
-  }
+  height: 10vh;
+  top: 39vh;
+  padding-left: 15rem;
 }
 header .logo-titre h1 {
   width: 100%;
   color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   opacity: 1;
-  margin: 0 auto;
+  transition: style 5s ease-in-out;
 }
 header .logo-titre .logo {
-  width: 100vw;
-  height: 100%;
-  transform: scale(2);
-  transition: all 0.5s ease-in-out;
+  width: 60vw;
+  height: 60vw;
+  margin-bottom: 3rem;
+  transition: style 5s ease-in-out;
 }
 @media screen and (min-width: 1080px) {
   header .logo-titre .logo {
-    width: 40%;
-    height: 30%;
+    width: 16vw;
+    height: 16vw;
   }
 }
 header .DL_Md {
@@ -611,9 +602,10 @@ footer .logo img {
 /* TITRES */
 h1 {
   font-family: "pixellari";
-  font-size: clamp(2rem, 0.235rem + 4.412vw, 5rem);
+  font-size: 4vw;
   filter: url(#crispify);
-  text-shadow: 0.2rem 0.2rem 0px rgb(255, 151, 194), 0.4rem 0.4rem 0px rgba(167, 10, 75, 0.662745098), -0.2rem -0.2rem 0px rgba(0, 188, 135, 0.6980392157), -0.5rem 0.5rem 2rem rgba(8, 9, 42, 0.8470588235);
+  text-shadow: 0.15vw 0.15vw 0px rgb(255, 151, 194), 0.3vw 0.3vw 0px rgba(167, 10, 75, 0.662745098), -0.15vw -0.15vw 0px rgba(0, 188, 135, 0.6980392157), -0.5vw 0.5vw 2vw rgba(8, 9, 42, 0.8470588235);
+  user-select: none;
 }
 
 h2 {
@@ -643,7 +635,7 @@ nav {
 @media screen and (min-width: 1080px) {
   nav {
     width: 100%;
-    height: 30%;
+    height: 5%;
     left: 0;
     top: 0;
     margin-top: 1rem;

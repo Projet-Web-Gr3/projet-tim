@@ -12,10 +12,11 @@
 /* TITRES */
 h1 {
     font-family: 'pixellari';
-    font-size: clamp(2rem, 0.235rem + 4.412vw, 5rem); // À TRAVAILLER wooooo
+    font-size: 4vw; // À TRAVAILLER
     filter: url(#crispify);
-    text-shadow: 0.2rem 0.2rem 0px rgb(255, 151, 194),0.4rem 0.4rem 0px #a70a4ba9, 
-    -0.2rem -0.2rem 0px #00bc87b2, -0.5rem 0.5rem 2rem #08092ad8;
+    text-shadow: 0.15vw 0.15vw 0px rgb(255, 151, 194),0.3vw 0.3vw 0px #a70a4ba9, 
+    -0.15vw -0.15vw 0px #00bc87b2, -0.5vw 0.5vw 2vw #08092ad8;
+    user-select: none;
 }
 
 h2 {
