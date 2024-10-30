@@ -73,7 +73,8 @@ a {
 abbr[title] {
   border-bottom: none; /* 1 */
   text-decoration: underline; /* 2 */
-  text-decoration: underline dotted; /* 2 */
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted; /* 2 */
 }
 
 /**
@@ -649,7 +650,8 @@ nav {
     margin-top: 1rem;
     background: transparent;
     box-shadow: none;
-    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+            backdrop-filter: none;
   }
 }
 nav ul {
@@ -958,4 +960,4 @@ li a {
 
 .flip-card.no8 {
   transform: rotateY(315deg) translateZ(253px);
-}
+}/*# sourceMappingURL=style.css.map */
