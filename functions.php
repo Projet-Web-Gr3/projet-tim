@@ -5,6 +5,8 @@
 
     add_theme_support('post-thumbnails');
 
+    add_theme_support('image-size');
+
     $defaults = array(
         'width'                  => 0,
         'height'                 => 0,

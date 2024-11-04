@@ -1,6 +1,6 @@
 /* BODY/ REMISE À 0 */
  * {
-    margin: 0 auto;
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
@@ -30,104 +30,12 @@ body {
     left: 25%;
     z-index: -4; /* Assurez-vous que le conteneur est derrière le header */
     overflow: hidden; /* Empêche le débordement du contenu */
-}
-
-/* HEADER */
-header {
-    width: 100%;
-    height: 30vh;
-    top: 0;
-    left: 0;
-    position: fixed;
-    display: flex;
-    flex-direction: column;
-    flex: 1 1 auto;
-    flex-wrap: wrap;
-    align-items: stretch;
-    justify-content: center;
-    background-color: transparent;
-    z-index: 2; /* Assurez-vous que le header est au-dessus du conteneur 3D */
-
-    transition: all 0.5s ease-in-out;
-
-    @media screen and (min-width: $Fullscreen) {
-        top: 0rem;
-    }
-
-    .logo-titre {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        position: relative;
-        top: 19rem;
-
-        transition: top 0.5s ease-in-out;
-
-        @media screen and (min-width: $Fullscreen) {
-            top: 30rem;
-        }
-
-        h1 {
-            width: 100%;
-            color: white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            opacity: 1;
-            margin: 0;
-        }
-
-
-    
-             .logo {
-                width: 100vw;
-                height: 100%;
-                transform: scale(2);
-    
-                 transition: all 0.5s ease-in-out;
-
-                 @media screen and (min-width: $Fullscreen) {
-                    width: 40%;
-                    height: 30%;
-                }
-             }
-        }
-
-        // Le bouton du light/ darkmode
-        .DL_Md {
-            width: 4.5rem;
-            height: 2rem;
-            border: 5px solid gainsboro;
-            border-radius: 50px;
-            background-color: grey;
-            position: absolute;
-            top: 2rem;
-            cursor: pointer;
-            
-            // Le point dans le bouton
-            .dot {
-                width: 1.5rem;
-                height: 1.5rem;
-                border-radius: 50px;
-                background-color: black;
-                transform: translate(-20px, -1px);
-                transition: transform 0.2s ease-in-out;
-            }
-
-            @media screen and (min-width: $Fullscreen) {
-                top: 1rem;
-                left: 1rem;
-            }
-        }
-    }
-    
+}    
    
     /* MAIN */
     main {
         display: flex;
         flex-direction: column;
-        padding-top: 30rem;  // TEMPORAIRE
         opacity: 1;
         min-height: 100vh;
         overflow-x: hidden;
@@ -140,15 +48,14 @@ header {
 
             /* SECTION(S) */
             section {
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
                 width: 100vw;
-                height: 100vh;                       
+                height: 90vh;                       
                 transition: opacity 0.5s ease-in-out;
                 z-index: -1;
-                padding-left: 2rem;
-                padding-right: 2rem;
-                margin-bottom: 5rem;
-
-                // background-color: grey;
+                padding: 5rem 7rem;
                 color: white;
 
                 // Le texte
@@ -158,12 +65,29 @@ header {
                     font-family: "Titillium Web", sans-serif;
                     margin-left: 2rem;
                     margin-right: 2rem;
-                    font-size: clamp(1rem, -1.5rem + 8vw, 3rem);
+
+                    @media screen and (min-width: $Fullscreen) {
+                        font-size: 1.5vw;
+                    }
                 }
             }
 
             .hidden {
                 opacity: 1;
+            }
+
+            .accueil_effacer{
+              
+
+
+                h1{
+                    margin-left: 7%;
+                }
+
+                .logoGrand{
+                    width: 44%;
+                    height: auto;
+                }
             }
     }
 

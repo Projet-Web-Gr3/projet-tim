@@ -1,6 +1,6 @@
 <?php
 /**
- * Template name: Cours
+ * Template name: Profs
  *
  */
 ?>
@@ -8,8 +8,8 @@
 <?php
 // Define your custom query arguments
 $args = array(
-    'category_name' => 'Cours', // Replace 'cours' with your actual category slug
-    'posts_per_page' => 20, // Adjust the number of posts displayed
+    'category_name' => 'Profs', // Replace 'cours' with your actual category slug
+    'posts_per_page' => 15, // Adjust the number of posts displayed
 );
 
 // Create a new query

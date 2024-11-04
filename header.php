@@ -17,9 +17,9 @@
 
 <body>
 <header class="menu__header">
-<?= get_custom_logo(); ?>
-                <?php wp_nav_menu(array(
-                    "menu" => "principal",
-                    'container' => 'nav'
-                )); ?>
+    <?= get_custom_logo(); ?>
+                    <?php wp_nav_menu(array(
+                        "menu" => "principal",
+                        'container' => 'nav'
+                    )); ?>
 </header>

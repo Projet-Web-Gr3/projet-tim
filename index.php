@@ -5,8 +5,8 @@
         <main>   
             <section class="accueil_effacer">
                 <h1>BIENVENUE AU</h1>
-                <img src="/4w4_joules/wp-content/themes/projet-tim/images/LogoTIMHiRes.png" alt="">
-                <h1>TECNIQUE D'INTÉGRATION MULTIMÉDIA</h1>
+                <img src="/4w4_joules/wp-content/themes/projet-tim/images/LogoTIMHiRes.png" alt="" class="logoGrand">
+                <h1>TECHNIQUE D'INTÉGRATION MULTIMÉDIA</h1>
             </section>
             <!-- Texte d'intro TIM -->
             <section class="intro effacer">

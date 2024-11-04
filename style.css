@@ -30,7 +30,7 @@
 -----------------------------------------------------*/
 /* BODY/ REMISE À 0 */
 * {
-  margin: 0 auto;
+  margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
@@ -58,93 +58,10 @@ body.lightMd {
   overflow: hidden; /* Empêche le débordement du contenu */
 }
 
-/* HEADER */
-header {
-  width: 100%;
-  height: 30vh;
-  top: 0;
-  left: 0;
-  position: fixed;
-  display: flex;
-  flex-direction: column;
-  flex: 1 1 auto;
-  flex-wrap: wrap;
-  align-items: stretch;
-  justify-content: center;
-  background-color: transparent;
-  z-index: 2; /* Assurez-vous que le header est au-dessus du conteneur 3D */
-  transition: all 0.5s ease-in-out;
-}
-@media screen and (min-width: 1080px) {
-  header {
-    top: 0rem;
-  }
-}
-header .logo-titre {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  top: 19rem;
-  transition: top 0.5s ease-in-out;
-}
-@media screen and (min-width: 1080px) {
-  header .logo-titre {
-    top: 30rem;
-  }
-}
-header .logo-titre h1 {
-  width: 100%;
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  opacity: 1;
-  margin: 0;
-}
-header .logo-titre .logo {
-  width: 100vw;
-  height: 100%;
-  transform: scale(2);
-  transition: all 0.5s ease-in-out;
-}
-@media screen and (min-width: 1080px) {
-  header .logo-titre .logo {
-    width: 40%;
-    height: 30%;
-  }
-}
-header .DL_Md {
-  width: 4.5rem;
-  height: 2rem;
-  border: 5px solid gainsboro;
-  border-radius: 50px;
-  background-color: grey;
-  position: absolute;
-  top: 2rem;
-  cursor: pointer;
-}
-header .DL_Md .dot {
-  width: 1.5rem;
-  height: 1.5rem;
-  border-radius: 50px;
-  background-color: black;
-  transform: translate(-20px, -1px);
-  transition: transform 0.2s ease-in-out;
-}
-@media screen and (min-width: 1080px) {
-  header .DL_Md {
-    top: 1rem;
-    left: 1rem;
-  }
-}
-
 /* MAIN */
 main {
   display: flex;
   flex-direction: column;
-  padding-top: 30rem;
   opacity: 1;
   min-height: 100vh;
   overflow-x: hidden;
@@ -154,13 +71,14 @@ main h2 {
   margin-bottom: 1rem;
 }
 main section {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
   width: 100vw;
-  height: 100vh;
+  height: 90vh;
   transition: opacity 0.5s ease-in-out;
   z-index: -1;
-  padding-left: 2rem;
-  padding-right: 2rem;
-  margin-bottom: 5rem;
+  padding: 5rem 7rem;
   color: white;
 }
 main section p {
@@ -169,10 +87,21 @@ main section p {
   font-family: "Titillium Web", sans-serif;
   margin-left: 2rem;
   margin-right: 2rem;
-  font-size: clamp(1rem, -1.5rem + 8vw, 3rem);
+}
+@media screen and (min-width: 1080px) {
+  main section p {
+    font-size: 1.5vw;
+  }
 }
 main .hidden {
   opacity: 1;
+}
+main .accueil_effacer h1 {
+  margin-left: 7%;
+}
+main .accueil_effacer .logoGrand {
+  width: 44%;
+  height: auto;
 }
 
 /* FOOTER */
@@ -327,28 +256,60 @@ p {
   font-family: "Titillium Web";
 }
 
+/* HEADER */
+header {
+  background-color: transparent;
+  z-index: 2; /* Assurez-vous que le header est au-dessus du conteneur 3D */
+  display: flex;
+  transition: all 0.5s ease-in-out;
+}
+@media screen and (min-width: 1080px) {
+  header {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+}
+
+.DL_Md {
+  width: 4.5rem;
+  height: 2rem;
+  border: 5px solid gainsboro;
+  border-radius: 50px;
+  background-color: grey;
+  position: absolute;
+  top: 2rem;
+  cursor: pointer;
+}
+.DL_Md .dot {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50px;
+  background-color: black;
+  transform: translate(-20px, -1px);
+  transition: transform 0.2s ease-in-out;
+}
+@media screen and (min-width: 1080px) {
+  .DL_Md {
+    top: 1rem;
+    left: 1rem;
+  }
+}
+
 nav {
-  position: fixed;
-  top: 0;
-  left: -100%;
-  width: 50%;
-  height: 100%;
   background: rgba(0, 0, 0, 0.19);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border: 1px solid rgba(0, 0, 0, 0.01);
   color: #fff;
-  z-index: 1000;
+  margin: 0;
+  z-index: 2;
   transition: opacity 0.5s ease-in-out, left 0.3s ease;
 }
 @media screen and (min-width: 1080px) {
   nav {
-    width: 100%;
-    height: 30%;
-    left: 0;
-    top: 0;
-    margin-top: 1rem;
+    width: 70%;
     background: transparent;
     box-shadow: none;
     -webkit-backdrop-filter: none;
@@ -356,12 +317,14 @@ nav {
   }
 }
 nav ul {
-  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  gap: 50px;
+  list-style: none;
+  margin: 0;
+  gap: 10%;
+  text-align: center;
 }
 @media screen and (min-width: 1080px) {
   nav ul {
@@ -373,12 +336,13 @@ nav ul {
 
 li {
   list-style-type: none;
-  margin: 0 1rem;
+  margin: 0;
   position: relative;
+  width: 15%;
 }
 @media screen and (min-width: 1080px) {
   li ::before, li ::after {
-    content: "¬";
+    /* content: "¬"; */
     font-size: 70px;
     position: absolute;
     width: 2px;
@@ -412,7 +376,8 @@ li:nth-child(1) {
 li a {
   color: white;
   text-decoration: none;
-  font-size: 2rem;
+  font-size: 1.7rem;
+  font-weight: bold;
 }
 
 .nav-onscreen {
