@@ -504,10 +504,10 @@ main .hidden {
 /* FOOTER */
 footer {
   width: 100%;
-  height: 40vh;
+  height: 70vh;
   display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
+  flex-direction: column;
+  justify-content: space-between;
   align-items: flex-start;
   position: relative;
   opacity: 0;
@@ -523,64 +523,77 @@ footer {
   footer {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     align-items: stretch;
+    height: 40vh;
   }
 }
 footer .conteneur-map {
   order: -1;
+  display: flex;
+  flex-direction: row;
 }
 footer .conteneur-map h3 {
   color: white;
   order: -2;
   margin: 0;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
   padding: 0;
 }
+@media screen and (min-width: 1080px) {
+  footer .conteneur-map h3 {
+    font-size: 2rem;
+  }
+}
 footer .conteneur-map .map {
-  width: 43vw;
-  height: 43vw;
+  width: 27vh;
+  height: 27vh;
 }
 @media screen and (min-width: 1080px) {
   footer .conteneur-map .map {
-    width: 23vw;
-    height: 23vw;
+    width: 50vh;
+    height: 29vh;
   }
 }
 footer .conteneur-texte {
-  padding-top: 2.5vh;
+  padding-top: 6vh;
   padding-left: 3vw;
 }
 footer .conteneur-texte p {
   color: white;
-  font-size: 1.1rem;
+  font-size: 1rem;
   padding-bottom: 1rem;
+  font-weight: bold;
+}
+@media screen and (min-width: 1080px) {
+  footer .conteneur-texte p {
+    font-size: 1.5rem;
+  }
 }
 footer .liens {
-  width: 15rem;
-  font-size: 0.7rem;
-  margin-top: 4rem;
+  padding-top: 6vh;
+  padding-right: 1.5vw;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
-  align-items: flex-end;
-  position: absolute;
-  left: 10rem;
+  align-items: center;
+  align-self: center;
 }
 @media screen and (min-width: 1080px) {
   footer .liens {
-    flex-grow: 1;
-    position: relative;
-    left: -2rem;
-    top: -7rem;
-    font-size: 1rem;
+    align-items: flex-end;
   }
 }
 footer .liens a {
   color: white;
   text-decoration: none;
-  margin: 0;
-  margin-bottom: 1rem;
+  font-size: 1rem;
+  padding-bottom: 2.5vh;
+  font-weight: bold;
+}
+@media screen and (min-width: 1080px) {
+  footer .liens a {
+    font-size: 1.5rem;
+  }
 }
 footer .logo {
   height: 1rem;
@@ -589,14 +602,15 @@ footer .logo {
   flex-direction: row;
 }
 footer .logo img {
-  width: 3rem;
-  height: 3rem;
-  padding-left: 0.5rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  height: 3vh;
 }
 @media screen and (min-width: 1080px) {
   footer .logo img {
-    width: 5rem;
-    height: 5rem;
+    height: 3vh;
+    padding-left: 3rem;
+    padding-right: 0rem;
   }
 }
 
