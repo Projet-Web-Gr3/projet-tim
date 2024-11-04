@@ -504,7 +504,7 @@ main .hidden {
 /* FOOTER */
 footer {
   width: 100%;
-  height: 28.5vh;
+  height: 40vh;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -529,9 +529,6 @@ footer {
 }
 footer .conteneur-map {
   order: -1;
-  margin: 0;
-  margin-top: 0.5rem;
-  margin-left: 1rem;
 }
 footer .conteneur-map h3 {
   color: white;
@@ -541,36 +538,23 @@ footer .conteneur-map h3 {
   padding: 0;
 }
 footer .conteneur-map .map {
-  width: 130px;
-  height: 130px;
+  width: 43vw;
+  height: 43vw;
 }
 @media screen and (min-width: 1080px) {
   footer .conteneur-map .map {
-    width: 500px;
-    height: 250px;
+    width: 23vw;
+    height: 23vw;
   }
 }
 footer .conteneur-texte {
-  width: 10rem;
-  font-size: 0.7rem;
-  margin: 0;
-  margin-top: 4rem;
-  margin-left: 0.5rem;
-}
-@media screen and (min-width: 1080px) {
-  footer .conteneur-texte {
-    flex-grow: 1;
-  }
+  padding-top: 2.5vh;
+  padding-left: 3vw;
 }
 footer .conteneur-texte p {
-  margin: 0;
-  padding: 0;
   color: white;
-}
-@media screen and (min-width: 1080px) {
-  footer .conteneur-texte p {
-    font-size: 1rem;
-  }
+  font-size: 1.1rem;
+  padding-bottom: 1rem;
 }
 footer .liens {
   width: 15rem;
