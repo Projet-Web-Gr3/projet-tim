@@ -12,11 +12,16 @@
 /* TITRES */
 h1 {
     font-family: 'pixellari';
-    font-size: 4vw; // À TRAVAILLER
+    font-size: 16vw; // À TRAVAILLER
     filter: url(#crispify);
-    text-shadow: 0.15vw 0.15vw 0px rgb(255, 151, 194),0.3vw 0.3vw 0px #a70a4ba9, 
-    -0.15vw -0.15vw 0px #00bc87b2, -0.5vw 0.5vw 2vw #08092ad8;
+    text-shadow: 0.6vw 0.6vw 0px rgb(255, 151, 194),1.2vw 1.2vw 0px #a70a4ba9, 
+    -0.6vw -0.6vw 0px #00bc87b2, -2vw 2vw 8vw #08092ad8;
     user-select: none;
+    @media screen and (min-width: $Fullscreen) {
+        font-size: 4vw;
+        text-shadow: 0.15vw 0.15vw 0px rgb(255, 151, 194),0.3vw 0.3vw 0px #a70a4ba9, 
+    -0.15vw -0.15vw 0px #00bc87b2, -0.5vw 0.5vw 2vw #08092ad8;
+    }
 }
 
 h2 {
