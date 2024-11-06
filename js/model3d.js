@@ -42,7 +42,7 @@ loader.load(
 );
 
 // Instantiate a new renderer and set its size
-const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true, powerPreference: "low-power" });
 renderer.setSize(window.innerWidth, window.innerHeight);
 
 // Add the renderer to the DOM
