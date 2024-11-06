@@ -29,6 +29,7 @@ body {
     left: 0;
     z-index: -4; /* Assurez-vous que le conteneur est derrière le header */
     overflow: hidden; /* Empêche le débordement du contenu */
+    pointer-events: none;
     @media screen and (min-width: $Fullscreen) {
         left: 30%;
     }
@@ -108,6 +109,7 @@ header {
                 }
              }
         }
+        
 
         // Le bouton du light/ darkmode
         .DL_Md {
@@ -140,6 +142,68 @@ header {
             }
         }
     }
+    .apprentissages {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: column;
+        z-index: 5;
+        @media screen and (min-width: $Fullscreen) {
+            flex-direction: row;
+        }
+        
+    }
+    .apprentissages div{
+        position: relative;
+    }
+    .apprentissages div div{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        
+    }
+    .apprentissages h2{
+        transition: all 0.3s ease-in-out;
+        filter: drop-shadow(0 0rem 0rem rgba(35, 36, 59, 0));
+        cursor: pointer;
+    }	
+    .apprentissages div img{
+        position: absolute;
+        width: 12vh;
+        transition: all 0.3s ease-in-out;       
+        transform: scale(0);       
+        pointer-events: none;
+        opacity: 0;
+        filter: drop-shadow(0 0 0rem rgba(35, 36, 59, 0));
+    }
+    .apprentissages h2:hover{
+        transform: scale(1.5);
+        filter: drop-shadow(0 1rem 0.5rem rgba(35, 36, 59, 0.525));
+    }
+    .apprentissages h2:hover + div .img1Effet{
+        transform: scale(1) rotate(-15deg) translate(-3vw, -13vh);
+        filter: drop-shadow(0 1rem 0.5rem rgba(35, 36, 59, 0.525));
+        opacity: 1;
+    }
+    .apprentissages h2:hover + div .img2Effet{
+        transform: scale(1) rotate(15deg) translate(3vw, -13vh);
+        filter: drop-shadow(0 1rem 0.5rem rgba(35, 36, 59, 0.525));
+        opacity: 1;
+    }
+    .apprentissages h2:hover + div .img3Effet{
+        transform: scale(1) rotate(-15deg) translate(3vw, 12vh);
+        filter: drop-shadow(0 1rem 0.5rem rgba(35, 36, 59, 0.525));
+        opacity: 1;
+    }
+    .apprentissages h2:hover + div .img4Effet{
+        transform: scale(1) rotate(15deg) translate(-3vw, 12vh);
+        filter: drop-shadow(0 1rem 0.5rem rgba(35, 36, 59, 0.525));
+        opacity: 1;
+    }
+
     
    
     /* MAIN */
@@ -160,7 +224,7 @@ header {
             /* SECTION(S) */
             section {
                 width: 100vw;
-                height: 100vh;                       
+                height: 60vh;                       
                 transition: opacity 0.5s ease-in-out;
                 z-index: -1;
                 padding-left: 2rem;
