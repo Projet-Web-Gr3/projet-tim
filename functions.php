@@ -14,6 +14,22 @@
         'flex-width'             => false,
     );
 
+    // Add custom image sizes
+function my_custom_image_sizes() {
+    add_image_size('custom-size', 800, 600, true); // Width, Height, Crop (true or false)
+    // Add other sizes as needed
+}
+add_action('after_setup_theme', 'my_custom_image_sizes');
+
+// Optional: Enable custom image sizes in the media library
+function my_custom_sizes($sizes) {
+    return array_merge($sizes, array(
+        'custom-size' => __('Custom Size'),
+    ));
+}
+add_filter('image_size_names_choose', 'my_custom_sizes');
+
+
     /**
  * Modifie la requete principale de Wordpress avant qu'elle soit exécuté
  * le hook « pre_get_posts » se manifeste juste avant d'exécuter la requête principal

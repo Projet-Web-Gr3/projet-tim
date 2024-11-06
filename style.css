@@ -636,4 +636,48 @@ li a {
 
 .flip-card.no8 {
   transform: rotateY(315deg) translateZ(253px);
+}
+
+.cours-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.cours-container p, .cours-container h2, .cours-container h3 {
+  color: white;
+}
+.cours-container .post-text {
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+}
+.cours-container .post-gallery {
+  width: 35%;
+  display: flex;
+  justify-content: center;
+}
+.cours-container .post-gallery .logiciels {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.cours-container .post-gallery .logiciels .icones-logiciels {
+  display: flex;
+  justify-content: center; /* Centering the icons */
+  flex-wrap: wrap; /* Allows icons to wrap to a new line if needed */
+  width: 100%; /* Make sure it doesn’t exceed the parent container */
+}
+.cours-container .post-gallery .logiciels .icones-logiciels figure {
+  width: 80px;
+  display: flex;
+}
+.cours-container .post-gallery .logiciels img {
+  width: 100%;
+  height: auto;
+}
+
+.cours-contenu {
+  width: 50%;
+  display: flex;
+  justify-content: center;
 }/*# sourceMappingURL=style.css.map */
