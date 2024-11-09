@@ -226,10 +226,11 @@ footer .logo img {
 }
 @font-face {
   font-family: "Titillium Web";
-  src: url("../fonts/TitilliumWeb-Regular.ttf");
+  src: url("/4w4_joules/wp-content/themes/projet-tim/fonts/TitilliumWeb-Regular.ttf");
 }
 /* TITRES */
 h1 {
+  margin: 0;
   font-family: "pixellari";
   font-size: 9vw;
   filter: url(#crispify);
@@ -649,6 +650,12 @@ li a {
   text-align: center;
   align-items: center;
 }
+@media screen and (min-width: 1080px) {
+  .cours-container {
+    margin: 2rem;
+    background-color: rgba(0, 0, 0, 0);
+  }
+}
 .cours-container p, .cours-container h2, .cours-container h3 {
   color: white;
 }
@@ -660,15 +667,38 @@ li a {
   align-items: center;
   width: 100%;
 }
+@media screen and (min-width: 1080px) {
+  .cours-container .cours-contenu {
+    flex-direction: row;
+    width: 75%;
+    align-items: flex-start;
+  }
+}
+@media screen and (min-width: 1080px) {
+  .cours-container .cours-contenu .desktopAffichage {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem 2rem;
+    width: 80%;
+  }
+  .cours-container .cours-contenu .desktopAffichage h3 {
+    margin-bottom: 1rem;
+  }
+  .cours-container .cours-contenu .desktopAffichage p {
+    margin-top: 10px;
+  }
+}
 .cours-container .cours-contenu .dropdown-toggle {
-  display: flex;
-  justify-content: space-between;
-  cursor: pointer;
   background: none;
   border: none;
   padding: 20px 7px;
   font-size: 1.2em;
-  align-items: center;
+}
+@media screen and (min-width: 1080px) {
+  .cours-container .cours-contenu .dropdown-toggle {
+    padding: 0;
+  }
 }
 .cours-container .cours-contenu .arrow {
   transition: transform 0.3s ease;
@@ -676,11 +706,27 @@ li a {
 .cours-container .cours-contenu .dropdown-toggle.active .arrow {
   transform: rotate(180deg);
 }
+@media screen and (min-width: 1080px) {
+  .cours-container .dropdown-toggle .arrow {
+    display: none;
+  }
+}
+@media screen and (min-width: 1080px) {
+  .cours-container .post-gallery {
+    width: 20%;
+    padding: 1rem;
+  }
+}
 .cours-container .post-gallery .logiciels {
   display: flex;
   align-items: center;
   flex-direction: column;
-  padding: 2rem;
+  padding: 1rem;
+}
+@media screen and (min-width: 1080px) {
+  .cours-container .post-gallery .logiciels {
+    padding: 0;
+  }
 }
 .cours-container .post-gallery .logiciels .icones-logiciels {
   display: flex;
@@ -693,6 +739,12 @@ li a {
   display: flex;
   margin: 5px;
 }
+@media screen and (min-width: 1080px) {
+  .cours-container .post-gallery .logiciels .icones-logiciels figure {
+    width: 65px;
+    margin: 10px;
+  }
+}
 .cours-container .post-gallery .logiciels img {
   width: 100%;
   height: auto;
@@ -702,12 +754,33 @@ li a {
   text-align: justify;
   padding: 1.5rem;
 }
+@media screen and (min-width: 1080px) {
+  .post-text p {
+    padding: 0;
+  }
+}
+.post-text .read-more {
+  display: inline-block;
+  padding-bottom: 20px;
+  color: #0073e6;
+  text-decoration: none;
+  font-weight: bold;
+}
+.post-text .read-more:hover {
+  text-decoration: underline;
+}
 
 .post-text, .post-gallery {
   overflow: hidden;
   max-height: 0;
   opacity: 0;
   transition: max-height 0.5s ease, opacity 0.5s ease-out;
+}
+@media screen and (min-width: 1080px) {
+  .post-text, .post-gallery {
+    max-height: none;
+    opacity: 1;
+  }
 }
 
 .open {

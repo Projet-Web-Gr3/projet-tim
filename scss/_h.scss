@@ -6,11 +6,12 @@
 
 @font-face {
     font-family: "Titillium Web";
-    src: url("../fonts/TitilliumWeb-Regular.ttf");
+    src: url("/4w4_joules/wp-content/themes/projet-tim/fonts/TitilliumWeb-Regular.ttf");
 }
  
 /* TITRES */
 h1 {
+    margin: 0;
     font-family: 'pixellari';
     font-size: 9vw; // À TRAVAILLER
     filter: url(#crispify);

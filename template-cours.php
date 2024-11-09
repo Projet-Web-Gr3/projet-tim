@@ -30,12 +30,15 @@
             }
             ?>
             <div class="cours-contenu">
-                <button class="dropdown-toggle"><h3><?php the_title(); ?></h23><span class="arrow">▼</span></button>
-                <div class="post-text">
-                    <?php
-                        $trimmed_content = wp_trim_words($text_content, 35, '...');
-                        echo apply_filters('the_content', $trimmed_content); 
-                    ?>
+                <div class="desktopAffichage">
+                    <button class="dropdown-toggle"><h3><?php the_title(); ?></h23><span class="arrow">▼</span></button>
+                    <div class="post-text">
+                        <?php
+                            $trimmed_content = wp_trim_words($text_content, 75, '...');
+                            $read_more_link = sprintf('<a href="%s" class="read-more"> Lire plus</a>', get_permalink());
+                            echo apply_filters('the_content', $trimmed_content . " " . $read_more_link); 
+                        ?>
+                    </div>
                 </div>
                 <?php if (!empty($gallery_content)): ?>
                     <div class="post-gallery"><?php echo apply_filters('the_content', $gallery_content); ?></div>
