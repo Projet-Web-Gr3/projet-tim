@@ -639,6 +639,7 @@ li a {
 }
 
 .cours-container {
+  gap: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -650,6 +651,10 @@ li a {
   display: flex;
   flex-direction: column;
   width: 75%;
+  h3{
+    font-size: 1.5rem;
+    margin: 0;
+}
 }
 .cours-container .post-gallery {
   width: 35%;
@@ -677,7 +682,9 @@ li a {
 }
 
 .cours-contenu {
-  width: 50%;
+  background-color: #00000049;
+  margin: 1rem;
+  padding: 3rem 0;
   display: flex;
   justify-content: center;
 }/*# sourceMappingURL=style.css.map */

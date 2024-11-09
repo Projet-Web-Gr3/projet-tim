@@ -12,7 +12,7 @@ const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerH
 let object;
 
 // Set which object to render
-let objToRender = 'Model';
+// let objToRender = 'Model';
 
 // Instantiate a loader for the .gltf file
 const loader = new GLTFLoader();

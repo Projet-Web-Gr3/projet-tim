@@ -1,0 +1,6 @@
+<?php
+/**
+ * Template name: Étudiants
+ *
+ */
+?>

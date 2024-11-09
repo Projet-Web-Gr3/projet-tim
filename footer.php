@@ -33,7 +33,7 @@
     <!-- JS -->
     <script src="/4w4_joules/wp-content/themes/projet-tim/js/carousel.js"></script>
     <script src="/4w4_joules/wp-content/themes/projet-tim/js/index.js"></script>
-    <script type="module" src="/4w4_joules/wp-content/themes/projet-tim/js/model3d.js"></script>
+    <script type="module" src="/wordpress/wp-content/themes/projet-tim/js/model3d.js"></script>
 
 </body>
 
