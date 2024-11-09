@@ -6,7 +6,9 @@
 ?>
 <?php get_header(); ?>
 <div class="cours-container">
-    <h1><?php the_title(); ?></h1>
+    <div class="titrePage">
+        <h1><?php the_title(); ?></h1>
+    </div>
     <?php
     $args = array(
         'category_name' => 'Cours', 

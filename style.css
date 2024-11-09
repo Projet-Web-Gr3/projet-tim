@@ -36,6 +36,9 @@
 }
 
 body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   width: 100vw;
   height: 100%;
   overflow-x: hidden;
@@ -255,6 +258,16 @@ a {
 
 p {
   font-family: "Titillium Web";
+}
+
+.titrePage {
+  text-align: left;
+  width: 95%;
+}
+@media screen and (min-width: 1080px) {
+  .titrePage {
+    width: 75%;
+  }
 }
 
 /* HEADER */

@@ -34,4 +34,14 @@ a {
 p {
     font-family: 'Titillium Web';
 }
+
+.titrePage{
+    text-align: left;
+    width: 95%;
+
+    @media screen and (min-width: $Fullscreen){
+        width: 75%;
+    }
+}
+
  

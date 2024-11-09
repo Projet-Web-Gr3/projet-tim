@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-    if (window.innerWidth < 768) {
+    if (window.innerWidth < 769) {
         const toggles = document.querySelectorAll(".dropdown-toggle");
 
         toggles.forEach(toggle => {
