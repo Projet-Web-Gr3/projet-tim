@@ -105,6 +105,7 @@ main .accueil_effacer h1 {
 main .accueil_effacer .logoGrand {
   width: 44%;
   height: auto;
+  padding: 2rem 0;
 }
 
 /* FOOTER */
@@ -235,8 +236,7 @@ footer .logo img {
 h1 {
   margin: 0;
   font-family: "pixellari";
-  font-size: 9vw;
-  filter: url(#crispify);
+  font-size: clamp(2rem, 0.537vw + 1.856rem, 2.5rem);
   text-shadow: 0.15vw 0.15vw 0px rgb(255, 151, 194), 0.3vw 0.3vw 0px rgba(167, 10, 75, 0.662745098), -0.15vw -0.15vw 0px rgba(0, 188, 135, 0.6980392157), -0.5vw 0.5vw 2vw rgba(8, 9, 42, 0.8470588235);
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -403,7 +403,7 @@ li a {
 }
 
 .custom-logo {
-  width: 200px;
+  width: 85px;
   height: auto;
   position: relative;
 }
@@ -799,4 +799,57 @@ li a {
 .open {
   max-height: 1000px; /* Set a max height large enough to fit the content */
   opacity: 1;
+}
+
+.barre-entete {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: space-evenly;
+}
+@media screen and (min-width: 1080px) {
+  .barre-entete {
+    display: none;
+  }
+}
+
+.barre-footer {
+  display: none;
+}
+@media screen and (min-width: 1080px) {
+  .barre-footer {
+    display: block;
+  }
+}
+
+.search-form {
+  display: flex;
+  padding: 1rem 0rem;
+  justify-content: center;
+}
+
+.recherche {
+  display: flex;
+  align-items: center;
+}
+
+button.recherche__bouton {
+  background-color: rgba(255, 255, 255, 0);
+  margin: 0.5rem 0.1rem;
+  padding: 0.5rem;
+  text-align: center;
+  text-decoration: none;
+  transition: transform 0.5s, background-color 0.2s, box-shadow 0.5s;
+  border: none;
+}
+
+.recherche__input {
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(9.5px);
+  -webkit-backdrop-filter: blur(9.5px);
+  border: 0.1rem solid rgb(255, 255, 255);
+  padding: 0.5rem;
+  width: 100%;
 }/*# sourceMappingURL=style.css.map */

@@ -13,8 +13,7 @@
 h1 {
     margin: 0;
     font-family: 'pixellari';
-    font-size: 9vw; // À TRAVAILLER
-    filter: url(#crispify);
+    font-size: clamp(2rem, 0.537vw + 1.856rem, 2.5rem);
     text-shadow: 0.15vw 0.15vw 0px rgb(255, 151, 194),0.3vw 0.3vw 0px #a70a4ba9,
     -0.15vw -0.15vw 0px #00bc87b2, -0.5vw 0.5vw 2vw #08092ad8;
     user-select: none;

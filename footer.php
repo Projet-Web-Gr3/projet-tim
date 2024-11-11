@@ -13,6 +13,11 @@
                 <p>(514)-254-7131</p>
             </div>
 
+            <div class="barre-footer clr-agencement-primaire">
+                <div class="search-form">
+                    <?php get_search_form(); ?>
+                </div>
+            </div> 
             <div class="liens">
                 <a href="">Aide</a>
                 <a href="">Contactez-nous</a>
