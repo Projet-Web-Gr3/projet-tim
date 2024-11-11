@@ -33,7 +33,7 @@ main {
  */
 h1 {
   font-size: 2em;
-  margin: 0;
+  margin: 0.67em 0;
 }
 
 /* Grouping content
@@ -339,7 +339,7 @@ template {
 -----------------------------------------------------*/
 /* BODY/ REMISE À 0 */
 * {
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   box-sizing: border-box;
 }
@@ -353,7 +353,7 @@ body {
   overflow-x: hidden;
 }
 body.lightMd {
-  background: linear-gradient(180deg, var(--couleur1-LightMode) 0%, var(--couleur4-LightMode) 100%);
+  background: linear-gradient(140deg, var(--couleur1-LightMode) 0%, var(--couleur2-LightMode) 25%, var(--couleur3-LightMode) 50%, var(--couleur4-LightMode) 75%);
 }
 
 /* Conteneur pour le modèle 3D */
@@ -362,32 +362,15 @@ body.lightMd {
   height: 100vh;
   position: fixed;
   top: 0;
-  left: 0;
+  left: 25%;
   z-index: -4; /* Assurez-vous que le conteneur est derrière le header */
   overflow: hidden; /* Empêche le débordement du contenu */
-  pointer-events: none;
-}
-@media screen and (min-width: 1080px) {
-  #container3D canvas {
-    left: 30%;
-  }
-}
-
-#blobCouleurs {
-  width: 100vw;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: -5; /* Assurez-vous que le conteneur est derrière le model 3D */
-  background-image: url("../images/BlobCouleurs.png");
-  background-size: cover;
-  background-position: center;
 }
 
 /* HEADER */
 header {
   width: 100%;
+  height: 30vh;
   top: 0;
   left: 0;
   position: fixed;
@@ -409,67 +392,54 @@ header {
 header .logo-titre {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   position: relative;
-  height: 10vh;
-  top: 32vh;
-  padding-left: 0;
+  top: 19rem;
+  transition: top 0.5s ease-in-out;
 }
 @media screen and (min-width: 1080px) {
   header .logo-titre {
-    padding-left: 15rem;
-    align-items: flex-start;
-    top: 39vh;
+    top: 30rem;
   }
 }
 header .logo-titre h1 {
   width: 100%;
   color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   opacity: 1;
-  transition: style 5s ease-in-out;
-  text-align: center;
-}
-@media screen and (min-width: 1080px) {
-  header .logo-titre h1 {
-    text-align: left;
-  }
+  margin: 0 auto;
 }
 header .logo-titre .logo {
-  width: 60vw;
-  height: 60vw;
-  margin-bottom: 3rem;
-  padding-right: 3.5vw;
-  transition: style 5s ease-in-out;
-  filter: drop-shadow(0.5vw 0.5vw 2vw rgba(8, 9, 42, 0.4901960784));
+  width: 100vw;
+  height: 100%;
+  transform: scale(2);
+  transition: all 0.5s ease-in-out;
 }
 @media screen and (min-width: 1080px) {
   header .logo-titre .logo {
-    padding-right: 0;
-    width: 16vw;
-    height: 16vw;
+    width: 40%;
+    height: 30%;
   }
 }
 header .DL_Md {
   width: 4.5rem;
   height: 2rem;
+  border: 5px solid gainsboro;
   border-radius: 50px;
-  background-color: rgba(0, 0, 0, 0.5);
-  filter: drop-shadow(0 0 0.5rem white);
-  backdrop-filter: blur(50px);
+  background-color: grey;
   position: absolute;
   top: 2rem;
   cursor: pointer;
-  z-index: 1001;
-  display: flex;
-  align-items: center;
 }
 header .DL_Md .dot {
   width: 1.5rem;
   height: 1.5rem;
   border-radius: 50px;
-  background-color: rgb(255, 255, 255);
-  transform: translate(0.25rem, 0);
+  background-color: black;
+  transform: translate(-20px, -1px);
   transition: transform 0.2s ease-in-out;
 }
 @media screen and (min-width: 1080px) {
@@ -477,77 +447,6 @@ header .DL_Md .dot {
     top: 1rem;
     left: 1rem;
   }
-}
-
-.apprentissages {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  flex-direction: column;
-  z-index: 5;
-}
-@media screen and (min-width: 1080px) {
-  .apprentissages {
-    flex-direction: row;
-  }
-}
-
-.apprentissages div {
-  position: relative;
-}
-
-.apprentissages div div {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-}
-
-.apprentissages h2 {
-  transition: all 0.3s ease-in-out;
-  filter: drop-shadow(0 0rem 0rem rgba(35, 36, 59, 0));
-  cursor: pointer;
-}
-
-.apprentissages div img {
-  position: absolute;
-  width: 12vh;
-  transition: all 0.3s ease-in-out;
-  transform: scale(0);
-  pointer-events: none;
-  opacity: 0;
-  filter: drop-shadow(0 0 0rem rgba(35, 36, 59, 0));
-}
-
-.apprentissages h2:hover {
-  transform: scale(1.5);
-  filter: drop-shadow(0 1rem 0.5rem rgba(35, 36, 59, 0.525));
-}
-
-.apprentissages h2:hover + div .img1Effet {
-  transform: scale(1) rotate(-15deg) translate(-3vw, -13vh);
-  filter: drop-shadow(0 1rem 0.5rem rgba(35, 36, 59, 0.525));
-  opacity: 1;
-}
-
-.apprentissages h2:hover + div .img2Effet {
-  transform: scale(1) rotate(15deg) translate(3vw, -13vh);
-  filter: drop-shadow(0 1rem 0.5rem rgba(35, 36, 59, 0.525));
-  opacity: 1;
-}
-
-.apprentissages h2:hover + div .img3Effet {
-  transform: scale(1) rotate(-15deg) translate(3vw, 12vh);
-  filter: drop-shadow(0 1rem 0.5rem rgba(35, 36, 59, 0.525));
-  opacity: 1;
-}
-
-.apprentissages h2:hover + div .img4Effet {
-  transform: scale(1) rotate(15deg) translate(-3vw, 12vh);
-  filter: drop-shadow(0 1rem 0.5rem rgba(35, 36, 59, 0.525));
-  opacity: 1;
 }
 
 /* MAIN */
@@ -565,7 +464,7 @@ main h2 {
 }
 main section {
   width: 100vw;
-  height: 60vh;
+  height: 100vh;
   transition: opacity 0.5s ease-in-out;
   z-index: -1;
   padding-left: 2rem;
@@ -588,97 +487,99 @@ main .hidden {
 /* FOOTER */
 footer {
   width: 100%;
-  height: 80vh;
+  height: 28.5vh;
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+  flex-direction: row;
+  justify-content: flex-start;
   align-items: flex-start;
   position: relative;
   opacity: 0;
   z-index: 1;
   /* Bck transparent */
-  background: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(50px);
-  filter: drop-shadow(0 0 1rem rgba(255, 255, 255, 0.7));
-  -webkit-backdrop-filter: blur(50px);
-  padding: 2rem;
+  background: rgba(0, 0, 0, 0.463);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6.7px);
+  -webkit-backdrop-filter: blur(6.7px);
+  border: 1px solid rgba(0, 0, 0, 0.01);
 }
 @media screen and (min-width: 1080px) {
   footer {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     align-items: stretch;
-    height: 40vh;
   }
 }
 footer .conteneur-map {
   order: -1;
-  display: flex;
-  flex-direction: row;
+  margin: 0;
+  margin-top: 0.5rem;
+  margin-left: 1rem;
 }
 footer .conteneur-map h3 {
   color: white;
   order: -2;
   margin: 0;
-  margin-bottom: 2rem;
-  font-size: 1.5rem;
+  margin-bottom: 1rem;
   padding: 0;
 }
-@media screen and (min-width: 1080px) {
-  footer .conteneur-map h3 {
-    font-size: 2rem;
-  }
-}
 footer .conteneur-map .map {
-  width: 27vh;
-  height: 27vh;
+  width: 130px;
+  height: 130px;
 }
 @media screen and (min-width: 1080px) {
   footer .conteneur-map .map {
-    width: 50vh;
-    height: 29vh;
+    width: 500px;
+    height: 250px;
   }
 }
 footer .conteneur-texte {
-  padding-top: 6vh;
-  padding-left: 3vw;
+  width: 10rem;
+  font-size: 0.7rem;
+  margin: 0;
+  margin-top: 4rem;
+  margin-left: 0.5rem;
+}
+@media screen and (min-width: 1080px) {
+  footer .conteneur-texte {
+    flex-grow: 1;
+  }
 }
 footer .conteneur-texte p {
+  margin: 0;
+  padding: 0;
   color: white;
-  font-size: 1rem;
-  padding-bottom: 1rem;
-  font-weight: bold;
 }
 @media screen and (min-width: 1080px) {
   footer .conteneur-texte p {
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
 }
 footer .liens {
+  width: 15rem;
+  font-size: 0.7rem;
+  margin-top: 4rem;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  align-self: center;
+  justify-content: flex-end;
+  align-items: flex-end;
+  position: absolute;
+  left: 10rem;
 }
 @media screen and (min-width: 1080px) {
   footer .liens {
-    align-items: flex-end;
-    padding-top: 6vh;
-    padding-bottom: 0;
-    padding-right: 1.5vw;
+    flex-grow: 1;
+    position: relative;
+    left: -2rem;
+    top: -7rem;
+    font-size: 1rem;
   }
 }
 footer .liens a {
   color: white;
   text-decoration: none;
-  font-size: 1rem;
-  padding-bottom: 2.5vh;
-  font-weight: bold;
-}
-@media screen and (min-width: 1080px) {
-  footer .liens a {
-    font-size: 1.5rem;
-  }
+  margin: 0;
+  margin-bottom: 1rem;
 }
 footer .logo {
   height: 1rem;
@@ -687,15 +588,14 @@ footer .logo {
   flex-direction: row;
 }
 footer .logo img {
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-  height: 3vh;
+  width: 3rem;
+  height: 3rem;
+  padding-left: 0.5rem;
 }
 @media screen and (min-width: 1080px) {
   footer .logo img {
-    height: 3vh;
-    padding-left: 3rem;
-    padding-right: 0rem;
+    width: 5rem;
+    height: 5rem;
   }
 }
 
@@ -711,32 +611,17 @@ footer .logo img {
 /* TITRES */
 h1 {
   font-family: "pixellari";
-  font-size: 16vw;
+  font-size: clamp(2rem, 0.235rem + 4.412vw, 5rem);
   filter: url(#crispify);
-  text-shadow: 0.6vw 0.6vw 0px rgb(255, 151, 194), 1.2vw 1.2vw 0px rgba(167, 10, 75, 0.662745098), -0.6vw -0.6vw 0px rgba(0, 188, 135, 0.6980392157), -2vw 2vw 8vw rgba(8, 9, 42, 0.8470588235);
-  user-select: none;
-}
-@media screen and (min-width: 1080px) {
-  h1 {
-    font-size: 4vw;
-    text-shadow: 0.15vw 0.15vw 0px rgb(255, 151, 194), 0.3vw 0.3vw 0px rgba(167, 10, 75, 0.662745098), -0.15vw -0.15vw 0px rgba(0, 188, 135, 0.6980392157), -0.5vw 0.5vw 2vw rgba(8, 9, 42, 0.8470588235);
-  }
+  text-shadow: 0.2rem 0.2rem 0px rgb(255, 151, 194), 0.4rem 0.4rem 0px rgba(167, 10, 75, 0.662745098), -0.2rem -0.2rem 0px rgba(0, 188, 135, 0.6980392157), -0.5rem 0.5rem 2rem rgba(8, 9, 42, 0.8470588235);
 }
 
 h2 {
-  font-family: "pixellari";
+  font-family: "Titillium Web";
   font-size: clamp(1.5rem, 0.235rem + 4.412vw, 3rem);
 }
 
 h3 {
-  font-family: "Titillium Web";
-}
-
-a {
-  font-family: "Titillium Web";
-}
-
-p {
   font-family: "Titillium Web";
 }
 
@@ -748,7 +633,7 @@ nav {
   height: 100%;
   background: rgba(0, 0, 0, 0.19);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(30px);
+  backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border: 1px solid rgba(0, 0, 0, 0.01);
   color: #fff;
@@ -758,7 +643,7 @@ nav {
 @media screen and (min-width: 1080px) {
   nav {
     width: 100%;
-    height: 5%;
+    height: 30%;
     left: 0;
     top: 0;
     margin-top: 1rem;
@@ -911,7 +796,7 @@ li a {
   align-items: center;
   flex-direction: column;
   padding-bottom: 7rem;
-  z-index: 1;
+  z-index: 1000;
 }
 .carousel h2 {
   margin: 0 0 0 0;

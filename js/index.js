@@ -25,8 +25,10 @@ window.addEventListener('scroll', function() {
         if (mediaQuery.matches) 
         {
             // Le logo
-            logo.style.transform = 'translate(-100vh, 0)';
-
+            logo.style.position = 'static';
+            logo.style.transform = 'translate(-380%, 0%)';
+            logo.style.top = '1rem';
+            logo.style.left = '1rem';
 
             // Le titre
             title.style.opacity = '0';
@@ -50,12 +52,13 @@ window.addEventListener('scroll', function() {
         else 
         {
             // Le logo
-            logo.style.transform = 'translate(-100vh, 0)';
-
+            logo.style.position = 'static';
+            logo.style.transform = 'translate(-30%, -130%) scale(0.8)';
+            logo.style.top = '1rem';
+            logo.style.left = '1rem';
 
             // Le titre
             title.style.opacity = '0';
-
 
             // La navigation
             nav.style.opacity = '1';
@@ -148,11 +151,12 @@ btn_Bck.addEventListener('click', function() {
     if (bod.classList.contains('lightMd'))
     {
         bod.classList.remove('lightMd');
-        point.style.transform = 'translate(0.25rem, 0)';
+        point.style.transform = 'translate(-20px, 0)';
     }
     else
     {
         bod.classList.add('lightMd');
-        point.style.transform = 'translate(2.7rem, 0)';
+        point.style.transform = 'translate(20px, 0)';
     }
-});
+}
+);
