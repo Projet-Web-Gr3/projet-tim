@@ -5,7 +5,7 @@
         <main>   
             <section class="accueil_effacer">
                 <h1>BIENVENUE AU</h1>
-                <img src="/4w4_joules/wp-content/themes/projet-tim/images/LogoTIMHiRes.png" alt="" class="logoGrand">
+                <img src="/olivier_5w5/wp-content/themes/projet-tim/images/LogoTIMHiRes.png" alt="" class="logoGrand">
                 <h1>TECHNIQUE D'INTÉGRATION MULTIMÉDIA</h1>
             </section>
             <!-- Texte d'intro TIM -->

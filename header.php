@@ -27,4 +27,9 @@
                         "menu" => "principal",
                         'container' => 'nav'
                     )); ?>
+            <div class="burger-menu">
+                <div class="ligne"></div>
+                <div class="ligne"></div>
+                <div class="ligne"></div>
+            </div>
 </header>
