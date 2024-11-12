@@ -1,6 +1,6 @@
 <?php
 /**
- * Template name: Projets
+ * Template name: avenir
  *
  */
 ?>

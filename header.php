@@ -16,8 +16,13 @@
 </head>
 
 <body>
-<header class="menu__header">
-    <?= get_custom_logo(); ?>
+    <header class="menu__header">
+        <?= get_custom_logo(); ?>
+        <div class="barre-entete clr-agencement-primaire">
+                    <div class="search-form">
+                        <?php get_search_form(); ?>
+                    </div>
+            </div>   
                     <?php wp_nav_menu(array(
                         "menu" => "principal",
                         'container' => 'nav'

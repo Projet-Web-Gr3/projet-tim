@@ -1,33 +1,105 @@
-
+//@media screen and (min-width: $Fullscreen)
 .cours-container{
-    gap: 2rem;
+    background-color: #0000007a;
+    gap: 2.5rem;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    margin: 1rem;
+    padding: 1.5rem 0;
+    text-align: center;
     align-items: center;
+    
+
+    @media screen and (min-width: $Fullscreen){
+        margin: 2rem;
+        background-color: #00000000;
+    }
+
     p, h2, h3{
         color: white;
     }
 
-    .post-text{
+    .cours-contenu{
+        background-color: #00000049;
+        text-align: center;
         display: flex;
         flex-direction: column;
-        width: 75%;
-        h3{
-            font-size: 1.5rem;
-            margin: 0;
+        align-items: center;
+        width: 100%;
+
+        @media screen and (min-width: $Fullscreen){
+            flex-direction: row;
+            width: 75%;
+            align-items: flex-start;
         }
+        
+        @media screen and (min-width: $Fullscreen){
+
+            .desktopAffichage{
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 1rem 2rem;
+                width: 80%;
+
+                h3{
+                    margin-bottom: 1rem;
+                }
+
+                p{
+                    margin-top: 10px;
+                }
+            }
+        }
+
+        .dropdown-toggle {
+            background: none;
+            border: none;
+            padding: 20px 7px;
+            font-size: 1.2em;
+
+            @media screen and (min-width: $Fullscreen){
+                padding: 0;
+            }
+        }
+
+        .arrow {
+            transition: transform 0.3s ease;
+        }
+        
+        .dropdown-toggle.active .arrow {
+            transform: rotate(180deg);
+        }
+
+    }
+
+    @media screen and (min-width: $Fullscreen){
+
+        .dropdown-toggle .arrow {
+            display: none;
+        }
+        
     }
 
     .post-gallery{
-        width: 35%;
-        display: flex;
-        justify-content: center;
     
+        @media screen and (min-width: $Fullscreen){
+            width: 20%;
+            padding: 1rem;
+        }
+
+
         .logiciels{
             
             display: flex;
             align-items: center;
             flex-direction: column;
+            padding: 1rem;
+
+            @media screen and (min-width: $Fullscreen){
+                padding: 0;
+            }
 
             .icones-logiciels{
                 display: flex;
@@ -39,6 +111,12 @@
                 figure{
                     width: 80px;
                     display: flex;
+                    margin: 5px;
+
+                    @media screen and (min-width: $Fullscreen){
+                        width: 65px;
+                        margin: 10px;
+                    }
                 }
             }
 
@@ -52,12 +130,48 @@
     }
 }
 
-.cours-contenu{
-    background-color: #00000049;
-    margin: 1rem;
-    padding: 3rem 0;
-    display: flex;
-    justify-content: center;
+.post-text{
+    
+    p{
+        text-align: justify;
+        padding: 1.5rem;
+
+        @media screen and (min-width: $Fullscreen){
+            padding: 0;
+        }
+    }
+
+    .read-more {
+        display: inline-block;
+        padding-bottom: 20px;
+        color: #0073e6;
+        text-decoration: none;
+        font-weight: bold;
+    }
+    
+    .read-more:hover {
+        text-decoration: underline;
+    }
 }
 
+
+// Dropdown (Seulement pour l'animation avec css style et js)
+.post-text, .post-gallery {
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    transition: max-height 0.5s ease, opacity 0.5s ease-out;
+
+    @media screen and (min-width: $Fullscreen){
+        max-height: none;
+        opacity: 1;
+    }
+
+}
+
+.open {
+    max-height: 1000px; /* Set a max height large enough to fit the content */
+    opacity: 1;
+
+}
 
