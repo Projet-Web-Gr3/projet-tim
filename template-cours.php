@@ -2,6 +2,9 @@
 /**
  * Template name: Cours
  *
+ *
+ * Template name: Cours
+ *
  */
 ?>
 <?php get_header(); ?>
@@ -62,5 +65,6 @@
 
     <?php wp_reset_postdata(); ?>
 </div>
+
 
 <?php get_footer(); ?>
