@@ -1,4 +1,15 @@
 @charset "UTF-8";
+/*
+Theme Name: Projet-tim_5W5
+Author: Julian Ibanez
+Author URI: https://wordpress.org/
+Description: Theme de base développé dans le cours 4W4
+Requires PHP: 7.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: Projet-tim
+*/
+/* https://developer.wordpress.org/themes/basics/main-stylesheet-style-css/ */
 /*==================
  ** VARIABLES CSS **
  ==================*/
@@ -56,9 +67,14 @@ body.lightMd {
   height: 100vh;
   position: fixed;
   top: 0;
-  left: 25%;
+  left: 0;
   z-index: -4; /* Assurez-vous que le conteneur est derrière le header */
   overflow: hidden; /* Empêche le débordement du contenu */
+}
+@media screen and (min-width: 1080px) {
+  #container3D canvas {
+    left: 25%;
+  }
 }
 
 /* MAIN */

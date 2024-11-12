@@ -1,10 +1,7 @@
 <?php
     add_theme_support( 'menus' );
-
     add_theme_support('custom-logo');
-
     add_theme_support('post-thumbnails');
-
     add_theme_support('image-size');
 
     $defaults = array(
@@ -79,3 +76,19 @@ function _4w4_modifie_requete_principal( $query ) {
     }
     
     add_filter( 'image_size_names_choose', 'custom_image_size_for_gallery' );
+
+    function _4w4_joules_enqueue_style() {
+        $version_css = filemtime(get_template_directory() . '/style.css');
+        // $version_js = filemtime(get_template_directory() . '/js/model3d.js');
+        $version_anim = filemtime(get_template_directory() . '/js/index.js');
+        $version_cours = filemtime(get_template_directory() . '/js/coursDropDown.js');
+
+       //wp_enqueue_style( 'style', get_stylesheet_uri() );
+        wp_enqueue_style( 'style', get_template_directory_uri() . '/style.css', array(), $version_css, 'all'    );
+        // wp_enqueue_script( 'model3d', get_template_directory_uri() . '/js/model3d.js', array(), $version_js, true );
+        wp_enqueue_script('animation', get_template_directory_uri() . '/js/index.js', array(), $version_anim, true);
+        wp_enqueue_script('coursDropDown', get_template_directory_uri() . '/js/coursDropDown.js', array(), $version_cours, true);
+    }
+    add_action( 'wp_enqueue_scripts', '_4w4_joules_enqueue_style' );
+
+    
