@@ -41,9 +41,10 @@ button.recherche__bouton{
 }
 
 .recherche__input{
+    font-family: 'Titillium Web';
     border-radius: 28px;
     background: rgba( 255, 255, 255, 0.2 );
-    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    box-shadow: 0 8px 32px 0 rgba(14, 17, 46, 0.37);
     backdrop-filter: blur( 9.5px );
     -webkit-backdrop-filter: blur( 9.5px );
     border: 0.1rem solid rgba( 255, 255, 255);

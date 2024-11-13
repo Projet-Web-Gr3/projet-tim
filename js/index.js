@@ -25,7 +25,7 @@ window.addEventListener('scroll', function() {
         if (mediaQuery.matches) 
         {
             // Le logo
-            logo.style.transform = 'translate(-100vh, 0)';
+            //logo.style.transform = 'translate(-100vh, 0)';
 
 
             // Le titre
@@ -50,7 +50,7 @@ window.addEventListener('scroll', function() {
         else 
         {
             // Le logo
-            logo.style.transform = 'translate(-100vh, 0)';
+            //logo.style.transform = 'translate(-100vh, 0)';
 
 
             // Le titre
