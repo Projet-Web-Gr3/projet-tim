@@ -3,13 +3,14 @@ header {
     background-color: transparent;
     z-index: 2; /* Assurez-vous que le header est au-dessus du conteneur 3D */
     display: flex;
-
+    align-items: center;
+    justify-content: space-around;
     transition: all 0.5s ease-in-out;
 
     @media screen and (min-width: $Fullscreen) {
         flex-direction: row;
         align-items: center;
-        justify-content: space-evenly;
+        justify-content: flex-start;
     }
     }
 
@@ -41,33 +42,43 @@ header {
         }
 
 nav {
+    position: fixed;
+    top: 0;
+    left: 100%;
+    width: calc(100% - 6vw);
+    height: calc(100% - 6vw);
     background: rgba(0, 0, 0, 0.19);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(30px);
     -webkit-backdrop-filter: blur(10px);
     border: 1px solid rgba(0, 0, 0, 0.01);
     color: #fff;
-    margin: 0;
-    z-index: 2;
+    z-index: 1400;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 3vw;
 
     transition: opacity 0.5s ease-in-out, left 0.3s ease;
 
      @media screen and (min-width: $Fullscreen) {
-        width: 70%;
+        width: 100%;
+        height: 5%;
+        left: 0;
+        top: 0;
+        margin-top: 1rem;
         background: transparent;
         box-shadow: none;
         backdrop-filter: none;
     } 
 
     ul {
+        width: 100%;
         display: flex;
         flex-direction: column;
-        justify-content: flex-start;
-        align-items: flex-start;
-        list-style: none;
-        margin: 0;
-        gap: 10%;
-        text-align: center;
+        justify-content: center;
+        align-items: center;
+        gap: 50px; 
 
         @media screen and (min-width: $Fullscreen) {
             flex-direction: row;
@@ -79,9 +90,9 @@ nav {
 
 li {
     list-style-type: none;
-    margin: 0;
+    margin: 0 1rem;
     position: relative;
-    width: 15%;
+
 
 
     @media screen and (min-width: $Fullscreen) {
@@ -127,8 +138,7 @@ li {
     a {
         color: white;
         text-decoration: none;
-        font-size: 1.7rem;
-        font-weight: bold;
+        font-size: 2rem;
     }
 }
 
@@ -144,4 +154,12 @@ li {
     width: 85px;
     height: auto;
     position: relative;
+    padding-left: 1vh;
+    padding-top: 1vh;
+}
+.no-scroll {
+    overflow: hidden;
+}
+.hideAprentissage {
+    opacity: 0;
 }

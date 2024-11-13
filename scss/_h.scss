@@ -1,27 +1,33 @@
 /* POLICES */
 @font-face {
     font-family: "pixellari";
-    src: url("/4w4_joules/wp-content/themes/projet-tim/fonts/Pixellari.ttf");
+    src: url("/olivier_5w5/wp-content/themes/projet-tim2/fonts/Pixellari.ttf");
 }
 
 @font-face {
     font-family: "Titillium Web";
-    src: url("/4w4_joules/wp-content/themes/projet-tim/fonts/TitilliumWeb-Regular.ttf");
+    src: url("/olivier_5w5/wp-content/themes/projet-tim2/fonts/TitilliumWeb-Regular.ttf");
 }
  
 /* TITRES */
 h1 {
-    margin: 0;
     font-family: 'pixellari';
-    font-size: clamp(2rem, 0.537vw + 1.856rem, 2.5rem);
-    text-shadow: 0.15vw 0.15vw 0px rgb(255, 151, 194),0.3vw 0.3vw 0px #a70a4ba9,
-    -0.15vw -0.15vw 0px #00bc87b2, -0.5vw 0.5vw 2vw #08092ad8;
+    font-size: 8vw; // À TRAVAILLER
+    filter: url(#crispify);
+    text-shadow: 0.3vw 0.3vw 0px rgb(255, 151, 194),0.6vw 0.6vw 0px #a70a4ba9, 
+    -0.3vw -0.3vw 0px #00bc87b2, -2vw 2vw 8vw #08092ad8;
     user-select: none;
+    @media screen and (min-width: $Fullscreen) {
+        font-size: 4vw;
+        text-shadow: 0.15vw 0.15vw 0px rgb(255, 151, 194),0.3vw 0.3vw 0px #a70a4ba9, 
+    -0.15vw -0.15vw 0px #00bc87b2, -0.5vw 0.5vw 2vw #08092ad8;
+    }
 }
  
 h2 {
-    font-family: 'Titillium Web';
-    font-size: clamp(1.5rem, 0.235rem + 4.412vw, 3rem); // À TRAVAILLER
+    font-family: 'pixellari';
+    font-size: clamp(2.188rem, 1.678vw + 1.737rem, 3.75rem); // À TRAVAILLER
+    
 }
  
 h3 {

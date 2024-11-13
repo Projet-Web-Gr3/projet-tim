@@ -6,6 +6,7 @@
             <section class="accueil_effacer">
                 <h1>BIENVENUE AU</h1>
                 <img src="https://gftnth00.mywhc.ca/tim17/wp-content/uploads/2024/11/LogoTIMHiRes.png" alt="" class="logoGrand">
+
                 <h1>TECHNIQUE D'INTÉGRATION MULTIMÉDIA</h1>
             </section>
             <!-- Texte d'intro TIM -->
