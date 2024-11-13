@@ -17,11 +17,8 @@ $query = new WP_Query($args);
 
 // Check if the query returns any posts
 if ($query->have_posts()) :
-    echo '<div class="cours-posts">';
+    echo '<div class="profs-posts">';
     while ($query->have_posts()) : $query->the_post();
-        // Output the post title and content
-        echo '<h2>' . get_the_title() . '</h2>'; // Display post title
-        echo '<div>' . get_the_content() . '</div>'; // Display post content
     endwhile;
     echo '</div>';
 else :
@@ -30,5 +27,7 @@ endif;
 
 // Reset the post data
 wp_reset_postdata();
+
+echo do_shortcode('[slider_car]');
 ?>
 <?php get_footer(); ?>
