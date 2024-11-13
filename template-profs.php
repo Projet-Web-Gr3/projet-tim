@@ -6,6 +6,8 @@
 ?>
 <?php get_header(); ?>
 <?php
+echo '<h1>' . get_the_title() . '</h1>';
+
 // Define your custom query arguments
 $args = array(
     'category_name' => 'Profs', // Replace 'cours' with your actual category slug
