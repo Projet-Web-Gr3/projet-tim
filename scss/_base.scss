@@ -58,9 +58,17 @@ body {
                 height: 90vh;                       
                 transition: opacity 0.5s ease-in-out;
                 z-index: -1;
-                padding: 5rem 7rem;
+                padding: 5rem 1rem;
+                @media screen and (min-width: $Fullscreen) {
+                    padding: 5rem 7rem;
+                }
                 color: white;
-
+                h2 {
+                    text-align: center;
+                    @media screen and (min-width: $Fullscreen) {
+                        text-align: left;
+                    }
+                }
                 // Le texte
                 p {
                     color: white;
@@ -68,7 +76,7 @@ body {
                     font-family: "Titillium Web", sans-serif;
                     margin-left: 2rem;
                     margin-right: 2rem;
-
+                    font-size: 1.5rem;
                     @media screen and (min-width: $Fullscreen) {
                         font-size: 1.5vw;
                     }
