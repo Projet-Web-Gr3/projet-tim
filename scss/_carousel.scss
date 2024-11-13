@@ -13,6 +13,9 @@
 
     h2 {
         margin: 0 0 0 0;
+        @media screen and (min-width: $Fullscreen) {
+            align-self: flex-start;
+        }
     }
 
     p {
