@@ -91,4 +91,10 @@ function _4w4_modifie_requete_principal( $query ) {
     }
     add_action( 'wp_enqueue_scripts', '_4w4_joules_enqueue_style' );
 
+    // Cache la barre admin pour tous les utilisateurs
+function hide_admin_bar_for_all_users() {
+    add_filter('show_admin_bar', '__return_false');
+}
+add_action('after_setup_theme', 'hide_admin_bar_for_all_users');
+
     
