@@ -3,8 +3,6 @@
  * Template name: Cours
  *
  *
- * Template name: Cours
- *
  */
 ?>
 <?php get_header(); ?>

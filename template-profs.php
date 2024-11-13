@@ -17,11 +17,17 @@ $query = new WP_Query($args);
 
 // Check if the query returns any posts
 if ($query->have_posts()) :
-    echo '<div class="cours-posts">';
+    echo '<div class="prof-posts">';
     while ($query->have_posts()) : $query->the_post();
-        // Output the post title and content
-        echo '<h2>' . get_the_title() . '</h2>'; // Display post title
-        echo '<div>' . get_the_content() . '</div>'; // Display post content
+        echo '<div class="prof-post">';
+        // Display post title outside the image container
+        echo '<h2 class="prof-title">' . get_the_title() . '</h2>';
+        echo '<div class="titre-image-prof">';
+        echo the_post_thumbnail('medium');
+        // Add the text overlay inside the image container
+        echo '<div class="texte-prof">' . get_the_content() . '</div>';
+        echo '</div>'; // Close titre-image-prof div
+        echo '</div>'; // Close prof-post div
     endwhile;
     echo '</div>';
 else :

@@ -13,10 +13,14 @@
 h1 {
     margin: 0;
     font-family: 'pixellari';
-    font-size: clamp(2rem, 0.537vw + 1.856rem, 2.5rem);
+    font-size: 2rem;
     text-shadow: 0.15vw 0.15vw 0px rgb(255, 151, 194),0.3vw 0.3vw 0px #a70a4ba9,
     -0.15vw -0.15vw 0px #00bc87b2, -0.5vw 0.5vw 2vw #08092ad8;
     user-select: none;
+
+    @media screen and (min-width: $Fullscreen){
+        font-size: 4rem;       
+    }
 }
  
 h2 {
@@ -26,12 +30,14 @@ h2 {
  
 h3 {
     font-family: 'Titillium Web';
+    color: white;
 }
 a {
     font-family: 'Titillium Web';
 }
 p {
     font-family: 'Titillium Web';
+    color: white;
 }
 
 .titrePage{
