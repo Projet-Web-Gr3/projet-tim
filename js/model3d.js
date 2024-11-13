@@ -6,7 +6,7 @@ import { GLTFLoader } from "https://cdn.skypack.dev/three@0.129.0/examples/jsm/l
 // Create a Three.JS Scene
 const scene = new THREE.Scene();
 // Create a new camera with positions and angles
-const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+const camera = new THREE.PerspectiveCamera(50, window.innerWidth / window.innerHeight, 0.1, 1000);
 
 // Keep the 3D object on a global variable so we can access it later
 let object;
@@ -43,14 +43,14 @@ loader.load(
 );
 
 // Instantiate a new renderer and set its size
-const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true, powerPreference: "low-power" });
 renderer.setSize(window.innerWidth, window.innerHeight);
 
 // Add the renderer to the DOM
 document.getElementById("container3D").appendChild(renderer.domElement);
 
 // Set initial camera position (further away)
-camera.position.z = 10; // Plus éloigné
+camera.position.z = 15; // Plus éloigné
 
 // Add lights to the scene
 const redLight = new THREE.DirectionalLight(0xAA1B52, 2.9);
@@ -96,7 +96,7 @@ function animate() {
     }
 
     // Adjust the zoom based on scroll (slower zoom)
-    camera.position.z = Math.max(5, 7 - smoothScrollY * 0.001); // S'arrêter à 5 pour ne pas zoomer trop près
+    camera.position.z = Math.max(10, 13 - smoothScrollY * 0.001); // S'arrêter à 5 pour ne pas zoomer trop près
 
     // Render the scene after all transformations
     renderer.render(scene, camera);
