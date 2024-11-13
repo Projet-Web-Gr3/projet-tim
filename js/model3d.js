@@ -20,7 +20,7 @@ const loader = new GLTFLoader();
 // Load the file
 loader.load(
   //`models/${objToRender}/scene.gltf`,
-  `wp-content/themes/projet-tim/models/scene.gltf`,
+  `wp-content/themes/projet-tim2/models/scene.gltf`,
   function (gltf) {
     // If the file is loaded, add it to the scene
     object = gltf.scene;
