@@ -57,8 +57,10 @@ body.lightMd {
   position: fixed;
   top: 0;
   left: 25%;
-  z-index: -4; /* Assurez-vous que le conteneur est derrière le header */
-  overflow: hidden; /* Empêche le débordement du contenu */
+  z-index: -4;
+  /* Assurez-vous que le conteneur est derrière le header */
+  overflow: hidden;
+  /* Empêche le débordement du contenu */
 }
 
 /* MAIN */
@@ -111,7 +113,6 @@ main .accueil_effacer .logoGrand {
 /* FOOTER */
 footer {
   width: 100%;
-  height: 28.5vh;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -235,12 +236,24 @@ footer .logo img {
 /* TITRES */
 h1 {
   margin: 0;
+  color: white;
   font-family: "pixellari";
   font-size: clamp(2rem, 0.537vw + 1.856rem, 2.5rem);
   text-shadow: 0.15vw 0.15vw 0px rgb(255, 151, 194), 0.3vw 0.3vw 0px rgba(167, 10, 75, 0.662745098), -0.15vw -0.15vw 0px rgba(0, 188, 135, 0.6980392157), -0.5vw 0.5vw 2vw rgba(8, 9, 42, 0.8470588235);
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
+  user-select: none;
+}
+@media screen and (min-width: 1080px) {
+  h1 {
+    margin: 4rem 0;
+    font-size: 7rem;
+    text-align: center;
+  }
+}
+@media screen and (min-width: 812px) {
+  h1 {
+    font-size: 5rem;
+    margin: 4rem;
+  }
 }
 
 h2 {
@@ -326,8 +339,7 @@ nav {
     width: 70%;
     background: transparent;
     box-shadow: none;
-    -webkit-backdrop-filter: none;
-            backdrop-filter: none;
+    backdrop-filter: none;
   }
 }
 nav ul {
@@ -852,4 +864,79 @@ button.recherche__bouton {
   border: 0.1rem solid rgb(255, 255, 255);
   padding: 0.5rem;
   width: 100%;
+}
+
+.projet-menu {
+  width: 90%;
+  background-color: rgba(77, 77, 77, 0.3019607843);
+  text-align: center;
+  position: relative;
+  padding: 1.2rem 2rem;
+  left: 5%;
+  margin-top: 1rem;
+}
+.projet-menu:hover {
+  color: teal;
+  text-decoration: underline;
+}
+
+.solo_projet {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 5rem;
+  background-color: rgba(0, 0, 0, 0.336);
+  padding: 2rem 3rem;
+}
+@media screen and (min-width: 1080px) {
+  .solo_projet {
+    flex-direction: row;
+  }
+}
+
+.projet_image {
+  width: 85%;
+}
+@media screen and (min-width: 1080px) {
+  .projet_image {
+    width: 35rem;
+  }
+}
+
+.projet {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.projet-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.projet-content p {
+  text-align: center;
+  font-size: 1.5rem;
+  margin: 0.8rem;
+}
+@media screen and (min-width: 1080px) {
+  .projet-content p {
+    text-align: left;
+  }
+}
+.projet-content h2 {
+  font-size: 3.5rem;
+}
+.projet-content h3 {
+  font-size: 2.5rem;
+}
+@media screen and (min-width: 1080px) {
+  .projet-content {
+    width: 45rem;
+    align-items: flex-start;
+    justify-content: center;
+  }
 }/*# sourceMappingURL=style.css.map */

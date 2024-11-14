@@ -1,20 +1,21 @@
 <?php get_header(); ?>
 <div class="titrePage">
-    <h1><?php single_cat_title(); ?></h1>
-</div>
-<h1>CATEGORY.PHP</h1>
+    <h1><?php the_title(); ?></h1>
 
-<nav class="session-menu">
-        <?php
-        // Affiche le menu "Projet Menu" créé dans le panneau d'administration
-        wp_nav_menu(array(
-            'theme_location' => 'projet_menu',
-            'container' => false,
-            'menu_class' => 'slide'
-        ));
-        ?>
-    </nav>
-<div class="projets">
+</div>
+
+
+<nav class="projet-menu">
+    <?php
+    // Affiche le menu "Projet Menu" créé dans le panneau d'administration
+    wp_nav_menu(array(
+        'theme_location' => 'projet_menu',
+        'container' => false,
+        'menu_class' => 'slide'
+    ));
+    ?>
+</nav>
+<section class="projet">
     <?php
     $category = get_queried_object();
 
@@ -31,16 +32,36 @@
         while ($projets->have_posts()) :
             $projets->the_post();
     ?>
-            <div class="projet">
-                <div>
-                    <div class="projet-image">
-                        <?php the_post_thumbnail(); ?>
-                    </div>
-                    <div class="projet-content">
-                        <h2><?php the_title(); ?></h2>
-                        <p><?php the_excerpt(); ?></p>
-                    </div>
-        </div>
+            <div class="solo_projet">
+                <div class="projet_image">
+                    <!-- affiche l'images qui est dans le content pas post thumbnail -->
+                    <?php
+                    $content = get_the_content();
+                    $image = '';
+                    if (preg_match('/<img[^>]+>/i', $content, $matches)) {
+                        $image = $matches[0];
+                    }
+                    echo $image;
+                    ?>
+                </div>
+                <div class="projet-content">
+                    <h2><?php the_title(); ?></h2>
+                    <?php
+                    $subtitle = '';
+                    $paragraph = '';
+                    if (preg_match('/<h3[^>]*>(.*?)<\/h3>/i', $content, $matches)) {
+                        $subtitle = $matches[0];
+                    }
+                    if (preg_match('/<p[^>]*>(.*?)<\/p>/i', $content, $matches)) {
+                        $paragraph = $matches[0];
+                    }
+                    ?>
+                    <h3><?php echo $subtitle; ?></h3>
+                    <p><?php echo $paragraph; ?></p>
+                    ?>
+                </div>
+
+
             </div>
     <?php
         endwhile;
@@ -48,5 +69,5 @@
         echo '<p>Aucun projet trouvé.</p>';
     endif;
     ?>
-</div>
+</section>
 <?php get_footer(); ?>
