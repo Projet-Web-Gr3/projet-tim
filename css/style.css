@@ -1004,6 +1004,8 @@ button.recherche__bouton {
 .div-ensemble-img {
   display: flex;
   flex-direction: row;
+  margin-left: 2rem;
+  margin-right: 2rem;
 }
 .div-ensemble-img .div-img-stage {
   width: 50%;
