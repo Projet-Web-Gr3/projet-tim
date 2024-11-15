@@ -877,8 +877,13 @@ button.recherche__bouton {
   height: auto;
   transition: opacity 0.5s ease-in-out;
   z-index: -1;
-  padding: 5rem 7rem;
+  padding: 0;
   color: white;
+}
+@media (min-width: 1080px) {
+  .intro-avenir {
+    padding: 5rem 7rem;
+  }
 }
 
 .avenir-carousel {
@@ -946,6 +951,12 @@ button.recherche__bouton {
 .ate {
   display: flex;
   flex-direction: column;
+  padding: 0;
+}
+@media (min-width: 1080px) {
+  .ate {
+    padding: 5rem 7rem;
+  }
 }
 
 .conteneur-principal {
@@ -966,4 +977,23 @@ button.recherche__bouton {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.conteneur-txt-stage p {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.div-ensemble-img {
+  display: flex;
+  flex-direction: row;
+}
+.div-ensemble-img .div-img-stage {
+  width: 50%;
+  display: flex;
+}
+.div-ensemble-img .div-img-stage2 {
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
 }
