@@ -174,5 +174,4 @@ document.addEventListener('DOMContentLoaded', function() {
     divImgStage.appendChild(imgStage);
     divImgStage2.appendChild(imgStage2);
     divImgStage2.appendChild(imgStage3);
-
 });
