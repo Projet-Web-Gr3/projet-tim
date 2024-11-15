@@ -962,10 +962,22 @@ button.recherche__bouton {
 .conteneur-principal {
   display: flex;
   flex-direction: row-reverse;
+  flex-wrap: wrap;
+}
+@media (min-width: 1080px) {
+  .conteneur-principal {
+    display: flex;
+    flex-direction: row-reverse;
+  }
 }
 
 .ate-contenu {
-  width: 70%;
+  width: 100%;
+}
+@media (min-width: 1080px) {
+  .ate-contenu {
+    width: 70%;
+  }
 }
 
 .soustitre-ate {
@@ -973,10 +985,15 @@ button.recherche__bouton {
 }
 
 .ate-image {
-  width: 30%;
+  width: 90%;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+@media (min-width: 1080px) {
+  .ate-image {
+    width: 30%;
+  }
 }
 
 .conteneur-txt-stage p {
@@ -996,4 +1013,12 @@ button.recherche__bouton {
   width: 50%;
   display: flex;
   flex-wrap: wrap;
+}
+
+.fin-etudes {
+  padding: 0;
+}
+.fin-etudes p {
+  margin-left: 2rem;
+  margin-right: 2rem;
 }

@@ -89,10 +89,20 @@
 .conteneur-principal {
     display: flex;
     flex-direction: row-reverse;
+    flex-wrap: wrap;
+
+    @media (min-width: $Fullscreen) {
+        display: flex;
+        flex-direction: row-reverse;
+      }
 }
 
 .ate-contenu {
-    width: 70%;
+    width: 100%;
+
+    @media (min-width: $Fullscreen) {
+        width: 70%;
+      }
 }
 
 .soustitre-ate {
@@ -100,10 +110,14 @@
 }
 
 .ate-image {
-    width: 30%;
+    width: 90%;
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @media (min-width: $Fullscreen) {
+        width: 30%;
+      }
 }
 
 .conteneur-txt-stage {
@@ -126,6 +140,15 @@
         width: 50%;
         display: flex;
         flex-wrap: wrap;
+    }
+}
+
+.fin-etudes {
+    padding: 0;
+
+    p {
+        margin-left: 2rem;
+        margin-right: 2rem;
     }
 }
 

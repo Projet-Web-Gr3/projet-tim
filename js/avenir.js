@@ -28,21 +28,18 @@ document.addEventListener('DOMContentLoaded', function() {
         const carousel = document.getElementById('avenir-carousel');
         const carouselInner = carousel.querySelector('.avenir-carousel-inner');
 
-        carouselData.forEach((slide, index) => {
-            const carouselItem = document.createElement('div');
-            carouselItem.className = 'avenir-carousel-item';
-            if (index === 0) carouselItem.classList.add('active');
+        carouselData.forEach((slide, slideIndex) => {
+            slide.images.forEach((image, imageIndex) => {
+                const carouselItem = document.createElement('div');
+                carouselItem.className = 'avenir-carousel-item';
+                if (slideIndex === 0 && imageIndex === 0) carouselItem.classList.add('active');
 
-            const title = document.createElement('h2');
-            title.textContent = slide.title;
+                const title = document.createElement('h2');
+                title.textContent = slide.title;
 
-            const paragraph = document.createElement('p');
-            paragraph.textContent = slide.paragraph;
+                const paragraph = document.createElement('p');
+                paragraph.textContent = slide.paragraph;
 
-            const imagesDiv = document.createElement('div');
-            imagesDiv.className = 'images';
-
-            slide.images.forEach(image => {
                 const imgItem = document.createElement('div');
                 imgItem.className = 'avenir-img-item';
 
@@ -55,13 +52,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
                 imgItem.appendChild(img);
                 imgItem.appendChild(caption);
-                imagesDiv.appendChild(imgItem);
-            });
 
-            carouselItem.appendChild(title);
-            carouselItem.appendChild(paragraph);
-            carouselItem.appendChild(imagesDiv);
-            carouselInner.appendChild(carouselItem);
+                carouselItem.appendChild(title);
+                carouselItem.appendChild(paragraph);
+                carouselItem.appendChild(imgItem);
+                carouselInner.appendChild(carouselItem);
+            });
         });
     }
 
