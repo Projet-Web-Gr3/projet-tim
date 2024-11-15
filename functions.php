@@ -82,12 +82,14 @@ function _4w4_modifie_requete_principal( $query ) {
         // $version_js = filemtime(get_template_directory() . '/js/model3d.js');
         $version_anim = filemtime(get_template_directory() . '/js/index.js');
         $version_cours = filemtime(get_template_directory() . '/js/coursDropDown.js');
+        $version_avenir = filemtime(get_template_directory() . '/js/avenir.js');
 
        //wp_enqueue_style( 'style', get_stylesheet_uri() );
         wp_enqueue_style( 'style', get_template_directory_uri() . '/style.css', array(), $version_css, 'all'    );
         // wp_enqueue_script( 'model3d', get_template_directory_uri() . '/js/model3d.js', array(), $version_js, true );
         wp_enqueue_script('animation', get_template_directory_uri() . '/js/index.js', array(), $version_anim, true);
         wp_enqueue_script('coursDropDown', get_template_directory_uri() . '/js/coursDropDown.js', array(), $version_cours, true);
+        wp_enqueue_script('coursDropDown', get_template_directory_uri() . '/js/avenir.js', array(), $version_avenir, true);
     }
     add_action( 'wp_enqueue_scripts', '_4w4_joules_enqueue_style' );
 

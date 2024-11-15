@@ -84,6 +84,7 @@ main {
   opacity: 1;
   min-height: 100vh;
   overflow-x: hidden;
+  z-index: 0;
   /* SECTION(S) */
 }
 main h2 {
@@ -866,4 +867,62 @@ button.recherche__bouton {
   border: 0.1rem solid rgb(255, 255, 255);
   padding: 0.5rem;
   width: 100%;
+}
+
+.avenir-carousel {
+  position: relative;
+  max-width: 800px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.avenir-carousel .avenir-carousel-inner {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.avenir-carousel .avenir-carousel-item {
+  min-width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.avenir-carousel .avenir-img {
+  display: flex;
+  justify-content: center;
+}
+
+.avenir-carousel .avenir-img-item {
+  margin: 10px;
+}
+
+.avenir-carousel .avenir-img-item img {
+  max-width: 100px;
+  display: block;
+  margin: auto;
+}
+
+.avenir-carousel-item .images {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.avenir-carousel .carousel-control-prev, .avenir-carousel .carousel-control-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.avenir-carousel .carousel-control-prev {
+  left: 0;
+}
+
+.avenir-carousel .carousel-control-next {
+  right: 0;
 }
