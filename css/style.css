@@ -869,11 +869,27 @@ button.recherche__bouton {
   width: 100%;
 }
 
+.intro-avenir {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100vw;
+  height: auto;
+  transition: opacity 0.5s ease-in-out;
+  z-index: -1;
+  padding: 5rem 7rem;
+  color: white;
+}
+
 .avenir-carousel {
   position: relative;
-  max-width: 800px;
   margin: auto;
   overflow: hidden;
+  background: rgba(0, 0, 0, 0.463);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6.7px);
+  -webkit-backdrop-filter: blur(6.7px);
+  border: 1px solid rgba(0, 0, 0, 0.01);
 }
 
 .avenir-carousel .avenir-carousel-inner {
@@ -925,4 +941,29 @@ button.recherche__bouton {
 
 .avenir-carousel .carousel-control-next {
   right: 0;
+}
+
+.ate {
+  display: flex;
+  flex-direction: column;
+}
+
+.conteneur-principal {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.ate-contenu {
+  width: 70%;
+}
+
+.soustitre-ate {
+  text-align: center;
+}
+
+.ate-image {
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

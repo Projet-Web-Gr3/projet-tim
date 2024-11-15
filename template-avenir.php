@@ -6,7 +6,7 @@
 ?>
 <?php get_header(); ?>
 <main>
-    <section class="intro">
+    <section class="intro-avenir">
         <div>
             <div class="titrePage">
                 <h1><?php the_title(); ?></h1>
@@ -20,13 +20,8 @@
             </div>
         </div>
     </section>
+    <section class="ate"></section>
+    <section class="fin-etudes"></section>
 </main>
 
 <?php get_footer(); ?>
-
-<?php
-// Enqueue the JavaScript file only for the "Avenir" page
-if (is_page_template('template-avenir.php')) {
-    wp_enqueue_script('avenir-carousel', get_template_directory_uri() . '/js/avenir-carousel.js', array(), null, true);
-}
-?>

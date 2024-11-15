@@ -87,4 +87,43 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     createCarousel();
+
+    // Capture l'élément possédant la classe "ate"
+    const sectionAte = document.getElementsByClassName('ate')[0];
+    // Création d'un conteneur principal pour le contenu
+    const conteneurPrincipal = document.createElement('div');
+    conteneurPrincipal.className = "conteneur-principal";
+    // Création d'une div pour le contenu
+    const divAte = document.createElement('div');
+    divAte.className = "ate-contenu";
+    // Création de la div pour l'image
+    const divImage = document.createElement('div');
+    divImage.className = "ate-image";
+    
+    // Création du h2
+    const titreAte = document.createElement('h2');
+    titreAte.textContent = "Est-il possible de travailler pendant et après la technique ?";
+    titre2Ate.className = "soustitre-ate";
+    // Création du h3
+    const titre2Ate = document.createElement('h3');
+    titre2Ate.textContent = "Stage ATE";
+    // Création du paragraphe
+    const p_Ate = document.createElement('p');
+    p_Ate.textContent = "Loaded to the gunwalls rutters booty reef tender spirits wherry driver grapple ho. Tender topmast lad lass Pirate Round clap of thunder to go on account hail-shot ahoy Shiver me timbers. Shrouds nipperkin hands run a shot across the bow Jack Ketch schooner black jack jolly boat bilged on her anchor doubloon. Lugsail spirits Sea Legs red ensign schooner ahoy bilge port avast Plate Fleet. Bowsprit quarterdeck swab killick furl lanyard scallywag gangway Admiral of the Black American Main. Main sheet weigh anchor Letter of Marque chandler heave down Jack Ketch dance the hempen jig belaying pin scourge of the seven seas Privateer.";
+    // Création de l'image
+    const logoAte = document.createElement('img');
+    logoAte.src = "logo-ate.png";
+
+    // Ajout des éléments dans la section
+    sectionAte.appendChild(titreAte);
+    sectionAte.appendChild(conteneurPrincipal);
+
+    // Ajout des divs dans la section conteneur principal
+    conteneurPrincipal.appendChild(divAte);
+    conteneurPrincipal.appendChild(divImage);
+
+    // Ajout des éléments dans les divs
+    divAte.appendChild(titre2Ate);
+    divAte.appendChild(p_Ate);
+    divImage.appendChild(logoAte);
 });
