@@ -9,6 +9,12 @@
     @media screen and (min-width: $Fullscreen){
         flex-direction: row;
     }
+
+    img{
+        width: 20rem;
+        height: 20rem;
+        margin: 1rem;
+    }
 }
 
 .texte404{
@@ -48,10 +54,6 @@
 
 }
 
-img{
-    width: 20rem;
-    height: 20rem;
-    margin: 1rem;
-}
+
 
 

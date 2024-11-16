@@ -52,6 +52,11 @@ Text Domain: Projet-tim
     flex-direction: row;
   }
 }
+.page404 img {
+  width: 20rem;
+  height: 20rem;
+  margin: 1rem;
+}
 
 .texte404 {
   padding: 0.5rem;
@@ -83,12 +88,6 @@ Text Domain: Projet-tim
 }
 .button404 h3 {
   margin: 0;
-}
-
-img {
-  width: 20rem;
-  height: 20rem;
-  margin: 1rem;
 }
 
 .prof-posts {
@@ -1151,6 +1150,77 @@ li a {
   text-align: center;
   text-decoration: none;
   color: white;
+}
+
+.singleSection {
+  display: flex;
+  flex-direction: column;
+  margin: 1.5rem;
+  padding: 1.5rem 0;
+  justify-content: center;
+  gap: 2.5rem;
+}
+@media screen and (min-width: 1080px) {
+  .singleSection {
+    margin: 2rem 6rem;
+    align-items: center;
+  }
+}
+
+.contenuSingle {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  gap: 1rem;
+}
+@media screen and (min-width: 1080px) {
+  .contenuSingle {
+    text-align: left;
+  }
+}
+.contenuSingle .acfSingle {
+  display: flex;
+  justify-content: space-around;
+}
+.contenuSingle .acfSingle h3 {
+  font-size: 1.3rem;
+}
+.contenuSingle #photoSingle {
+  display: flex;
+  justify-content: center;
+}
+.contenuSingle .logiciels {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 1rem;
+}
+@media screen and (min-width: 1080px) {
+  .contenuSingle .logiciels {
+    padding: 0;
+  }
+}
+.contenuSingle .logiciels .icones-logiciels {
+  display: flex;
+  justify-content: center; /* Centering the icons */
+  flex-wrap: wrap; /* Allows icons to wrap to a new line if needed */
+  width: 100%; /* Make sure it doesn’t exceed the parent container */
+}
+.contenuSingle .logiciels .icones-logiciels .image-icone {
+  width: 80px;
+  display: flex;
+  margin: 5px;
+}
+@media screen and (min-width: 1080px) {
+  .contenuSingle .logiciels .icones-logiciels .image-icone {
+    width: 65px;
+    margin: 10px;
+  }
+}
+.contenuSingle .logiciels img {
+  max-width: 20% !important;
+  height: auto;
 }
 
 .barre-entete {
