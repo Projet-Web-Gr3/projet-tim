@@ -396,9 +396,15 @@ h1 {
 h2 {
   font-family: "Titillium Web";
   font-size: clamp(1.5rem, 0.235rem + 4.412vw, 3rem);
+  color: white;
 }
 
 h3 {
+  font-family: "Titillium Web";
+  color: white;
+}
+
+h4 {
   font-family: "Titillium Web";
   color: white;
 }
@@ -951,6 +957,107 @@ li a {
 .open {
   max-height: 1000px; /* Set a max height large enough to fit the content */
   opacity: 1;
+}
+
+#rechercheSection {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+  padding: 1.5rem 0;
+  justify-content: center;
+  gap: 2.5rem;
+}
+@media screen and (min-width: 1080px) {
+  #rechercheSection {
+    margin: 2rem;
+    align-items: center;
+  }
+}
+
+.resultatsRecherche {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+@media screen and (min-width: 1080px) {
+  .resultatsRecherche {
+    width: 65%;
+  }
+}
+
+@media screen and (min-width: 1080px) {
+  .articleContenu {
+    padding: 0.5rem;
+  }
+  .articleCatégorie {
+    padding: 0.5rem;
+  }
+}
+.articleRecherche {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.4784313725);
+  padding: 0.7rem;
+  text-align: center;
+}
+@media screen and (min-width: 1080px) {
+  .articleRecherche {
+    flex-direction: row;
+    text-align: left;
+  }
+}
+.articleRecherche h3 {
+  font-size: 1.3rem;
+}
+.articleRecherche h4 {
+  padding: 0.5rem;
+  font-size: 1.1rem;
+}
+.articleRecherche p {
+  text-align: center;
+  font-size: 1rem;
+}
+@media screen and (min-width: 1080px) {
+  .articleRecherche p {
+    text-align: left;
+  }
+}
+
+.post-categories {
+  display: flex;
+}
+.post-categories li {
+  padding: 0.3rem;
+  margin: 0;
+  width: 100%;
+  position: static;
+}
+.post-categories li a {
+  font-size: 1.1rem;
+  white-space: nowrap;
+}
+@media screen and (min-width: 1080px) {
+  .post-categories {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+.boutonRecherche {
+  padding: 0.5rem;
+  margin: 0.5rem;
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  border: 0.1rem solid rgb(255, 255, 255);
+  padding: 0.5rem;
+  width: 50%;
+}
+.boutonRecherche a {
+  text-align: center;
+  text-decoration: none;
+  color: white;
 }
 
 .barre-entete {
