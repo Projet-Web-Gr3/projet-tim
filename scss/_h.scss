@@ -1,17 +1,18 @@
 /* POLICES */
 @font-face {
     font-family: "pixellari";
-    src: url("/4w4_joules/wp-content/themes/projet-tim/fonts/Pixellari.ttf");
+    src: url("/wordpress/wp-content/themes/projet-tim/fonts/Pixellari.ttf");
 }
 
 @font-face {
     font-family: "Titillium Web";
-    src: url("/4w4_joules/wp-content/themes/projet-tim/fonts/TitilliumWeb-Regular.ttf");
+    src: url("/wordpress/wp-content/themes/projet-tim/fonts/TitilliumWeb-Regular.ttf");
 }
- 
+
 /* TITRES */
 h1 {
     margin: 0;
+    color: white;
     font-family: 'pixellari';
     font-size: 2rem;
     text-shadow: 0.15vw 0.15vw 0px rgb(255, 151, 194),0.3vw 0.3vw 0px #a70a4ba9,
@@ -19,41 +20,42 @@ h1 {
     user-select: none;
 
     @media screen and (min-width: $Fullscreen){
-        font-size: 4rem;       
+        font-size: 4rem;      
     }
 }
- 
+
 h2 {
     font-family: 'Titillium Web';
     font-size: clamp(1.5rem, 0.235rem + 4.412vw, 3rem); // À TRAVAILLER
     color: white;
 }
- 
+
 h3 {
     font-family: 'Titillium Web';
     color: white;
 }
+
 
 h4 {
     font-family: 'Titillium Web';
     color: white;
 }
 
+
 a {
     font-family: 'Titillium Web';
 }
+
 p {
     font-family: 'Titillium Web';
     color: white;
 }
 
-.titrePage{
+.titrePage {
     text-align: left;
     width: 95%;
 
-    @media screen and (min-width: $Fullscreen){
+    @media screen and (min-width: $Fullscreen) {
         width: 75%;
     }
 }
-
- 

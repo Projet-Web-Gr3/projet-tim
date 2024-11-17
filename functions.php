@@ -90,5 +90,26 @@ function _4w4_modifie_requete_principal( $query ) {
         wp_enqueue_script('coursDropDown', get_template_directory_uri() . '/js/coursDropDown.js', array(), $version_cours, true);
     }
     add_action( 'wp_enqueue_scripts', '_4w4_joules_enqueue_style' );
+    
+    // Ajout de la fonctionnalité de menu
+
+    function register_menus() {
+        register_nav_menus(array(
+            'principal' => 'Menu Principal',
+            'projet_menu' => 'Projet Menu'
+        ));
+    }
+    add_action('init', 'register_menus');
+
+    // menu de nav pour les projets
+    function register_projet_menu() {
+        register_nav_menu('projet_menu', 'Projet Menu');
+    }
+    add_action('init', 'register_projet_menu');
+
+ 
+
+    
+
 
     
