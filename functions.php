@@ -107,6 +107,9 @@ function _4w4_modifie_requete_principal( $query ) {
         register_nav_menu('projet_menu', 'Projet Menu');
     }
     add_action('init', 'register_projet_menu');
+
+ 
+
     
 
     
