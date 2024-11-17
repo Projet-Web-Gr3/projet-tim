@@ -1,9 +1,29 @@
+/*
+Theme Name: Projet-tim_5W5
+Author: Julian Ibanez
+Author URI: https://wordpress.org/
+Description: Theme de base développé dans le cours 4W4
+Requires PHP: 7.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: Projet-tim
+*/
+
+/* https://developer.wordpress.org/themes/basics/main-stylesheet-style-css/ */
+
+
 @import "variables";
+@import "pages/404";
+@import "profs";
 @import "base";
 @import "h";
 @import "nav";
 @import "brgr";
 @import "carousel";
 @import "cours";
-@import "composants/recherche";
+@import "pages/pageSearch";
+@import "pages/pageCategorie";
+@import "pages/pageSingle";
+@import "composants/recherche"
 @import "composants/projet";
+

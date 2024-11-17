@@ -30,13 +30,15 @@ body {
     height: 100vh;
     position: fixed;
     top: 0;
-    left: 25%;
-    z-index: -4;
-    /* Assurez-vous que le conteneur est derrière le header */
-    overflow: hidden;
-    /* Empêche le débordement du contenu */
-}
+    left: 0;
+    z-index: -4; /* Assurez-vous que le conteneur est derrière le header */
+    overflow: hidden; /* Empêche le débordement du contenu */
 
+    @media screen and (min-width: $Fullscreen) {
+        left: 25%;
+    }
+}    
+   
 /* MAIN */
 main {
     display: flex;

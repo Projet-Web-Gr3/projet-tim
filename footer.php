@@ -23,28 +23,20 @@
                </div>
            </div>
 
-           <a href="">Aide</a>
-           <a href="">Contactez-nous</a>
-           <a href="">Universités</a>
-           <a href="">politique de confidentialité</a>
-           <a href="">Réseaux sociaux</a>
-
-           <div class="logo">
-               <img src="https://placehold.co/600x400" alt="">
-               <img src="https://placehold.co/600x400" alt="">
-               <img src="https://placehold.co/600x400" alt="">
-               <img src="https://placehold.co/600x400" alt="">
-           </div>
-       </div>
-   </footer>
-   </div>
-   <!-- JS -->
-   <!-- <script src="/4w4_joules/wp-content/themes/projet-tim/js/carousel.js"></script>
+                <div class="logo">
+                    <img src="https://placehold.co/600x400" alt="">
+                    <img src="https://placehold.co/600x400" alt="">
+                    <img src="https://placehold.co/600x400" alt="">
+                    <img src="https://placehold.co/600x400" alt="">
+                </div>
+            </div>
+        </footer>
+    </div>
+    <!-- JS -->
+    <!-- <script src="/4w4_joules/wp-content/themes/projet-tim/js/carousel.js"></script>
     <script src="/4w4_joules/wp-content/themes/projet-tim/js/index.js"></script>
     <script src="/4w4_joules/wp-content/themes/projet-tim/js/coursDropDown.js"></script>-->
-   <script type="module" src="<?php echo get_template_directory_uri() . '/js/model3d.js' ?>"></script>
-   <?php wp_footer(); ?>
-   </body>
-
-
-   </html>
+    <script type="module" src="<?php echo get_template_directory_uri() .'/js/model3d.js' ?>"></script> 
+<?php wp_footer(); ?>
+</body>
+</html>

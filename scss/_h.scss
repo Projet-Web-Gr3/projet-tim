@@ -14,31 +14,33 @@ h1 {
     margin: 0;
     color: white;
     font-family: 'pixellari';
-    font-size: clamp(2rem, 0.537vw + 1.856rem, 2.5rem);
-    text-shadow: 0.15vw 0.15vw 0px rgb(255, 151, 194), 0.3vw 0.3vw 0px #a70a4ba9,
-        -0.15vw -0.15vw 0px #00bc87b2, -0.5vw 0.5vw 2vw #08092ad8;
+    font-size: 2rem;
+    text-shadow: 0.15vw 0.15vw 0px rgb(255, 151, 194),0.3vw 0.3vw 0px #a70a4ba9,
+    -0.15vw -0.15vw 0px #00bc87b2, -0.5vw 0.5vw 2vw #08092ad8;
     user-select: none;
 
-    @media screen and (min-width: $Fullscreen) {
-        margin: 4rem 0;
-        font-size: 7rem;
-        text-align: center;
-    }
-
-    @media screen and (min-width: 812px) {
-        font-size: 5rem;
-        margin: 4rem;
+    @media screen and (min-width: $Fullscreen){
+        font-size: 4rem;      
     }
 }
 
 h2 {
     font-family: 'Titillium Web';
     font-size: clamp(1.5rem, 0.235rem + 4.412vw, 3rem); // À TRAVAILLER
+    color: white;
 }
 
 h3 {
     font-family: 'Titillium Web';
+    color: white;
 }
+
+
+h4 {
+    font-family: 'Titillium Web';
+    color: white;
+}
+
 
 a {
     font-family: 'Titillium Web';
@@ -46,6 +48,7 @@ a {
 
 p {
     font-family: 'Titillium Web';
+    color: white;
 }
 
 .titrePage {
