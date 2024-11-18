@@ -125,6 +125,24 @@ main .accueil_effacer .logoGrand {
   padding: 2rem 0;
 }
 
+.vie {
+  height: 100vh;
+  padding: 0;
+  align-items: center;
+}
+@media screen and (min-width: 1080px) {
+  .vie {
+    margin-top: 10rem;
+    margin-bottom: 15rem;
+  }
+}
+
+@media screen and (min-width: 1080px) {
+  .img-vie {
+    width: 50%;
+  }
+}
+
 /* FOOTER */
 footer {
   width: 100%;

@@ -98,6 +98,23 @@ body {
             }
     }
 
+    .vie {
+        height: 100vh;
+        padding: 0;
+        align-items: center;
+
+        @media screen and (min-width: $Fullscreen) {
+            margin-top: 10rem;
+            margin-bottom: 15rem;
+        }
+    }
+
+    .img-vie {
+        @media screen and (min-width: $Fullscreen) {
+            width: 50%;
+        }
+    }
+
     /* FOOTER */
     footer {
         width: 100%;
