@@ -6,16 +6,16 @@
 ?>
 <?php get_header(); ?>
 <?php
-// Define your custom query arguments
+// Arguments personnalisés
 $args = array(
-    'category_name' => 'Profs', // Replace 'cours' with your actual category slug
-    'posts_per_page' => 15, // Adjust the number of posts displayed
+    'category_name' => 'Profs', // On cherche le slug "Profs"
+    'posts_per_page' => 15, // Nombre de posts affichés
 );
 
 // Create a new query
 $query = new WP_Query($args);
 
-// Check if the query returns any posts
+// Regarde si la requête renvoie le bon résultat
 if ($query->have_posts()) :
     echo '<div class="prof-posts">';
     while ($query->have_posts()) : $query->the_post();
