@@ -12,14 +12,15 @@ const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerH
 let object;
 
 // Set which object to render
-let objToRender = 'Model';
+// let objToRender = 'Model';
 
 // Instantiate a loader for the .gltf file
 const loader = new GLTFLoader();
 
 // Load the file
 loader.load(
-  `models/${objToRender}/scene.gltf`,
+  //`models/${objToRender}/scene.gltf`,
+  `wp-content/themes/projet-tim/models/scene.gltf`,
   function (gltf) {
     // If the file is loaded, add it to the scene
     object = gltf.scene;
@@ -42,7 +43,7 @@ loader.load(
 );
 
 // Instantiate a new renderer and set its size
-const renderer = new THREE.WebGLRenderer({ alpha: true });
+const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
 renderer.setSize(window.innerWidth, window.innerHeight);
 
 // Add the renderer to the DOM
