@@ -17,7 +17,7 @@
                 <div class="search-form">
                     <?php get_search_form(); ?>
                 </div>
-            </div> 
+            </div>
             <div class="liens">
                 <a href="">Aide</a>
                 <a href="">Contactez-nous</a>
@@ -34,14 +34,18 @@
                 </div>
             </div>
         </footer>
-    </div>
-    <!-- JS -->
-    <!-- <script src="/4w4_joules/wp-content/themes/projet-tim/js/carousel.js"></script>
+        </div>
+        <!-- Include stats.js library -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/stats.js/r16/Stats.min.js"></script>
+        <!-- Include particles.js library -->
+        <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+        <!-- JS -->
+        <!-- <script src="/4w4_joules/wp-content/themes/projet-tim/js/carousel.js"></script>
     <script src="/4w4_joules/wp-content/themes/projet-tim/js/index.js"></script>
     <script src="/4w4_joules/wp-content/themes/projet-tim/js/coursDropDown.js"></script>-->
-    <script type="module" src="<?php echo get_template_directory_uri() .'/js/model3d.js' ?>"></script> 
-<?php wp_footer(); ?>
-</body>
+        <script type="module" src="<?php echo get_template_directory_uri() . '/js/model3d.js' ?>"></script>
+        <?php wp_footer(); ?>
+        </body>
 
 
-</html>
+        </html>

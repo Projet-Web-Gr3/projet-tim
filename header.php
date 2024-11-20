@@ -12,20 +12,21 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap"
         rel="stylesheet">
-        <?php wp_head(); ?>
+    <?php wp_head(); ?>
 </head>
 
 <body>
-   <header class="menu__header">
-    <?= get_custom_logo(); ?>
-    <div class="barre-entete clr-agencement-primaire">
-        <div class="search-form">
-            <?php get_search_form(); ?>
+    <header class="menu__header">
+        <?= get_custom_logo(); ?>
+        <div class="barre-entete clr-agencement-primaire">
+            <div class="search-form">
+                <?php get_search_form(); ?>
+            </div>
         </div>
-    </div>   
-    <?php wp_nav_menu(array(
-        'theme_location' => 'principal',
-        'container' => 'nav',
-        'menu_class' => 'menu-principal'
-    )); ?>
-</header>
+        <?php wp_nav_menu(array(
+            'theme_location' => 'principal',
+            'container' => 'nav',
+            'menu_class' => 'menu-principal'
+        )); ?>
+
+    </header>
