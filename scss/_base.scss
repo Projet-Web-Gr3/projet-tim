@@ -169,9 +169,13 @@ body {
                 }
 
                 .logoGrand{
-                    width: 30vw;
+                    width: 40vw;
                     height: auto;
-                    padding: 3rem 0 3rem 6vw;
+                    padding: 1rem 0 1rem 6vw;
+                    @media screen and (min-width: $Fullscreen) {
+                        width: 30vw;
+                        padding: 3rem 0 3rem 6vw;
+                    }
                 }
             }
     }
