@@ -205,6 +205,19 @@ body.lightMd {
   }
 }
 
+#blobCouleurs {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -5; /* Assurez-vous que le conteneur est derrière le model 3D */
+  background-image: url("/olivier_5w5/wp-content/themes/projet-tim2/images/BlobCouleurs.png");
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
 /* MAIN */
 main {
   display: flex;
@@ -250,6 +263,78 @@ main .accueil_effacer .logoGrand {
   width: 44%;
   height: auto;
   padding: 2rem 0;
+}
+
+.apprentissages {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  z-index: 5;
+}
+@media screen and (min-width: 1080px) {
+  .apprentissages {
+    flex-direction: row;
+  }
+}
+
+.apprentissages div {
+  position: relative;
+}
+
+.apprentissages div div {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.apprentissages h2 {
+  transition: all 0.3s ease-in-out;
+  filter: drop-shadow(0 0rem 0rem rgba(35, 36, 59, 0));
+  cursor: pointer;
+  z-index: 10;
+}
+
+.apprentissages div img {
+  position: absolute;
+  width: 12vh;
+  transition: all 0.3s ease-in-out;
+  transform: scale(0);
+  pointer-events: none;
+  opacity: 0;
+  filter: drop-shadow(0 0 0rem rgba(35, 36, 59, 0));
+}
+
+.apprentissages h2:hover {
+  transform: scale(1.5);
+  filter: drop-shadow(0 1rem 0.5rem rgba(35, 36, 59, 0.525));
+}
+
+.apprentissages h2:hover + div .img1Effet {
+  transform: scale(1) rotate(-15deg) translate(-3vw, -13vh);
+  filter: drop-shadow(0 1rem 0.5rem rgba(35, 36, 59, 0.525));
+  opacity: 1;
+}
+
+.apprentissages h2:hover + div .img2Effet {
+  transform: scale(1) rotate(15deg) translate(3vw, -13vh);
+  filter: drop-shadow(0 1rem 0.5rem rgba(35, 36, 59, 0.525));
+  opacity: 1;
+}
+
+.apprentissages h2:hover + div .img3Effet {
+  transform: scale(1) rotate(-15deg) translate(3vw, 12vh);
+  filter: drop-shadow(0 1rem 0.5rem rgba(35, 36, 59, 0.525));
+  opacity: 1;
+}
+
+.apprentissages h2:hover + div .img4Effet {
+  transform: scale(1) rotate(15deg) translate(-3vw, 12vh);
+  filter: drop-shadow(0 1rem 0.5rem rgba(35, 36, 59, 0.525));
+  opacity: 1;
 }
 
 /* FOOTER */
@@ -382,9 +467,7 @@ h1 {
   font-family: "pixellari";
   font-size: 2rem;
   text-shadow: 0.15vw 0.15vw 0px rgb(255, 151, 194), 0.3vw 0.3vw 0px rgba(167, 10, 75, 0.662745098), -0.15vw -0.15vw 0px rgba(0, 188, 135, 0.6980392157), -0.5vw 0.5vw 2vw rgba(8, 9, 42, 0.8470588235);
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
+  user-select: none;
 }
 @media screen and (min-width: 1080px) {
   h1 {
@@ -483,8 +566,7 @@ nav {
     width: 70%;
     background: transparent;
     box-shadow: none;
-    -webkit-backdrop-filter: none;
-            backdrop-filter: none;
+    backdrop-filter: none;
   }
 }
 nav ul {
@@ -1349,4 +1431,4 @@ button.recherche__bouton {
     align-items: flex-start;
     justify-content: center;
   }
-}/*# sourceMappingURL=style.css.map */
+}
