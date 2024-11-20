@@ -1,6 +1,7 @@
 <?php get_header() ?>
 <div id="main-content">
         <div id="container3D"></div>
+        <div id="blobCouleurs"></div>
     <!-- Contenu du site -->
         <main>   
             <section class="accueil_effacer">
@@ -20,11 +21,44 @@
             </section>
 
             <!-- Apprentissages -->
-            <section class="apprt effacer">
-                <h2>Apprentissages</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium quod repudiandae tempora, error
-                    nobis eos. Quas, nostrum! Similique totam asperiores laboriosam quasi culpa, ex neque, perferendis,
-                    maiores nostrum voluptates sed.</p>
+            <section class="apprentissages">
+                <div class="jeuApprentissage">
+                    <h2>JEU</h2>
+                    <Div>
+                        <img class="img1Effet" src="/olivier_5w5/wp-content/themes/projet-tim2/images/icones/Unity.png" alt="Unity">
+                        <img class="img2Effet" src="/olivier_5w5/wp-content/themes/projet-tim2/images/icones/CSharp.png" alt="CSharp">
+                        <img class="img3Effet" src="/olivier_5w5/wp-content/themes/projet-tim2/images/icones/Meta.png" alt="meta">
+                        <img class="img4Effet" src="/olivier_5w5/wp-content/themes/projet-tim2/images/icones/VS.png" alt="VS">
+                    </Div>
+                </div>
+                <div class="audiovisuelApprentissage">
+                    <h2>AUDIOVISUEL</h2>
+                    <Div>
+                        <img class="img1Effet" src="/olivier_5w5/wp-content/themes/projet-tim2/images/icones/Ae.png" alt="Ae">
+                        <img class="img2Effet" src="/olivier_5w5/wp-content/themes/projet-tim2/images/icones/Maya.png" alt="Maya">
+                        <img class="img3Effet" src="/olivier_5w5/wp-content/themes/projet-tim2/images/icones/Pt.png" alt="Pt">
+                        <img class="img4Effet" src="/olivier_5w5/wp-content/themes/projet-tim2/images/icones/TouchDesigner.png" alt="TouchDesigner">
+                    </Div>
+                </div>
+                <div class="designApprentissage">
+                    <h2>DESIGN</h2>
+                    <Div>
+                        <img class="img1Effet" src="/olivier_5w5/wp-content/themes/projet-tim2/images/icones/Ps.png" alt="Ps">
+                        <img class="img2Effet" src="/olivier_5w5/wp-content/themes/projet-tim2/images/icones/Ai.png" alt="Ai">
+                        <img class="img3Effet" src="/olivier_5w5/wp-content/themes/projet-tim2/images/icones/Figma.png" alt="Figma">
+                        <img class="img4Effet" src="/olivier_5w5/wp-content/themes/projet-tim2/images/icones/Xd.png" alt="XD">
+                    </Div>
+                </div>
+                <div class="webApprentissage">
+                    <h2>WEB</h2>
+                    <Div>
+                        <img class="img1Effet" src="/olivier_5w5/wp-content/themes/projet-tim2/images/icones/HTML.png" alt="HTML">
+                        <img class="img2Effet" src="/olivier_5w5/wp-content/themes/projet-tim2/images/icones/CSS.png" alt="CSS">
+                        <img class="img3Effet" src="/olivier_5w5/wp-content/themes/projet-tim2/images/icones/Javascript.png" alt="Javascript">
+                        <img class="img4Effet" src="/olivier_5w5/wp-content/themes/projet-tim2/images/icones/Github.png" alt="Github">
+                    </Div>
+                </div>
+
             </section>
 
             <!-- Carousel -->

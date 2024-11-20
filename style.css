@@ -61,6 +61,91 @@ body.lightMd {
   overflow: hidden; /* Empêche le débordement du contenu */
 }
 
+#blobCouleurs {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -5; /* Assurez-vous que le conteneur est derrière le model 3D */
+  background-image: url("/olivier_5w5/wp-content/themes/projet-tim2/images/BlobCouleurs.png");
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+.apprentissages {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  z-index: 5;
+}
+@media screen and (min-width: 1080px) {
+  .apprentissages {
+    flex-direction: row;
+  }
+}
+
+.apprentissages div {
+  position: relative;
+}
+
+.apprentissages div div {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.apprentissages h2 {
+  transition: all 0.3s ease-in-out;
+  filter: drop-shadow(0 0rem 0rem rgba(35, 36, 59, 0));
+  cursor: pointer;
+  z-index: 10;
+}
+
+.apprentissages div img {
+  position: absolute;
+  width: 12vh;
+  transition: all 0.3s ease-in-out;
+  transform: scale(0);
+  pointer-events: none;
+  opacity: 0;
+  filter: drop-shadow(0 0 0rem rgba(35, 36, 59, 0));
+}
+
+.apprentissages h2:hover {
+  transform: scale(1.5);
+  filter: drop-shadow(0 1rem 0.5rem rgba(35, 36, 59, 0.525));
+}
+
+.apprentissages h2:hover + div .img1Effet {
+  transform: scale(1) rotate(-15deg) translate(-3vw, -13vh);
+  filter: drop-shadow(0 1rem 0.5rem rgba(35, 36, 59, 0.525));
+  opacity: 1;
+}
+
+.apprentissages h2:hover + div .img2Effet {
+  transform: scale(1) rotate(15deg) translate(3vw, -13vh);
+  filter: drop-shadow(0 1rem 0.5rem rgba(35, 36, 59, 0.525));
+  opacity: 1;
+}
+
+.apprentissages h2:hover + div .img3Effet {
+  transform: scale(1) rotate(-15deg) translate(3vw, 12vh);
+  filter: drop-shadow(0 1rem 0.5rem rgba(35, 36, 59, 0.525));
+  opacity: 1;
+}
+
+.apprentissages h2:hover + div .img4Effet {
+  transform: scale(1) rotate(15deg) translate(-3vw, 12vh);
+  filter: drop-shadow(0 1rem 0.5rem rgba(35, 36, 59, 0.525));
+  opacity: 1;
+}
+
 /* MAIN */
 main {
   display: flex;
