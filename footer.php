@@ -39,11 +39,11 @@
         </footer>
     </div>
     <!-- JS -->
-    <script src="/olivier_5w5/wp-content/themes/projet-tim2/js/carousel.js"></script>
-    <script src="/olivier_5w5/wp-content/themes/projet-tim2/js/index.js"></script>
-    <script src="/olivier_5w5/wp-content/themes/projet-tim2/js/coursDropDown.js"></script>
-    <script type="module" src="/olivier_5w5/wp-content/themes/projet-tim2/js/model3d.js"></script>
-
+    <!-- <script src="/4w4_joules/wp-content/themes/projet-tim/js/carousel.js"></script>
+    <script src="/4w4_joules/wp-content/themes/projet-tim/js/index.js"></script>
+    <script src="/4w4_joules/wp-content/themes/projet-tim/js/coursDropDown.js"></script>-->
+    <script type="module" src="<?php echo get_template_directory_uri() .'/js/model3d.js' ?>"></script> 
+<?php wp_footer(); ?>
 </body>
 
 

@@ -3,7 +3,7 @@
  ==================*/
 :root {
     /* Calcul teintes
-    ---------------------------------------------*/
+    -------------------------------------------*/
     --u1: 238;
     // Variations:
     --u2: calc(var(--u1) - 78); // 160
@@ -14,9 +14,9 @@
 
     /* Couleurs de base pour l'arriere plan
     ---------------------------------------------*/
-    --couleur-primaire: hsl(var(--u1),67.1%,15.5%);
-    --couleur-secondaire: hsl(var(--u2),100%,29.6%);
-    
+    --couleur-primaire: hsl(var(--u1), 67.1%, 15.5%);
+    --couleur-secondaire: hsl(var(--u2), 100%, 29.6%);
+
     --couleur1-LightMode: hsl(var(--u3), 100%, 33%);
     --couleur2-LightMode: hsl(var(--u4), 63%, 45%);
     --couleur3-LightMode: hsl(var(--u5), 76%, 43%);
@@ -43,4 +43,3 @@
 $Fullscreen: 1080px;
 $Medium: 700px;
 $Small: 400px;
-

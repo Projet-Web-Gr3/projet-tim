@@ -2,12 +2,15 @@
 /**
  * Template name: Cours
  *
+ *
+ *
  */
 ?>
 <?php get_header(); ?>
 <div class="cours-container">
     <div class="titrePage">
         <h1><?php the_title(); ?></h1>
+        <?php echo do_shortcode("[wtp_session_menu]");?>
     </div>
     <?php
     $args = array(
@@ -30,8 +33,16 @@
                 $text_content = $content;
                 $gallery_content = '';
             }
+            
+            $categories = get_the_category();
+            $nomSession="";
+            
+            if(isset($categories[1])){
+                $nomSession=$categories[1]->term_id;
+            }
             ?>
-            <div class="cours-contenu">
+          
+            <div class="cours-contenu" data-session="<?php echo $nomSession; ?>">
                 <div class="desktopAffichage">
                     <button class="dropdown-toggle"><h3><?php the_title(); ?></h23><span class="arrow">▼</span></button>
                     <div class="post-text">
@@ -53,5 +64,6 @@
 
     <?php wp_reset_postdata(); ?>
 </div>
+
 
 <?php get_footer(); ?>

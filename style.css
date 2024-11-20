@@ -4,7 +4,7 @@
  ==================*/
 :root {
   /* Calcul teintes
-  ---------------------------------------------*/
+  -------------------------------------------*/
   --u1: 238;
   --u2: calc(var(--u1) - 78);
   --u3: calc(var(--u1) + 90);
@@ -13,8 +13,8 @@
   --u6: calc(var(--u1) - 186);
   /* Couleurs de base pour l'arriere plan
   ---------------------------------------------*/
-  --couleur-primaire: hsl(var(--u1),67.1%,15.5%);
-  --couleur-secondaire: hsl(var(--u2),100%,29.6%);
+  --couleur-primaire: hsl(var(--u1), 67.1%, 15.5%);
+  --couleur-secondaire: hsl(var(--u2), 100%, 29.6%);
   --couleur1-LightMode: hsl(var(--u3), 100%, 33%);
   --couleur2-LightMode: hsl(var(--u4), 63%, 45%);
   --couleur3-LightMode: hsl(var(--u5), 76%, 43%);
@@ -342,6 +342,7 @@ h1 {
     font-size: 4vw;
     text-shadow: 0.15vw 0.15vw 0px rgb(255, 151, 194), 0.3vw 0.3vw 0px rgba(167, 10, 75, 0.662745098), -0.15vw -0.15vw 0px rgba(0, 188, 135, 0.6980392157), -0.5vw 0.5vw 2vw rgba(8, 9, 42, 0.8470588235);
   }
+
 }
 
 h2 {
@@ -921,6 +922,14 @@ li a {
 .open {
   max-height: 1000px; /* Set a max height large enough to fit the content */
   opacity: 1;
+}
+
+.projet-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  background-color: rgba(63, 63, 63, 0.637);
 }
 
 .barre-entete {
