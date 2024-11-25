@@ -1,0 +1,155 @@
+.intro-avenir {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100vw;
+    height: auto;
+    transition: opacity 0.5s ease-in-out;
+    z-index: -1;
+    padding: 0;
+    color: white;
+
+    @media (min-width: $Fullscreen) {
+        padding: 5rem 7rem;
+    }
+}
+
+.avenir-carousel {
+    position: relative;
+    margin: auto;
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.463);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(6.7px);
+        -webkit-backdrop-filter: blur(6.7px);
+        border: 1px solid rgba(0, 0, 0, 0.01);
+}
+
+.avenir-carousel .avenir-carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.avenir-carousel .avenir-carousel-item {
+    min-width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.avenir-carousel .avenir-img {
+    display: flex;
+    justify-content: center;
+}
+
+.avenir-carousel .avenir-img-item {
+    margin: 10px;
+}
+
+.avenir-carousel .avenir-img-item img {
+    max-width: 100px;
+    display: block;
+    margin: auto;
+}
+
+.avenir-carousel-item .images {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.avenir-carousel .carousel-control-prev, .avenir-carousel .carousel-control-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.avenir-carousel .carousel-control-prev {
+    left: 0;
+}
+
+.avenir-carousel .carousel-control-next {
+    right: 0;
+}
+
+.ate {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+
+    @media (min-width: $Fullscreen) {
+        padding: 5rem 7rem;
+    }
+}
+
+.conteneur-principal {
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+
+    @media (min-width: $Fullscreen) {
+        display: flex;
+        flex-direction: row-reverse;
+      }
+}
+
+.ate-contenu {
+    width: 100%;
+
+    @media (min-width: $Fullscreen) {
+        width: 70%;
+      }
+}
+
+.soustitre-ate {
+    text-align: center;
+}
+
+.ate-image {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media (min-width: $Fullscreen) {
+        width: 30%;
+      }
+}
+
+.conteneur-txt-stage {
+    p {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+.div-ensemble-img {
+    display: flex;
+    flex-direction: row;
+    margin-left: 2rem;
+    margin-right: 2rem;
+
+    .div-img-stage {
+        width: 50%;
+        display: flex;
+    }
+
+    .div-img-stage2 {
+        width: 50%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+.fin-etudes {
+    padding: 0;
+
+    p {
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+}

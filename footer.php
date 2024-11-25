@@ -36,9 +36,9 @@
         </footer>
     </div>
     <!-- JS -->
-    <!-- <script src="/4w4_joules/wp-content/themes/projet-tim/js/carousel.js"></script>
+   <!--  <script src="/4w4_joules/wp-content/themes/projet-tim/js/carousel.js"></script>
     <script src="/4w4_joules/wp-content/themes/projet-tim/js/index.js"></script>
-    <script src="/4w4_joules/wp-content/themes/projet-tim/js/coursDropDown.js"></script>-->
+    <script src="/4w4_joules/wp-content/themes/projet-tim/js/coursDropDown.js"></script> -->
     <script type="module" src="<?php echo get_template_directory_uri() .'/js/model3d.js' ?>"></script> 
 <?php wp_footer(); ?>
 </body>

@@ -6,6 +6,8 @@
 ?>
 <?php get_header(); ?>
 <?php
+echo '<h1>' . get_the_title() . '</h1>';
+
 // Define your custom query arguments
 $args = array(
     'category_name' => 'Profs', // Replace 'cours' with your actual category slug
@@ -17,17 +19,8 @@ $query = new WP_Query($args);
 
 // Check if the query returns any posts
 if ($query->have_posts()) :
-    echo '<div class="prof-posts">';
+    echo '<div class="profs-posts">';
     while ($query->have_posts()) : $query->the_post();
-        echo '<div class="prof-post">';
-        // Display post title outside the image container
-        echo '<h2 class="prof-title">' . get_the_title() . '</h2>';
-        echo '<div class="titre-image-prof">';
-        echo the_post_thumbnail('medium');
-        // Add the text overlay inside the image container
-        echo '<div class="texte-prof">' . get_the_content() . '</div>';
-        echo '</div>'; // Close titre-image-prof div
-        echo '</div>'; // Close prof-post div
     endwhile;
     echo '</div>';
 else :
@@ -36,5 +29,7 @@ endif;
 
 // Reset the post data
 wp_reset_postdata();
+
+echo do_shortcode('[slider_car]');
 ?>
 <?php get_footer(); ?>
