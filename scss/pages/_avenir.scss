@@ -129,13 +129,15 @@
 }
 
 .ate-image {
-    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 
     img {
         scale: 0.5;
+        @media (min-width: $Fullscreen) {
+            scale: 1;
+          }
     }
 
     @media (min-width: $Fullscreen) {
@@ -169,6 +171,7 @@
 }
 
 .fin-etudes {
+    height: 100%;
     padding: 16 16 16 16;
 
     p {

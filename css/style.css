@@ -1354,13 +1354,17 @@ li a {
 }
 
 .ate-image {
-  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .ate-image img {
   scale: 0.5;
+}
+@media (min-width: 1080px) {
+  .ate-image img {
+    scale: 1;
+  }
 }
 @media (min-width: 1080px) {
   .ate-image {
@@ -1390,6 +1394,7 @@ li a {
 }
 
 .fin-etudes {
+  height: 100%;
   padding: 16 16 16 16;
 }
 .fin-etudes p {
