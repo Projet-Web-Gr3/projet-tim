@@ -5,20 +5,17 @@ document.addEventListener('DOMContentLoaded', function() {
             title: "Pour les plus créatifs",
             paragraph: "Une technique en Intégration Multimédias au Collège de Maisonneuve ouvre de nombreuses portes pour les jeunes créatifs. Que ce soit dans le design graphique, le développement web, l’animation 2D/3D, la production vidéo ou la réalité virtuelle, les diplômés acquièrent des compétences polyvalentes adaptées aux besoins des industries numériques.",
             images: [
-                { src: "image1.jpg", alt: "Image 1", caption: "Texte 1" },
-                { src: "image2.jpg", alt: "Image 2", caption: "Texte 2" },
-                { src: "image3.jpg", alt: "Image 3", caption: "Texte 3" },
-                { src: "image4.jpg", alt: "Image 4", caption: "Texte 4" }
+                { src: "https://gftnth00.mywhc.ca/tim17/wp-content/uploads/2024/11/UCATImg.png", alt: "Image UQAT", caption: "Le profil créatif de l'UQAT propose une formation innovante et multidisciplinaire, permettant aux étudiants d’explorer divers domaines comme le design, l’arts visuels, la création numérique et l’animation. L’approche pédagogique encourage l’expérimentation et le développement de projets personnels, tout en favorisant la collaboration et la réflexion critique. Ce programme prépare les étudiants à devenir des professionnels polyvalents et audacieux, capables de transformer des idées en créations uniques, tout en répondant aux défis contemporains du secteur créatif." },
+                { src: "https://gftnth00.mywhc.ca/tim17/wp-content/uploads/2024/11/NADImg.png", alt: "Image NAD Créatif", caption: "Le profil créatif de l’école NAD UQAC offre un environnement stimulant où les étudiants explorent et développent leur imagination à travers des projets multidisciplinaires en design, art numérique, animation et effets visuels. Grâce à une approche innovante et collaborative, les étudiants apprennent à maîtriser les outils de création les plus avancés tout en développant une réflexion artistique poussée. Ce programme prépare les futurs professionnels à repousser les limites de la créativité pour répondre aux défis de l’industrie numérique." }
             ]
         },
         {
             title: "Pour les plus logiques",
             paragraph: "Une technique en Intégration Multimédias au Collège de Maisonneuve offre également des opportunités prometteuses pour les jeunes au profil logique. Avec des compétences en programmation, en développement web, en gestion de bases de données et en optimisation d’interfaces utilisateur, ils peuvent se démarquer dans des domaines tels que le développement d’applications, la conception de systèmes interactifs, ou encore la gestion technique de projets multimédias.",
             images: [
-                { src: "image5.jpg", alt: "Image 5", caption: "Texte 5" },
-                { src: "image6.jpg", alt: "Image 6", caption: "Texte 6" },
-                { src: "image7.jpg", alt: "Image 7", caption: "Texte 7" },
-                { src: "image8.jpg", alt: "Image 8", caption: "Texte 8" }
+                { src: "https://gftnth00.mywhc.ca/tim17/wp-content/uploads/2024/11/ETSImg.png", alt: "Image ETS", caption: "L'ÉTS forme plus de 25 % de tous les ingénieurs et ingénieures au Québec et se classe au deuxième rang au Canada quant au nombre de diplômes de baccalauréat en génie décernés au 1er cycle." },
+                { src: "https://gftnth00.mywhc.ca/tim17/wp-content/uploads/2024/11/NADImg.png", alt: "Image NAD Logique", caption: "Le profil logique de l’école NAD UQAC se concentre sur les aspects techniques et analytiques des métiers numériques. Les étudiants développent des compétences en programmation, en génie logiciel, en intelligence artificielle et en développement de systèmes interactifs. Le programme met l’accent sur la résolution de problèmes complexes et l’optimisation des processus, tout en offrant une formation pratique et théorique pour une carrière dans l’industrie numérique, où rigueur et logique sont essentielles." },
+                { src: "https://gftnth00.mywhc.ca/tim17/wp-content/uploads/2024/11/PolytechniqueImg.png", alt: "Image Polytechnique", caption: "Le profil logique de la Polytechnique offre une formation rigoureuse axée sur l'ingénierie et les sciences appliquées. Les étudiants acquièrent des compétences solides en résolution de problèmes, en conception de systèmes complexes et en optimisation des technologies. Le programme met l'accent sur l'innovation technique, la recherche et le développement, et prépare les futurs ingénieurs à relever les défis technologiques mondiaux. Grâce à une approche pratique et analytique, les diplômés sont prêts à exceller dans divers secteurs industriels en alliant logique, précision et créativité." }
             ]
         }
     ];
@@ -34,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 carouselItem.className = 'avenir-carousel-item';
                 if (slideIndex === 0 && imageIndex === 0) carouselItem.classList.add('active');
 
-                const title = document.createElement('h2');
+                const title = document.createElement('h3');
                 title.textContent = slide.title;
 
                 const paragraph = document.createElement('p');
@@ -113,7 +110,7 @@ document.addEventListener('DOMContentLoaded', function() {
     p_Ate.textContent = "Loaded to the gunwalls rutters booty reef tender spirits wherry driver grapple ho. Tender topmast lad lass Pirate Round clap of thunder to go on account hail-shot ahoy Shiver me timbers. Shrouds nipperkin hands run a shot across the bow Jack Ketch schooner black jack jolly boat bilged on her anchor doubloon. Lugsail spirits Sea Legs red ensign schooner ahoy bilge port avast Plate Fleet. Bowsprit quarterdeck swab killick furl lanyard scallywag gangway Admiral of the Black American Main. Main sheet weigh anchor Letter of Marque chandler heave down Jack Ketch dance the hempen jig belaying pin scourge of the seven seas Privateer.";
     // Création de l'image
     const logoAte = document.createElement('img');
-    logoAte.src = "logo-ate.png";
+    logoAte.src = "https://gftnth00.mywhc.ca/tim17/wp-content/uploads/2024/11/ATEImg.png";
 
     // Ajout des éléments dans la section
     sectionAte.appendChild(titreAte);
@@ -146,7 +143,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Création du titre et du paragraphe pour les stages de fin d'études
     // Le titre h2
-    const titreStage = document.createElement('h2');
+    const titreStage = document.createElement('h3');
     titreStage.textContent = "Stage de fin d'études";
     titreStage.className = "soustitre-stage";
     // Le paragraphe

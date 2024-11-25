@@ -1220,6 +1220,15 @@ li a {
   height: auto;
 }
 
+.avenir-main {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow-x: hidden;
+  justify-content: center;
+  align-items: center;
+}
+
 .intro-avenir {
   display: flex;
   justify-content: center;
@@ -1280,6 +1289,10 @@ li a {
   justify-content: center;
 }
 
+.avenir-carousel-item h3 {
+  font-size: clamp(1.389rem, 2.844vw + 0.738rem, 2.444rem);
+}
+
 .avenir-carousel .carousel-control-prev, .avenir-carousel .carousel-control-next {
   position: absolute;
   top: 50%;
@@ -1302,7 +1315,7 @@ li a {
 .ate {
   display: flex;
   flex-direction: column;
-  padding: 0;
+  margin-top: 10rem;
 }
 @media (min-width: 1080px) {
   .ate {
@@ -1324,11 +1337,16 @@ li a {
 
 .ate-contenu {
   width: 100%;
+  padding: 0 50px 0 50px;
 }
 @media (min-width: 1080px) {
   .ate-contenu {
     width: 70%;
   }
+}
+.ate-contenu h3 {
+  padding-left: 10px;
+  font-size: clamp(1.389rem, 2.844vw + 0.738rem, 2.444rem);
 }
 
 .soustitre-ate {
@@ -1336,10 +1354,13 @@ li a {
 }
 
 .ate-image {
-  width: 90%;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.ate-image img {
+  scale: 0.5;
 }
 @media (min-width: 1080px) {
   .ate-image {
@@ -1369,7 +1390,7 @@ li a {
 }
 
 .fin-etudes {
-  padding: 0;
+  padding: 16 16 16 16;
 }
 .fin-etudes p {
   margin-left: 2rem;

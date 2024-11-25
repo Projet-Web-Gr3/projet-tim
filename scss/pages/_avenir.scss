@@ -1,3 +1,12 @@
+.avenir-main {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden;
+    justify-content: center;
+    align-items: center;
+}
+
 .intro-avenir {
     display: flex;
     justify-content: center;
@@ -57,6 +66,10 @@
     justify-content: center;
 }
 
+.avenir-carousel-item h3 {
+    font-size: clamp(1.389rem, 2.844vw + 0.738rem, 2.444rem);
+}
+
 .avenir-carousel .carousel-control-prev, .avenir-carousel .carousel-control-next {
     position: absolute;
     top: 50%;
@@ -79,7 +92,7 @@
 .ate {
     display: flex;
     flex-direction: column;
-    padding: 0;
+    margin-top: 10rem;
 
     @media (min-width: $Fullscreen) {
         padding: 5rem 7rem;
@@ -99,9 +112,15 @@
 
 .ate-contenu {
     width: 100%;
+    padding: 0 50px 0 50px;
 
     @media (min-width: $Fullscreen) {
         width: 70%;
+      }
+
+      h3 {
+        padding-left: 10px;
+        font-size: clamp(1.389rem, 2.844vw + 0.738rem, 2.444rem);
       }
 }
 
@@ -110,10 +129,14 @@
 }
 
 .ate-image {
-    width: 90%;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+
+    img {
+        scale: 0.5;
+    }
 
     @media (min-width: $Fullscreen) {
         width: 30%;
@@ -146,7 +169,7 @@
 }
 
 .fin-etudes {
-    padding: 0;
+    padding: 16 16 16 16;
 
     p {
         margin-left: 2rem;
