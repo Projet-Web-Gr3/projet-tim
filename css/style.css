@@ -631,181 +631,6 @@ li a {
   }
 }
 
-/* Le Carousel */
-.carousel {
-  width: 100%;
-  height: 100vh;
-  perspective: 1000px;
-  transform-origin: 50% 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  padding-bottom: 7rem;
-  z-index: 1000;
-}
-.carousel h2 {
-  margin: 0 0 0 0;
-  align-self: flex-start;
-}
-.carousel p {
-  padding-bottom: 0;
-}
-
-/* Conteneur des cartes */
-#spinner {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transform-style: preserve-3d;
-}
-@media screen and (min-width: 1080px) {
-  #spinner {
-    transform: scale(1.5);
-  }
-}
-
-/* Conteneur des boutons */
-#boutons {
-  position: absolute;
-  top: 67%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 1000;
-}
-#boutons .prev {
-  position: relative;
-  left: -220%;
-  z-index: 5;
-}
-#boutons .next {
-  position: relative;
-  left: 220%;
-  z-index: 5;
-}
-
-/* Les cartes */
-.flip-card {
-  position: absolute;
-  width: 190px;
-  height: 120px;
-  transform-style: preserve-3d;
-  perspective: 1000px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  transform: rotateY(45deg);
-  transition: transform 1s;
-}
-.flip-card h1 {
-  font-size: 30px;
-  text-shadow: 0.3vw 0.3vw 0px rgb(255, 151, 194), 0.6vw 0.6vw 0px rgba(167, 10, 75, 0.662745098), -0.3vw -0.3vw 0px rgba(0, 188, 135, 0.6980392157), -20px 15px 15px rgba(8, 9, 42, 0.8470588235);
-}
-@media screen and (min-width: 1080px) {
-  .flip-card h1 {
-    text-shadow: 0.1vw 0vw 0px rgb(255, 151, 194), 0.1vw 0.1vw 0px rgba(167, 10, 75, 0.662745098), -0.05vw -0.1vw 0px rgba(0, 188, 135, 0.6980392157), -5px 15px 15px rgba(8, 9, 42, 0.8470588235);
-  }
-}
-.flip-card p {
-  width: 100%;
-  font-size: 12px;
-  margin: 0;
-}
-
-/* Positionnement de l'avant et arrière des cartes */
-.inner-flip {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  transition: transform 1s;
-  transform-style: preserve-3d;
-}
-
-/* Hover sur la carte */
-.flip-card:hover .inner-flip {
-  transform: scale(1.2);
-  cursor: pointer;
-}
-
-/* Le devant et l'arrière des cartes */
-.front-flip, .flip-card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  font-size: 12px;
-  transition: transform 1s;
-}
-
-/* Le dos de la carte */
-.flip-card-back {
-  width: 150px;
-  height: 150px;
-  background-color: skyblue;
-  transform: rotateY(180deg) translateX(-20px);
-}
-
-/* Le devant est visible dans l'état normal */
-.front-flip {
-  backface-visibility: visible;
-}
-
-/* L'arrière est invisible dans l'état normal (caché derrière le devant) */
-.flip-card-back {
-  backface-visibility: hidden;
-}
-
-/* Pour debugger (voir une des images tourner pour s'assurer que la rotation soit bonne) */
-.carousel .no1 .image:nth-child(1) {
-  border: 3px solid blue;
-}
-
-/* 
-    Calcul pour obtenir la moitié du rectangle en face de l'usager, le milieu est l'endroit où l'image s'arrête après un click :
-
-    1- rotation Y = 360deg / 8 images --> [45deg] (angle d'un triangle de l'octogone) 
-    2- translate Z = 45deg / 2 (séparation d'un triangle en 2 pour obtenir l'angle des 2 triangles rectangles obtenus)--> [22.5deg]
-    3- width = 210px (largeur d'un panneau de l'octogone) / 2 --> [105px] 
-    4- tan(22.5deg) = 105px/ r ("rayon" qui part du centre de l'octogone et se rend au panneau faisant face à l'utilisateur) -->
-       r = 105px/22.5tan = 253px
-
-    Références: https://www.sitepoint.com/building-3d-rotating-carousel-css-javascript/ 
-                https://3dtransforms.desandro.com/carousel
-*/
-.flip-card.no1 {
-  transform: rotateY(0deg) translateZ(253px);
-}
-
-.flip-card.no2 {
-  transform: rotateY(45deg) translateZ(253px);
-}
-
-.flip-card.no3 {
-  transform: rotateY(90deg) translateZ(253px);
-}
-
-.flip-card.no4 {
-  transform: rotateY(135deg) translateZ(253px);
-}
-
-.flip-card.no5 {
-  transform: rotateY(180deg) translateZ(253px);
-}
-
-.flip-card.no6 {
-  transform: rotateY(225deg) translateZ(253px);
-}
-
-.flip-card.no7 {
-  transform: rotateY(270deg) translateZ(253px);
-}
-
-.flip-card.no8 {
-  transform: rotateY(315deg) translateZ(253px);
-}
-
 .cours-container {
   background-color: rgba(0, 0, 0, 0.4784313725);
   gap: 2.5rem;
@@ -1220,6 +1045,15 @@ li a {
   height: auto;
 }
 
+.avenir-main {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow-x: hidden;
+  justify-content: center;
+  align-items: center;
+}
+
 .intro-avenir {
   display: flex;
   justify-content: center;
@@ -1280,6 +1114,10 @@ li a {
   justify-content: center;
 }
 
+.avenir-carousel-item h3 {
+  font-size: clamp(1.389rem, 2.844vw + 0.738rem, 2.444rem);
+}
+
 .avenir-carousel .carousel-control-prev, .avenir-carousel .carousel-control-next {
   position: absolute;
   top: 50%;
@@ -1302,7 +1140,7 @@ li a {
 .ate {
   display: flex;
   flex-direction: column;
-  padding: 0;
+  margin-top: 10rem;
 }
 @media (min-width: 1080px) {
   .ate {
@@ -1324,11 +1162,16 @@ li a {
 
 .ate-contenu {
   width: 100%;
+  padding: 0 50px 0 50px;
 }
 @media (min-width: 1080px) {
   .ate-contenu {
     width: 70%;
   }
+}
+.ate-contenu h3 {
+  padding-left: 10px;
+  font-size: clamp(1.389rem, 2.844vw + 0.738rem, 2.444rem);
 }
 
 .soustitre-ate {
@@ -1336,10 +1179,17 @@ li a {
 }
 
 .ate-image {
-  width: 90%;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.ate-image img {
+  scale: 0.5;
+}
+@media (min-width: 1080px) {
+  .ate-image img {
+    scale: 1;
+  }
 }
 @media (min-width: 1080px) {
   .ate-image {
@@ -1369,13 +1219,80 @@ li a {
 }
 
 .fin-etudes {
-  padding: 0;
+  height: 100%;
+  padding: 16px;
 }
 .fin-etudes p {
   margin-left: 2rem;
   margin-right: 2rem;
 }
 
+.div-ensemble-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  margin-left: 0;
+  margin-right: 0;
+}
+@media (min-width: 1080px) {
+  .div-ensemble-img {
+    align-items: flex-start;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+}
+
+.div-ensemble-img .div-img-stage {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+@media (min-width: 1080px) {
+  .div-ensemble-img .div-img-stage {
+    justify-content: flex-start;
+  }
+}
+
+.div-ensemble-img .div-img-stage2 {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+}
+@media (min-width: 1080px) {
+  .div-ensemble-img .div-img-stage2 {
+    flex-direction: row;
+  }
+}
+
+.div-ensemble-img img {
+  max-width: 50%;
+  height: auto;
+}
+
+.div-ensemble-img .div-img-stage2 img {
+  margin-bottom: 0px;
+}
+
+.div-ensemble-img .div-img-stage2 img:last-child {
+  margin-bottom: 0px;
+}
+
+@media (min-width: 1080px) {
+  .div-ensemble-img {
+    flex-direction: column;
+  }
+  .div-ensemble-img .div-img-stage,
+  .div-ensemble-img .div-img-stage2 {
+    width: 20%;
+  }
+  .div-ensemble-img img {
+    max-width: 40%;
+  }
+}
 .barre-entete {
   display: flex;
   flex-direction: row-reverse;

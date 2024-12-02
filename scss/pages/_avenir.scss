@@ -1,3 +1,12 @@
+.avenir-main {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden;
+    justify-content: center;
+    align-items: center;
+}
+
 .intro-avenir {
     display: flex;
     justify-content: center;
@@ -57,6 +66,10 @@
     justify-content: center;
 }
 
+.avenir-carousel-item h3 {
+    font-size: clamp(1.389rem, 2.844vw + 0.738rem, 2.444rem);
+}
+
 .avenir-carousel .carousel-control-prev, .avenir-carousel .carousel-control-next {
     position: absolute;
     top: 50%;
@@ -79,7 +92,7 @@
 .ate {
     display: flex;
     flex-direction: column;
-    padding: 0;
+    margin-top: 10rem;
 
     @media (min-width: $Fullscreen) {
         padding: 5rem 7rem;
@@ -99,9 +112,15 @@
 
 .ate-contenu {
     width: 100%;
+    padding: 0 50px 0 50px;
 
     @media (min-width: $Fullscreen) {
         width: 70%;
+      }
+
+      h3 {
+        padding-left: 10px;
+        font-size: clamp(1.389rem, 2.844vw + 0.738rem, 2.444rem);
       }
 }
 
@@ -110,10 +129,16 @@
 }
 
 .ate-image {
-    width: 90%;
     display: flex;
     justify-content: center;
     align-items: center;
+
+    img {
+        scale: 0.5;
+        @media (min-width: $Fullscreen) {
+            scale: 1;
+          }
+    }
 
     @media (min-width: $Fullscreen) {
         width: 30%;
@@ -146,10 +171,77 @@
 }
 
 .fin-etudes {
-    padding: 0;
+    height: 100%;
+    padding: 16px;
 
     p {
         margin-left: 2rem;
         margin-right: 2rem;
+    }
+}
+
+.div-ensemble-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    margin-left: 0;
+    margin-right: 0;
+
+    @media (min-width: 1080px) {
+        align-items: flex-start;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+}
+
+.div-ensemble-img .div-img-stage {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+
+    @media (min-width: 1080px) {
+        justify-content: flex-start;
+    }
+}
+
+.div-ensemble-img .div-img-stage2 {
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+
+    @media (min-width: 1080px) {
+        flex-direction: row;
+    }
+}
+
+.div-ensemble-img img {
+    max-width: 50%; 
+    height: auto; 
+}
+
+.div-ensemble-img .div-img-stage2 img {
+    margin-bottom: 0px; 
+}
+
+.div-ensemble-img .div-img-stage2 img:last-child {
+    margin-bottom: 0px; 
+}
+
+@media (min-width: 1080px) {
+    .div-ensemble-img {
+        flex-direction: column;
+    }
+
+    .div-ensemble-img .div-img-stage,
+    .div-ensemble-img .div-img-stage2 {
+        width: 20%;
+    }
+
+    .div-ensemble-img img {
+        max-width: 40%; 
     }
 }
