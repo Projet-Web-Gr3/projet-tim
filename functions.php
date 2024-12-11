@@ -11,13 +11,6 @@
         'flex-width'             => false,
     );
 
-    // Add custom image sizes
-function my_custom_image_sizes() {
-    add_image_size('custom-size', 800, 600, true); // Width, Height, Crop (true or false)
-    // Add other sizes as needed
-}
-add_action('after_setup_theme', 'my_custom_image_sizes');
-
 // Optional: Enable custom image sizes in the media library
 function my_custom_sizes($sizes) {
     return array_merge($sizes, array(
@@ -25,7 +18,6 @@ function my_custom_sizes($sizes) {
     ));
 }
 add_filter('image_size_names_choose', 'my_custom_sizes');
-
 
     /**
  * Modifie la requete principale de Wordpress avant qu'elle soit exécuté
@@ -82,12 +74,20 @@ function _4w4_modifie_requete_principal( $query ) {
         // $version_js = filemtime(get_template_directory() . '/js/model3d.js');
         $version_anim = filemtime(get_template_directory() . '/js/index.js');
         $version_cours = filemtime(get_template_directory() . '/js/coursDropDown.js');
+        $version_avenir = filemtime(get_template_directory() . '/js/avenir.js');
+		$version_particle = filemtime(get_template_directory(). '/js/particles.js');
 
        //wp_enqueue_style( 'style', get_stylesheet_uri() );
         wp_enqueue_style( 'style', get_template_directory_uri() . '/style.css', array(), $version_css, 'all'    );
         // wp_enqueue_script( 'model3d', get_template_directory_uri() . '/js/model3d.js', array(), $version_js, true );
         wp_enqueue_script('animation', get_template_directory_uri() . '/js/index.js', array(), $version_anim, true);
         wp_enqueue_script('coursDropDown', get_template_directory_uri() . '/js/coursDropDown.js', array(), $version_cours, true);
+		wp_enqueue_script('avenir', get_template_directory_uri() . '/js/avenir.js', array(), $version_avenir, true);
+		wp_enqueue_script('particles', get_template_directory_uri() . '/js/particles.js', array(), $version_particle, true);
+		
+		 // Enqueue external JS libraries
+        
+		
     }
     add_action( 'wp_enqueue_scripts', '_4w4_joules_enqueue_style' );
 
@@ -106,3 +106,26 @@ function _4w4_modifie_requete_principal( $query ) {
         register_nav_menu('projet_menu', 'Projet Menu');
     }
     add_action('init', 'register_projet_menu');
+
+function hide_admin_bar_for_all_users() {
+    add_filter('show_admin_bar', '__return_false');
+}
+add_action('after_setup_theme', 'hide_admin_bar_for_all_users');
+
+function my_custom_image_sizes() {
+    add_image_size( 'custom-small', 300, 200, true );
+    add_image_size( 'custom-medium', 600, 400, true );
+    add_image_size( 'custom-large', 1200, 800, false );
+}
+add_action( 'after_setup_theme', 'my_custom_image_sizes' );
+
+function add_image_size_setting_to_admin_menu() {
+    add_options_page(
+        'Image Size Settings',
+        'Image Size Settings',
+        'manage_options',
+        'image-size-settings',
+        'render_image_size_settings_page'
+    );
+}
+add_action( 'admin_menu', 'add_image_size_setting_to_admin_menu' );

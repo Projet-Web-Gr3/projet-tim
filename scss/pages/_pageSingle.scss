@@ -25,6 +25,7 @@
     .acfSingle{
         display: flex;
         justify-content: space-around;
+        flex-direction: column;
 
         h3{
             font-size: 1.3rem;
@@ -34,6 +35,7 @@
     #photoSingle{
         display: flex;
         justify-content: center;
+        overflow-x: hidden;
     }
 
 

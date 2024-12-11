@@ -3,7 +3,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const carouselData = [
         {
             title: "Pour les plus créatifs",
-            paragraph: "Une technique en Intégration Multimédias au Collège de Maisonneuve ouvre de nombreuses portes pour les jeunes créatifs. Que ce soit dans le design graphique, le développement web, l’animation 2D/3D, la production vidéo ou la réalité virtuelle, les diplômés acquièrent des compétences polyvalentes adaptées aux besoins des industries numériques.",
             images: [
                 { src: "https://gftnth00.mywhc.ca/tim17/wp-content/uploads/2024/11/UCATImg.png", alt: "Image UQAT", caption: "Le profil créatif de l'UQAT propose une formation innovante et multidisciplinaire, permettant aux étudiants d’explorer divers domaines comme le design, l’arts visuels, la création numérique et l’animation. L’approche pédagogique encourage l’expérimentation et le développement de projets personnels, tout en favorisant la collaboration et la réflexion critique. Ce programme prépare les étudiants à devenir des professionnels polyvalents et audacieux, capables de transformer des idées en créations uniques, tout en répondant aux défis contemporains du secteur créatif." },
                 { src: "https://gftnth00.mywhc.ca/tim17/wp-content/uploads/2024/11/NADImg.png", alt: "Image NAD Créatif", caption: "Le profil créatif de l’école NAD UQAC offre un environnement stimulant où les étudiants explorent et développent leur imagination à travers des projets multidisciplinaires en design, art numérique, animation et effets visuels. Grâce à une approche innovante et collaborative, les étudiants apprennent à maîtriser les outils de création les plus avancés tout en développant une réflexion artistique poussée. Ce programme prépare les futurs professionnels à repousser les limites de la créativité pour répondre aux défis de l’industrie numérique." }
@@ -11,7 +10,6 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         {
             title: "Pour les plus logiques",
-            paragraph: "Une technique en Intégration Multimédias au Collège de Maisonneuve offre également des opportunités prometteuses pour les jeunes au profil logique. Avec des compétences en programmation, en développement web, en gestion de bases de données et en optimisation d’interfaces utilisateur, ils peuvent se démarquer dans des domaines tels que le développement d’applications, la conception de systèmes interactifs, ou encore la gestion technique de projets multimédias.",
             images: [
                 { src: "https://gftnth00.mywhc.ca/tim17/wp-content/uploads/2024/11/ETSImg.png", alt: "Image ETS", caption: "L'ÉTS forme plus de 25 % de tous les ingénieurs et ingénieures au Québec et se classe au deuxième rang au Canada quant au nombre de diplômes de baccalauréat en génie décernés au 1er cycle." },
                 { src: "https://gftnth00.mywhc.ca/tim17/wp-content/uploads/2024/11/NADImg.png", alt: "Image NAD Logique", caption: "Le profil logique de l’école NAD UQAC se concentre sur les aspects techniques et analytiques des métiers numériques. Les étudiants développent des compétences en programmation, en génie logiciel, en intelligence artificielle et en développement de systèmes interactifs. Le programme met l’accent sur la résolution de problèmes complexes et l’optimisation des processus, tout en offrant une formation pratique et théorique pour une carrière dans l’industrie numérique, où rigueur et logique sont essentielles." },
@@ -34,9 +32,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 const title = document.createElement('h3');
                 title.textContent = slide.title;
 
-                const paragraph = document.createElement('p');
-                paragraph.textContent = slide.paragraph;
-
                 const imgItem = document.createElement('div');
                 imgItem.className = 'avenir-img-item';
 
@@ -51,7 +46,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 imgItem.appendChild(caption);
 
                 carouselItem.appendChild(title);
-                carouselItem.appendChild(paragraph);
                 carouselItem.appendChild(imgItem);
                 carouselInner.appendChild(carouselItem);
             });
@@ -107,7 +101,7 @@ document.addEventListener('DOMContentLoaded', function() {
     titre2Ate.textContent = "Stage ATE";
     // Création du paragraphe
     const p_Ate = document.createElement('p');
-    p_Ate.textContent = "Loaded to the gunwalls rutters booty reef tender spirits wherry driver grapple ho. Tender topmast lad lass Pirate Round clap of thunder to go on account hail-shot ahoy Shiver me timbers. Shrouds nipperkin hands run a shot across the bow Jack Ketch schooner black jack jolly boat bilged on her anchor doubloon. Lugsail spirits Sea Legs red ensign schooner ahoy bilge port avast Plate Fleet. Bowsprit quarterdeck swab killick furl lanyard scallywag gangway Admiral of the Black American Main. Main sheet weigh anchor Letter of Marque chandler heave down Jack Ketch dance the hempen jig belaying pin scourge of the seven seas Privateer.";
+    p_Ate.textContent = "Les stages ATE en Technique d'Intégration Multimédia permettent aux étudiants d'acquérir de l'expérience pratique dans le domaine du multimédia entre les sessions. Les étudiants trouvent eux-mêmes leur stage et travaillent sur des projets concrets en entreprise. À l'issue de leur stage, une mention ATE est inscrite sur leur bulletin, valorisant ainsi leur parcours académique et professionnel.";
     // Création de l'image
     const logoAte = document.createElement('img');
     logoAte.src = "https://gftnth00.mywhc.ca/tim17/wp-content/uploads/2024/11/ATEImg.png";
@@ -148,15 +142,15 @@ document.addEventListener('DOMContentLoaded', function() {
     titreStage.className = "soustitre-stage";
     // Le paragraphe
     const p_Stage = document.createElement('p');
-    p_Stage.textContent = "Loaded to the gunwalls rutters booty reef tender spirits wherry driver grapple ho. Tender topmast lad lass Pirate Round clap of thunder to go on account hail-shot ahoy Shiver me timbers. Shrouds nipperkin hands run a shot across the bow Jack Ketch schooner black jack jolly boat bilged on her anchor doubloon. Lugsail spirits Sea Legs red ensign schooner ahoy bilge port avast Plate Fleet. Bowsprit quarterdeck swab killick furl lanyard scallywag gangway Admiral of the Black American Main. Main sheet weigh anchor Letter of Marque chandler heave down Jack Ketch dance the hempen jig belaying pin scourge of the seven seas Privateer.";
+    p_Stage.textContent = "Les stages de fin d'études en Technique d'Intégration Multimédia remplacent la dernière session du programme. Après avoir complété leur projet de fin d’études, les étudiants effectuent un stage en entreprise. Ces stages sont obligatoires pour l’obtention du diplôme, offrant aux étudiants l’opportunité de mettre en pratique leurs compétences et de se préparer à leur entrée sur le marché du travail.";
 
     // Création des images
     const imgStage = document.createElement('img');
-    imgStage.src = "stage-fin-etudes.jpg";
+    imgStage.src = "https://gftnth00.mywhc.ca/tim17/wp-content/uploads/2024/12/StageImg3.png";
     const imgStage2 = document.createElement('img');
-    imgStage2.src = "stage-fin-etudes2.jpg";
+    imgStage2.src = "https://gftnth00.mywhc.ca/tim17/wp-content/uploads/2024/12/StageImg1.png";
     const imgStage3 = document.createElement('img');
-    imgStage3.src = "stage-fin-etudes3.jpg";
+    imgStage3.src = "https://gftnth00.mywhc.ca/tim17/wp-content/uploads/2024/12/StageImg2.png";
     
     // Ajout des éléments dans la section
     sectionStage.appendChild(conteneurTexte);

@@ -9,6 +9,7 @@
                 ?>
                     <h3>Type: <?php the_field('type'); ?></h3>
                     <h3>Cours: <?php the_field('cours'); ?></h3>
+                    <p><?php the_field('Description'); ?> </p>
                 <?php 
                     elseif (has_category('cours')) : 
                 ?>

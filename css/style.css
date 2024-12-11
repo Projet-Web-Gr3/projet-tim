@@ -926,6 +926,7 @@ li a {
 .contenuSingle .acfSingle {
   display: flex;
   justify-content: space-around;
+  flex-direction: column;
 }
 .contenuSingle .acfSingle h3 {
   font-size: 1.3rem;
@@ -933,6 +934,7 @@ li a {
 .contenuSingle #photoSingle {
   display: flex;
   justify-content: center;
+  overflow-x: hidden;
 }
 .contenuSingle .logiciels {
   text-align: center;
@@ -1045,11 +1047,13 @@ li a {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: transparent;
   color: white;
   border: none;
   padding: 10px;
   cursor: pointer;
+  font-size: 2rem;
+  font-family: "pixellari";
 }
 
 .avenir-carousel .carousel-control-prev {
@@ -1063,7 +1067,7 @@ li a {
 .ate {
   display: flex;
   flex-direction: column;
-  margin-top: 10rem;
+  margin-top: 5rem;
 }
 @media (min-width: 1080px) {
   .ate {
@@ -1105,6 +1109,7 @@ li a {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 300px;
 }
 .ate-image img {
   scale: 0.5;
@@ -1117,6 +1122,7 @@ li a {
 @media (min-width: 1080px) {
   .ate-image {
     width: 30%;
+    height: auto;
   }
 }
 
