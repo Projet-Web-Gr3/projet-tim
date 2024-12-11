@@ -62,11 +62,6 @@ burgerMenu.addEventListener('click', function() {
 document.addEventListener('DOMContentLoaded', function () {
     const accueil = document.querySelector('.accueil');
     const header = document.querySelector('.menu__header');
-    
-    if (!accueil || !header) {
-        console.error("Les éléments d'accueil ou de header n'ont pas été trouvés.");
-        return; // Arrête l'exécution si les éléments sont introuvables
-    }
 
     let lastScrollTop = 0;
     let isScrollingDown = false;
